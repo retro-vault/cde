@@ -1,0 +1,8 @@
+<metainfo>
+<title>CDE migration test
+<abstract>Compiler round trip.
+<\metainfo>
+<hometopic>Help compiler test
+This document checks native help generation.
+<chapter id=chapter>Second topic
+A second topic with an <idx|index entry|.

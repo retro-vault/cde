@@ -1,0 +1,6 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/vfork by iffe version 2022-01-09 : : */
+#ifndef _def_vfork_ast
+#define _def_vfork_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+extern __pid_t vfork (void) __attribute__ ((__nothrow__ , __leaf__));
+#endif

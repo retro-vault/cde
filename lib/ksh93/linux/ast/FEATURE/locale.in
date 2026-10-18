@@ -1,0 +1,6 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/locale by iffe version 2022-01-09 : : */
+#ifndef _def_locale_ast
+#define _def_locale_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _locale_utf8_str	0
+#endif

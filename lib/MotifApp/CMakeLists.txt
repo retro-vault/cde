@@ -1,0 +1,34 @@
+add_library(MotifApp STATIC
+    Application.C
+    AskFirstCmd.C
+    BasicComponent.C
+    BusyPixmap.C
+    ButtonInterface.C
+    Cmd.C
+    CmdInterface.C
+    CmdList.C
+    DialogManager.C
+    Help.C
+    IconifyCmd.C
+    InfoDialogManager.C
+    InterruptibleCmd.C
+    Main.C
+    MainWindow.C
+    ManageCmd.C
+    MenuBar.C
+    MenuWindow.C
+    MotifCmds.C
+    NoUndoCmd.C
+    PixmapCycler.C
+    PromptDialogManager.C
+    QuestionDialogManager.C
+    QuitCmd.C
+    ScrollingList.C
+    SelectFileCmd.C
+    ToggleButtonInterface.C
+    UIComponent.C
+    UndoCmd.C
+    WarnNoUndoCmd.C
+    WorkingDialogManager.C
+)
+target_link_libraries(MotifApp PUBLIC mail_build_options DtHelp DtWidget)

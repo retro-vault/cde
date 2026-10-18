@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CDE: build and stage",
+            "type": "process",
+            "command": "${workspaceFolder}/cmake/docker-build.sh",
+            "args": ["--build-only"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": "$gcc",
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}

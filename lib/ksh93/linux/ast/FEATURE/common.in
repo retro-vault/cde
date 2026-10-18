@@ -1,0 +1,158 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/common by iffe version 2022-01-09 : : */
+#ifndef _AST_COMMON_H
+#define _AST_COMMON_H	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _hdr_pthread	1	/* #include <pthread.h> ok */
+#define _hdr_stdarg	1	/* #include <stdarg.h> ok */
+#define _hdr_stddef	1	/* #include <stddef.h> ok */
+#define _hdr_stdint	1	/* #include <stdint.h> ok */
+#define _hdr_inttypes	1	/* #include <inttypes.h> ok */
+#define _hdr_unistd	1	/* #include <unistd.h> ok */
+#define _hdr_time	1	/* #include <time.h> ok */
+#define _sys_time	1	/* #include <sys/time.h> ok */
+#define _sys_times	1	/* #include <sys/times.h> ok */
+#define _hdr_stdlib	1	/* #include <stdlib.h> ok */
+#define _typ_long_double	1	/* long double is a type */
+#define _typ_size_t	1	/* size_t is a type */
+#define _typ_ssize_t	1	/* ssize_t is a type */
+#define _hdr_stdio	1	/* #include <stdio.h> ok */
+#define _sys_stat	1	/* #include <sys/stat.h> ok */
+#define _sys_socket	1	/* #include <sys/socket.h> ok */
+#define _std_noreturn	1	/* noreturn ok */
+#pragma clang diagnostic ignored "-Wdeprecated-register"
+#pragma clang diagnostic ignored "-Wparentheses"
+#pragma clang diagnostic ignored "-Wstring-plus-int"
+#pragma clang diagnostic ignored "-Wunused-value"
+#pragma GCC diagnostic ignored "-Wunused-result"
+
+/* AST backwards compatibility macros */
+#undef	_NIL_
+#define	_NIL_(x)	((x)0)
+#undef	_STD_
+#define	_STD_		1
+#undef	_ARG_
+#define	_ARG_(x)	x
+#undef	_VOID_
+#define	_VOID_		void
+#undef	_BEGIN_EXTERNS_
+#define	_BEGIN_EXTERNS_
+#undef	_END_EXTERNS_
+#define	_END_EXTERNS_
+#undef __EXTERN__
+#define __EXTERN__(T,obj)	extern T obj
+#undef __DEFINE__
+#define __DEFINE__(T,obj,val)	T obj = val
+#undef	__STD_C
+#define	__STD_C		1
+#undef	Void_t
+#define	Void_t		void
+
+/* disable non-standard Linux/GNU inlines */
+#ifdef __GNUC__	
+#	undef	__OPTIMIZE_SIZE__
+#	define	__OPTIMIZE_SIZE__	1
+#endif
+
+/* __INLINE__, if defined, is the inline keyword */
+#if !defined(__INLINE__) && defined(_WIN32) && !defined(__GNUC__)
+#	define __INLINE__	__inline
+#endif
+
+/* Windows variants and veneers */
+/* (as of 2022-07-21, only Cygwin) */
+#if !defined(_WINIX) && __CYGWIN__
+#	define _WINIX		1
+#endif
+
+/* dynamic linked library external scope handling */
+#ifdef __DYNAMIC__
+#	undef	__DYNAMIC__
+#	ifndef _DLL
+#		define _DLL		1
+#	endif
+#endif
+
+#if !_std_noreturn
+#if defined(__GNUC__) && (__GNUC__ > 2 || (__GNUC__ == 2 && __GNUC_MINOR__ > 4))
+#define noreturn __attribute__((noreturn))
+#else
+#define noreturn
+#endif /* __GNUC__ */
+#else
+#include <stdnoreturn.h>
+#endif /* _std_noreturn */
+
+#define _ast_LL	1	/* LL numeric suffix supported */
+#define _ast_int1_t		char
+#define _ast_int2_t		short
+#define _ast_int4_t		int
+#define _ast_int8_t		long
+#define _ast_intmax_t		_ast_int8_t
+#define _ast_intmax_long		1
+#define _ast_intswap		7
+
+#define _ast_sizeof_short	2	/* sizeof(short) */
+#define _ast_sizeof_int		4	/* sizeof(int) */
+#define _ast_sizeof_long	8	/* sizeof(long) */
+#define _ast_sizeof_size_t	8	/* sizeof(size_t) */
+#define _ast_sizeof_pointer	8	/* sizeof(pointer) */
+#define _ast_sizeof_float	4	/* sizeof(float) */
+#define _ast_sizeof_double	8	/* sizeof(double) */
+#define _ast_sizeof_long_double	16	/* sizeof(long_double) */
+
+#define _ast_flt4_t		float
+#define _ast_flt8_t		double
+#define _ast_flt16_t		long double
+#define _ast_fltmax_t		_ast_flt16_t
+#define _typ_int8_t	1	/* int8_t is a type */
+#define _typ_uint8_t	1	/* uint8_t is a type */
+#define _typ_int16_t	1	/* int16_t is a type */
+#define _typ_uint16_t	1	/* uint16_t is a type */
+#define _typ_int32_t	1	/* int32_t is a type */
+#define _typ_uint32_t	1	/* uint32_t is a type */
+#define _typ_int64_t	1	/* int64_t is a type */
+#define _typ_uint64_t	1	/* uint64_t is a type */
+#define _typ_intmax_t	1	/* intmax_t is a type */
+#define _typ_uintmax_t	1	/* uintmax_t is a type */
+#define _typ_uintptr_t	1	/* uintptr_t is a type */
+
+#ifndef va_listref
+#ifndef	va_start
+#include <stdarg.h>
+#endif
+#define va_listref(p) (&(p))	/* pass va_list to varargs function */
+#define va_listval(p) (*(p))	/* retrieve va_list from va_arg(ap,va_listarg) */
+#define va_listarg va_list*	/* va_arg() va_list type */
+#endif
+#ifndef _AST_STD_H
+#	if _hdr_stddef
+#	include	<stddef.h>
+#	endif
+#	if _sys_types
+#	include	<sys/types.h>
+#	endif
+#	if _hdr_stdint
+#	include	<stdint.h>
+#	else
+#		if _hdr_inttypes
+#		include	<inttypes.h>
+#		endif
+#	endif
+#endif
+#if !_typ_size_t
+#	define _typ_size_t	1
+	typedef int size_t;
+#endif
+#if !_typ_ssize_t
+#	define _typ_ssize_t	1
+	typedef int ssize_t;
+#endif
+#ifndef _AST_STD_H
+#	define _def_map_ast	1
+#	if !_def_map_ast
+#		include <ast_map.h>
+#	endif
+#endif
+
+#   define UNREACHABLE()	__builtin_unreachable()
+#endif

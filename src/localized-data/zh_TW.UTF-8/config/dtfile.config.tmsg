@@ -1,0 +1,31 @@
+$ $XConsortium: dtfile.config.tmsg /main/3 1995/11/08 14:02:06 rswiston $
+$set 1
+$ *
+$ *****************************************************************************
+$ * dtfile.config.tmsg
+$ *
+$ * Translatable Strings for dtfile.config
+$ *
+$ * Copyright (c) 1993 Hewlett-Packard Company
+$ * Copyright (c) 1993 International Business Machines Corp.
+$ * Copyright (c) 1993 Sun Microsystems, Inc.
+$ *
+$ *****************************************************************************
+
+$ *****************************************************************************
+$ *
+$ *  Format of this message file.
+$ *    $set n [comment] ... n must be 1.
+$ *    $ [comment]
+$ *    m message-text ... Message text may contain following special characters
+$ *                       and escape sequences.
+$ *                         \\                  backslash
+$ *                         \n                  newline
+$ *                         \t                  horizontal tab
+$ *                         \ (at end of line)  continue on same line
+$ *
+$ *****************************************************************************
+$ 
+1 更改 AFS ACL ...
+2 顯示測試對話 ...
+3 注意: 它是一個 Andrew File System (AFS) 物件.\\n存取許可權已在 AFS Access Control List (ACL) 中限制.

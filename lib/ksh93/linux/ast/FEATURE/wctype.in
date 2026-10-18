@@ -1,0 +1,14 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/wctype by iffe version 2022-01-09 : : */
+#ifndef _def_wctype_ast
+#define _def_wctype_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _nxt_wctype <../include/wctype.h>	/* include path for the native <wctype.h> */
+#define _nxt_wctype_str "../include/wctype.h"	/* include string for the native <wctype.h> */
+#if _hdr_wctype && defined(_nxt_wctype)
+#include <../include/wctype.h>	/* the native wctype.h */
+#endif
+
+#undef	iswalpha
+
+#define iswalpha(w)	(ast.mb_alpha?(*ast.mb_alpha)(w):isalpha(w))
+#endif

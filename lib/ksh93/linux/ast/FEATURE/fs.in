@@ -1,0 +1,73 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/fs by iffe version 2022-01-09 : : */
+#ifndef _def_fs_ast
+#define _def_fs_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _sys_stat	1	/* #include <sys/stat.h> ok */
+#define _lib___fxstat	1	/* __fxstat() in default lib(s) */
+#define _lib___lxstat	1	/* __lxstat() in default lib(s) */
+#define _lib___xmknod	1	/* __xmknod() in default lib(s) */
+#define _lib___xstat	1	/* __xstat() in default lib(s) */
+#define _lib_lstat	1	/* lstat() in default lib(s) */
+#define _lib_mknod	1	/* mknod() in default lib(s) */
+#define _lib_sync	1	/* sync() in default lib(s) */
+#include <sys/stat.h>
+#define FS_default	"ufs"
+#ifndef major
+#define major(x) gnu_dev_major ((x))
+#endif
+#ifndef minor
+#define minor(x) gnu_dev_minor ((x))
+#endif
+#ifndef makedev
+#define makedev(x,y) gnu_dev_makedev ((x), (y))
+#endif
+#define _hdr_stdio	1	/* #include <stdio.h> ok */
+#define _hdr_mntent	1	/* #include <mntent.h> ok */
+#define _sys_param	1	/* #include <sys/param.h> ok */
+#define _sys_mount	1	/* #include <sys/mount.h> ok */
+#define _sys_statfs	1	/* #include <sys/statfs.h> ok */
+#define _sys_statvfs	1	/* #include <sys/statvfs.h> ok */
+#define _sys_vfs	1	/* #include <sys/vfs.h> ok */
+#define _mem_mnt_opts_mntent	1	/* mnt_opts is a member of struct mntent */
+#define _mem_st_blocks_stat	1	/* st_blocks is a member of struct stat */
+#define _mem_st_blksize_stat	1	/* st_blksize is a member of struct stat */
+#define _mem_st_rdev_stat	1	/* st_rdev is a member of struct stat */
+#define _mem_f_files_statfs	1	/* f_files is a member of struct statfs */
+#define _mem_f_bavail_statfs	1	/* f_bavail is a member of struct statfs */
+#define _mem_f_frsize_statvfs	1	/* f_frsize is a member of struct statvfs */
+#define _lib_getmntent	1	/* getmntent() in default lib(s) */
+#define _lib_setmntent	1	/* setmntent() in default lib(s) */
+#define _lib_statfs	1	/* statfs() in default lib(s) */
+#define _lib_statvfs	1	/* statvfs() in default lib(s) */
+#if _sys_statvfs
+#include <sys/statvfs.h>
+#if !_mem_statvfs_f_basetype
+#if _ary_f_reserved7
+#define f_basetype	f_reserved7
+#endif
+#endif
+#else
+#define _mem_f_basetype_statvfs	1
+#define _mem_f_frsize_statvfs	1
+struct statvfs
+{
+unsigned long	f_bsize;	/* fundamental file system block size */
+unsigned long	f_frsize;	/* fragment size */
+unsigned long	f_blocks;	/* total # of blocks of f_frsize on fs */
+unsigned long	f_bfree;	/* total # of free blocks of f_frsize */
+unsigned long	f_bavail;	/* # of free blocks avail to non-superuser */
+unsigned long	f_files;	/* total # of file nodes (inodes) */
+unsigned long	f_ffree;	/* total # of free file nodes */
+unsigned long	f_favail;	/* # of free nodes avail to non-superuser */
+unsigned long	f_fsid;		/* file system ID (dev for now) */
+char		f_basetype[16]; /* target fs type name, null-terminated */
+unsigned long	f_flag;		/* bit-mask of flags */
+unsigned long	f_namemax;	/* maximum file name length */
+char		f_fstr[32];	/* filesystem-specific string */
+unsigned long	f_filler[16];	/* reserved for future expansion */
+};
+extern int	fstatvfs(int, struct statvfs*);
+extern int	statvfs(const char*, struct statvfs*);
+#endif
+
+#endif

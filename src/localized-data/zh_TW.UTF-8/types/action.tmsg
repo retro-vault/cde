@@ -1,0 +1,47 @@
+$ $XConsortium: action.tmsg /main/3 1995/11/08 14:11:32 rswiston $
+$set 1
+$ *
+$ *****************************************************************************
+$ * actions.tmsg
+$ *
+$ * Translatable Strings for actions
+$ *
+$ * Copyright (c) 1993, 1994 Hewlett-Packard Company
+$ * Copyright (c) 1993, 1994 International Business Machines Corp.
+$ * Copyright (c) 1993, 1994 Sun Microsystems, Inc.
+$ * Copyright (c) 1993, 1994 Novell, Inc.
+$ *
+$ *****************************************************************************
+
+$ *****************************************************************************
+$ *
+$ *  Format of this message file.
+$ *    $set n [comment] ... n must be 1.
+$ *    $ [comment]
+$ *    m message-text ... Message text may contain following spcial characters
+$ *                       and escape sequences.
+$ *                         \\                  backslash
+$ *                         \n                  newline
+$ *                         \t                  horizontal tab
+$ *                         \ (at end of line)  continue on same line
+$ *
+$ *****************************************************************************
+$ 
+$ Messages 1 - 11 are 1 continuous comment, make sure you put the "#" at the 
+$ start of each new line.  Use all 1 - 11 to translate if needed.  Leave
+$ any line empty with a '#' if the message is not needed.
+$ 
+1 # 這個檔案代表一個「一般桌上管理系統環境」(CDE; 
+2 # Common Desktop Environment) 的動作。這個檔案的內容無關緊要；
+3 # 即使這個檔案是空的，程式都可以執行。如果這個檔案是一個可
+4 # 執行檔，且檔名和動作資料庫中任一項目 (*.dt 檔案) 的名稱相符，
+5 # CDE 檔案管理者就會將這個檔案視為一個動作。
+6 #
+7 # 如需有關動作的詳細資訊，請參閱 CDE 手冊。
+8 #
+9 #
+10 #
+11 #
+$ 
+$ 
+12 一般桌上管理系統環境 (CDE) 動作。請使用檔案管理者調用。

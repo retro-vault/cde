@@ -1,0 +1,62 @@
+/* : : generated from upstream-ksh93/src/cmd/ksh93/features/poll by iffe version 2022-01-09 : : */
+#ifndef _def_poll_ksh93
+#define _def_poll_ksh93	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _LIB_m	1	/* -lm is a library */
+#define _LIB_ast	1	/* upstream-ksh93/arch/linux.i386-64/lib/libast.a is a library */
+#define _LIB_util	1	/* -lutil is a library */
+#define _LIB_cmd	1	/* upstream-ksh93/arch/linux.i386-64/lib/libcmd.a is a library */
+#define _LIB_dll	1	/* upstream-ksh93/arch/linux.i386-64/lib/libdll.a is a library */
+#define _LIB_nsl	1	/* -lnsl is a library */
+#define _hdr_poll	1	/* #include <poll.h> ok */
+#define _hdr_netinet_in	1	/* #include <netinet/in.h> ok */
+#define _sys_poll	1	/* #include <sys/poll.h> ok */
+#define _sys_socket	1	/* #include <sys/socket.h> ok */
+#define _lib_select	1	/* select() in default lib(s) */
+#define _lib_poll	1	/* poll() in default lib(s) */
+#define _lib_socket	1	/* socket() in default lib(s) */
+#define _lib_htons	1	/* htons() in default lib(s) */
+#define _lib_htonl	1	/* htonl() in default lib(s) */
+#define _hdr_netdb	1	/* #include <netdb.h> ok */
+#define _lib_getaddrinfo	1	/* getaddrinfo() in default lib(s) */
+#define _hdr_time	1	/* #include <time.h> ok */
+#define _sys_time	1	/* #include <sys/time.h> ok */
+#define _sys_times	1	/* #include <sys/times.h> ok */
+#define _hdr_stddef	1	/* #include <stddef.h> ok */
+#define _hdr_stdlib	1	/* #include <stdlib.h> ok */
+#define _sys_select	1	/* #include <sys/select.h> ok */
+#define _typ_fd_set	1	/* fd_set is a type */
+#define _hdr_unistd	1	/* #include <unistd.h> ok */
+#define _typ_socklen_t	1	/* socklen_t is a type */
+#define _pipe_socketpair	1	/* use socketpair() for peekable pipe() */
+#define _socketpair_shutdown_mode	1	/* fchmod() after socketpair() shutdown() */
+#ifdef _lib_poll
+#   define poll _SYS_poll
+#else
+#   undef _hdr_poll
+#   undef _sys_poll
+#endif /* _lib_poll */
+#ifdef _hdr_poll
+#    include    <poll.h>
+#else
+#   ifdef _sys_poll
+#	include    <sys/poll.h>
+#   endif /* _sys_poll */
+#endif /* _hdr_poll */
+#ifdef _lib_poll
+#   undef poll
+    extern int poll(struct pollfd*,unsigned long,int);
+#endif /* _lib_poll */
+#ifdef _lib_select
+#   ifndef FD_ZERO
+#	define FD_ZERO(x)	(*(x)=0)
+#   endif /* FD_ZERO */
+#   ifndef FD_SET
+#	define FD_SET(n,x)	(*(x)|=(1L<<(n)))
+#   endif /* FD_SET */
+#   ifndef _typ_fd_set
+	typedef long fd_set;
+#   endif /* _typ_fd_set */
+#endif /* _lib_select */
+
+#endif

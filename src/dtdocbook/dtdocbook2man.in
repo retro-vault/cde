@@ -1,0 +1,138 @@
+#!/bin/ksh
+set -o pipefail
+export LC_ALL=C.UTF-8
+# $XConsortium: dbtoman /main/6 1996/09/15 18:58:15 rws $
+#############################################################################
+#
+#	dbtoman
+#
+#############################################################################
+#
+# Copyright (c) 1996 X Consortium
+# Copyright (c) 1996 Dalrymple Consulting
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+# X CONSORTIUM OR DALRYMPLE CONSULTING BE LIABLE FOR ANY CLAIM, DAMAGES OR
+# OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+# ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# OTHER DEALINGS IN THE SOFTWARE.
+#
+# Except as contained in this notice, the names of the X Consortium and
+# Dalrymple Consulting shall not be used in advertising or otherwise to
+# promote the sale, use or other dealings in this Software without prior
+# written authorization.
+#
+
+temp_dir=$(mktemp -d "${TMPDIR:-/tmp}/cde-man.XXXXXXXX") || exit 1
+trap 'rm -rf -- "$temp_dir"' EXIT HUP INT QUIT TERM
+
+prefix="@CDE_INSTALLATION_TOP@"
+exec_prefix="@CDE_INSTALLATION_TOP@"
+
+dcbk_name="dt/dtdocbook"
+
+dtdcbk_libexecdir="${dtdcbk_libexecdir:-@CDE_LIBEXEC_DIR@/dtdocbook}"
+dtdcbk_datarootdir="${dtdcbk_datarootdir:-@CDE_DATA_TOP@/dtdocbook}"
+
+instant="${dtdcbk_libexecdir}/instant/instant"
+
+sgml_dir="${dtdcbk_datarootdir}/sgml"
+
+export SP_CHARSET_FIXED=1
+export SP_ENCODING='UTF-8'
+export SGML_CATALOG_FILES="${sgml_dir}/catalog"
+export TPT_LIB="${dtdcbk_datarootdir}/tpt"
+
+parser='onsgmls'
+parser_opts='-g -oline -wno-idref'
+decl="${sgml_dir}/docbook.dcl"
+
+nroff=
+
+if [ $# -gt 0 ] && [ $1 = "-c" ]
+then
+	nroff="| tbl | nroff -man"
+	shift
+fi
+if [ $# -eq 4 ]
+then	locale=$1
+	dclfile=$2
+	reffile=$3
+	manfile=$4
+else	echo "usage:  dtdocbook2man [-c] locale dcl-file ref-src-file man-dst-file"
+	exit 1
+fi
+
+cat > $temp_dir/dtm.psinc <<\!
+'\" t
+!
+
+grep '<\!-- $''XConsortium: ' $reffile | \
+sed -e 's/<\!-- $''XConsortium:/...\\"/g' -e 's/ -->//g' >> $temp_dir/dtm.psinc
+
+cat >> $temp_dir/dtm.psinc <<\!
+.de P!
+.fl
+\!!1 setgray
+.fl
+\\&.\"
+.fl
+\!!0 setgray
+.fl			\" force out current output buffer
+\!!save /psv exch def currentpoint translate 0 0 moveto
+\!!/showpage{}def
+.fl			\" prolog
+.sy sed -e 's/^/!/' \\$1\" bring in postscript file
+\!!psv restore
+.
+.de pF
+.ie     \\*(f1 .ds f1 \\n(.f
+.el .ie \\*(f2 .ds f2 \\n(.f
+.el .ie \\*(f3 .ds f3 \\n(.f
+.el .ie \\*(f4 .ds f4 \\n(.f
+.el .tm ? font overflow
+.ft \\$1
+..
+.de fP
+.ie     !\\*(f4 \{\
+.	ft \\*(f4
+.	ds f4\"
+'	br \}
+.el .ie !\\*(f3 \{\
+.	ft \\*(f3
+.	ds f3\"
+'	br \}
+.el .ie !\\*(f2 \{\
+.	ft \\*(f2
+.	ds f2\"
+'	br \}
+.el .ie !\\*(f1 \{\
+.	ft \\*(f1
+.	ds f1\"
+'	br \}
+.el .tm ? font underflow
+..
+.ds f1\"
+.ds f2\"
+.ds f3\"
+.ds f4\"
+!
+
+cat $decl $dclfile $reffile | \
+sed -e 's/<\!\[[ ]*\%CDE\.C\.CDE;[ ]*\[<[rR]ef[eE]ntry [iI]d="[^"]*">\]\]>/<refentry>/g' | \
+$parser $parser_opts | \
+$instant -L$locale -croff.cmap -sroff.sdata -tdocbook-to-man.ts > \
+$temp_dir/dtm.out1 && eval cat $temp_dir/dtm.psinc $temp_dir/dtm.out1 $nroff > \
+$temp_dir/dtm.out2 && cp $temp_dir/dtm.out2 $manfile

@@ -1,0 +1,6 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/hack by iffe version 2022-01-09 : : */
+#ifndef _def_hack_ast
+#define _def_hack_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _need_va_listval_workaround 0
+#endif

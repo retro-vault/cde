@@ -1,0 +1,16 @@
+/* : : generated from upstream-ksh93/src/lib/libcmd/features/ids by iffe version 2022-01-09 : : */
+#ifndef _def_ids_cmd
+#define _def_ids_cmd	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _LIB_ast	1	/* upstream-ksh93/arch/linux.i386-64/lib/libast.a is a library */
+#define _LIB_util	1	/* -lutil is a library */
+#define _lib_endgrent	1	/* endgrent() in default lib(s) */
+#define _lib_getgrent	1	/* getgrent() in default lib(s) */
+#define _lib_setgrent	1	/* setgrent() in default lib(s) */
+#define _hdr_unistd	1	/* #include <unistd.h> ok */
+#define _lib_getsid	1	/* getsid() in default lib(s) */
+#if !_lib_fsid && _mac_fsid
+#define _lib_fsid	1
+#endif
+
+#endif

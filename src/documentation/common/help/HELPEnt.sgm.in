@@ -1,0 +1,38 @@
+<!-- $TOG: HELPEnt.sgm /main/12 1999/10/12 09:35:15 mgreess $ -->
+<!ENTITY CDEcopyright "<GlossTerm Role=nogloss>Common Desktop Environment @CDE_VERSION_MAJOR@.@CDE_VERSION_MINOR@.@CDE_VERSION_MICRO@@CDE_VERSION_DEV@</GlossTerm>,
+
+&copy; Copyright 1993-2012 The Open Group
+&copy; Copyright 2012-2023 CDE Project contributors, see CONTRIBUTORS for details
+
+Project Website: http://cdesktopenv.sourceforge.net/
+
+CDE, the Common Desktop Environment, is released under the terms of the GNU LGPL, please see the file COPYING for more details.">
+
+<!ENTITY headerFix "&empty;">
+<!ENTITY AbstractBullet "&bullet;">
+<!ENTITY empty  "">
+<!ENTITY newline SDATA "[newlin]">
+<!ENTITY emdash "&mdash;">
+<!ENTITY bullet "&bull;">
+<!ENTITY dquote "&rdquor;">
+<!ENTITY sigspace "&nbsp;">
+<!ENTITY vellipsis "&vellip;">
+<!ENTITY tm "&trade;">
+<!ENTITY a.m. "AM">
+<!ENTITY cents "&cent;">
+<!ENTITY date SDATA "[date]">
+<!ENTITY div "&divide;">
+<!ENTITY ellipsis "&hellip;">
+<!ENTITY endash "&ndash;">
+<!ENTITY geq "&ge;">
+<!ENTITY leq "&le;">
+<!ENTITY minutes "&prime;">
+<!ENTITY neq "&ne;">
+<!ENTITY p.m. "PM">
+<!ENTITY pellipsis "....">
+<!ENTITY pm "&plusmn;">
+<!ENTITY seconds "&Prime;">
+<!ENTITY squote "&rsquor;">
+<!ENTITY sterling "&pound;">
+<!ENTITY time SDATA "[time]">
+<!ENTITY vblank SDATA "[vblank]">

@@ -1,0 +1,252 @@
+# Fixed Linux x86-64 feature decisions for the maintained GCC/glibc image.
+# All materialized headers and generated sources stay in the binary tree.
+set(ksh_headers
+    align.h.in
+    aso.h.in
+    ast.h.in
+    ast_api.h.in
+    ast_botch.h.in
+    ast_ccode.h.in
+    ast_common.h.in
+    ast_dir.h.in
+    ast_dirent.h.in
+    ast_fcntl.h.in
+    ast_float.h.in
+    ast_fs.h.in
+    ast_getopt.h.in
+    ast_iconv.h.in
+    ast_lib.h.in
+    ast_limits.h.in
+    ast_map.h.in
+    ast_mmap.h.in
+    ast_mode.h.in
+    ast_namval.h.in
+    ast_ndbm.h.in
+    ast_nl_types.h.in
+    ast_param.h.in
+    ast_sizeof.h.in
+    ast_standards.h.in
+    ast_std.h.in
+    ast_stdio.h.in
+    ast_sys.h.in
+    ast_time.h.in
+    ast_tty.h.in
+    ast_vfork.h.in
+    ast_wait.h.in
+    ast_wchar.h.in
+    ast_wctype.h.in
+    ast_windows.h.in
+    bytesex.h.in
+    ccode.h.in
+    cdt.h.in
+    cdtlib.h.in
+    cmd.h.in
+    cmdarg.h.in
+    cmdext.h.in
+    cmdlist.h.in
+    debug.h.in
+    dirent.h.in
+    dlldefs.h.in
+    dt.h.in
+    endian.h.in
+    error.h.in
+    find.h.in
+    fnmatch.h.in
+    fnv.h.in
+    fts.h.in
+    ftw.h.in
+    ftwalk.h.in
+    getopt.h.in
+    glob.h.in
+    hash.h.in
+    hashkey.h.in
+    hashpart.h.in
+    history.h.in
+    iconv.h.in
+    ip6.h.in
+    lc.h.in
+    ls.h.in
+    magic.h.in
+    magicid.h.in
+    mc.h.in
+    mime.h.in
+    mnt.h.in
+    modecanon.h.in
+    modex.h.in
+    namval.h.in
+    nl_types.h.in
+    nval.h.in
+    option.h.in
+    preroot.h.in
+    proc.h.in
+    re_comp.h.in
+    recfmt.h.in
+    regex.h.in
+    regexp.h.in
+    releaseflags.h.in
+    sfdisc.h.in
+    sfio.h.in
+    sfio_s.h.in
+    sfio_t.h.in
+    shcmd.h.in
+    shell.h.in
+    sig.h.in
+    stack.h.in
+    stak.h.in
+    stdio.h.in
+    stk.h.in
+    sum.h.in
+    swap.h.in
+    tar.h.in
+    times.h.in
+    tm.h.in
+    tmx.h.in
+    tok.h.in
+    tv.h.in
+    usage.h.in
+    vdb.h.in
+    vecargs.h.in
+    vmalloc.h.in
+    wait.h.in
+    wchar.h.in
+    wctype.h.in
+    wordexp.h.in
+)
+foreach(header IN LISTS ksh_headers)
+    string(REGEX REPLACE "\\.in$" "" output "${header}")
+    configure_file(include/ast/${header} include/ast/${output} COPYONLY)
+endforeach()
+set(ksh_linux_files
+    ast/FEATURE/align.in
+    ast/FEATURE/api.in
+    ast/FEATURE/aso.in
+    ast/FEATURE/asometh.in
+    ast/FEATURE/botch.in
+    ast/FEATURE/ccode.in
+    ast/FEATURE/common.in
+    ast/FEATURE/dirent.in
+    ast/FEATURE/eaccess.in
+    ast/FEATURE/errno.in
+    ast/FEATURE/fcntl.in
+    ast/FEATURE/float.in
+    ast/FEATURE/fs.in
+    ast/FEATURE/hack.in
+    ast/FEATURE/iconv.in
+    ast/FEATURE/lib.in
+    ast/FEATURE/libpath.in
+    ast/FEATURE/limits.in
+    ast/FEATURE/locale.in
+    ast/FEATURE/map.in
+    ast/FEATURE/mmap.in
+    ast/FEATURE/mode.in
+    ast/FEATURE/ndbm.in
+    ast/FEATURE/nl_types.in
+    ast/FEATURE/omitted.in
+    ast/FEATURE/options.in
+    ast/FEATURE/param.in
+    ast/FEATURE/preroot.in
+    ast/FEATURE/prog.in
+    ast/FEATURE/sfinit.in
+    ast/FEATURE/sfio.in
+    ast/FEATURE/sig.in
+    ast/FEATURE/siglist.in
+    ast/FEATURE/signal.in
+    ast/FEATURE/sizeof.in
+    ast/FEATURE/standards.in
+    ast/FEATURE/stdio.in
+    ast/FEATURE/sys.in
+    ast/FEATURE/syscall.in
+    ast/FEATURE/time.in
+    ast/FEATURE/tmlib.in
+    ast/FEATURE/tmx.in
+    ast/FEATURE/tty.in
+    ast/FEATURE/tv.in
+    ast/FEATURE/tvlib.in
+    ast/FEATURE/vfork.in
+    ast/FEATURE/vmalloc.in
+    ast/FEATURE/wait.in
+    ast/FEATURE/wchar.in
+    ast/FEATURE/wctype.in
+    ast/align.h.in
+    ast/ast_api.h.in
+    ast/ast_botch.h.in
+    ast/ast_ccode.h.in
+    ast/ast_common.h.in
+    ast/ast_dirent.h.in
+    ast/ast_fcntl.h.in
+    ast/ast_float.h.in
+    ast/ast_fs.h.in
+    ast/ast_iconv.h.in
+    ast/ast_lib.h.in
+    ast/ast_limits.h.in
+    ast/ast_map.h.in
+    ast/ast_mmap.h.in
+    ast/ast_mode.h.in
+    ast/ast_namval.h.in
+    ast/ast_ndbm.h.in
+    ast/ast_nl_types.h.in
+    ast/ast_param.h.in
+    ast/ast_sizeof.h.in
+    ast/ast_standards.h.in
+    ast/ast_stdio.h.in
+    ast/ast_sys.h.in
+    ast/ast_time.h.in
+    ast/ast_tty.h.in
+    ast/ast_vfork.h.in
+    ast/ast_wait.h.in
+    ast/ast_wchar.h.in
+    ast/ast_wctype.h.in
+    ast/conflim.h.in
+    ast/conftab.c.in
+    ast/conftab.h.in
+    ast/lc.h.in
+    ast/lctab.c.in
+    ast/preroot.h.in
+    ast/releaseflags.h.in
+    ast/sig.h.in
+    ast/t.c.in
+    ast/tmx.h.in
+    ast/tv.h.in
+    cmd/FEATURE/ids.in
+    cmd/FEATURE/sockets.in
+    cmd/FEATURE/symlink.in
+    cmd/FEATURE/utsname.in
+    cmd/cmdext.h.in
+    cmd/cmdlist.h.in
+    dll/FEATURE/dll.in
+    dll/dlldefs.h.in
+    shell/FEATURE/acct.in
+    shell/FEATURE/cmds.in
+    shell/FEATURE/dynamic.in
+    shell/FEATURE/execargs.in
+    shell/FEATURE/externs.in
+    shell/FEATURE/locale.in
+    shell/FEATURE/math.in
+    shell/FEATURE/options.in
+    shell/FEATURE/poll.in
+    shell/FEATURE/pstat.in
+    shell/FEATURE/rlimits.in
+    shell/FEATURE/setjmp.in
+    shell/FEATURE/setproctitle.in
+    shell/FEATURE/sigfeatures.in
+    shell/FEATURE/time.in
+    shell/FEATURE/ttys.in
+    shell/shopt.h.in
+)
+foreach(header IN LISTS ksh_linux_files)
+    string(REGEX REPLACE "\\.in$" "" output "${header}")
+    configure_file(linux/${header} linux/${output} COPYONLY)
+endforeach()
+add_library(ksh_build_options INTERFACE)
+target_include_directories(ksh_build_options INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/include/ast)
+target_compile_definitions(ksh_build_options INTERFACE _GNU_SOURCE _PACKAGE_ast
+    SHOPT_DYNAMIC=1 SHOPT_NAMESPACE=1 SHOPT_MULTIBYTE=1 SHOPT_STATS=1 SHOPT_BGX=1
+    SHOPT_AUDIT=1 SHOPT_KIA=1 SHOPT_HISTEXPAND=1 SHOPT_EDPREDICT=1 SHOPT_ESH=1
+    SHOPT_VSH=1 SHOPT_FIXEDARRAY=1 SHOPT_SUID_EXEC=1 SHOPT_BRACEPAT=1 SHOPT_ECHOPRINT=1)
+target_compile_options(ksh_build_options INTERFACE -Werror=implicit-function-declaration
+    -Werror=pointer-to-int-cast -Werror=int-to-pointer-cast)
+add_subdirectory(ast)
+add_subdirectory(cmd)
+add_subdirectory(dll)
+add_subdirectory(shell)
+configure_file(linux/cmd/sum/FEATURE/sum.in linux/cmd/sum/FEATURE/sum COPYONLY)

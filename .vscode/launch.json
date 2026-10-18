@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CDE desktop in Xephyr",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "exec ./cmake/run-xephyr.sh",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CDE: build and stage"
+        }
+    ]
+}

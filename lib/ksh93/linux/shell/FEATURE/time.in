@@ -1,0 +1,54 @@
+/* : : generated from upstream-ksh93/src/cmd/ksh93/features/time by iffe version 2022-01-09 : : */
+#ifndef _def_time_ksh93
+#define _def_time_ksh93	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _LIB_m	1	/* -lm is a library */
+#define _LIB_ast	1	/* upstream-ksh93/arch/linux.i386-64/lib/libast.a is a library */
+#define _LIB_util	1	/* -lutil is a library */
+#define _LIB_cmd	1	/* upstream-ksh93/arch/linux.i386-64/lib/libcmd.a is a library */
+#define _LIB_dll	1	/* upstream-ksh93/arch/linux.i386-64/lib/libdll.a is a library */
+#define _hdr_utime	1	/* #include <utime.h> ok */
+#define _hdr_sys_resource	1	/* #include <sys/resource.h> ok */
+#define _lib_getrusage	1	/* getrusage() in default lib(s) */
+#define _lib_gettimeofday	1	/* gettimeofday() in default lib(s) */
+#define _lib_setitimer	1	/* setitimer() in default lib(s) */
+#define _sys_time	1	/* #include <sys/time.h> ok */
+#define _mem_tv_usec_timeval	1	/* tv_usec is a member of struct timeval */
+#define _lib_2_timeofday	1	/* 2 arg gettimeofday() */
+#undef _def_time
+#include	<times.h>
+#include	<sys/time.h>
+#define _def_time	1
+#undef timeofday
+#if _lib_2_timeofday
+#define timeofday(p)	gettimeofday(p,(struct timezone*)0)
+#else
+#if _lib_1_timeofday
+#define timeofday(p)	gettimeofday(p)
+#endif
+#endif
+/* BSD timeradd and timersub macros */
+#if !defined(timeradd)
+#define	timeradd(tvp, uvp, vvp)						\
+do {								\
+	(vvp)->tv_sec = (tvp)->tv_sec + (uvp)->tv_sec;		\
+	(vvp)->tv_usec = (tvp)->tv_usec + (uvp)->tv_usec;	\
+	if ((vvp)->tv_usec >= 1000000) {			\
+		(vvp)->tv_sec++;				\
+		(vvp)->tv_usec -= 1000000;			\
+	}							\
+} while(0)
+#endif
+#if !defined(timersub)
+#define	timersub(tvp, uvp, vvp)						\
+do {								\
+	(vvp)->tv_sec = (tvp)->tv_sec - (uvp)->tv_sec;		\
+	(vvp)->tv_usec = (tvp)->tv_usec - (uvp)->tv_usec;	\
+	if ((vvp)->tv_usec < 0) {				\
+		(vvp)->tv_sec--;				\
+		(vvp)->tv_usec += 1000000;			\
+	}							\
+} while(0)
+#endif
+
+#endif

@@ -1,0 +1,29 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/time by iffe version 2022-01-09 : : */
+#ifndef _def_time_ast
+#define _def_time_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _lib_getrusage	1	/* getrusage() in default lib(s) */
+#define _lib_nanosleep	1	/* nanosleep() in default lib(s) */
+#define _lib_usleep	1	/* usleep() in default lib(s) */
+#define _hdr_time	1	/* #include <time.h> ok */
+#define _sys_time	1	/* #include <sys/time.h> ok */
+#define _sys_times	1	/* #include <sys/times.h> ok */
+#define _hdr_stddef	1	/* #include <stddef.h> ok */
+#define _hdr_stdlib	1	/* #include <stdlib.h> ok */
+#define _typ_clock_t	1	/* clock_t is a type */
+#define _typ_time_t	1	/* time_t is a type */
+#define _sys_resource	1	/* #include <sys/resource.h> ok */
+#include <sys/resource.h>
+
+#include <sys/time.h>
+
+#define _mem_tm_sec_tm	1	/* tm_sec is not a member of tm */
+#include <time.h>
+
+#include <sys/times.h>
+
+#if !defined(CLOCKS_PER_SEC) && defined(CLK_TCK)
+#define CLOCKS_PER_SEC	CLK_TCK
+#endif
+
+#endif

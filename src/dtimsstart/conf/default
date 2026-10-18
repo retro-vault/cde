@@ -1,0 +1,3 @@
+! Linux input-method default. Add site-specific XIM servers here.
+@DefaultIms: none
+none: No input method server

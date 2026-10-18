@@ -1,0 +1,25 @@
+/* : : generated from upstream-ksh93/src/cmd/ksh93/features/options by iffe version 2022-01-09 : : */
+#ifndef _def_options_ksh93
+#define _def_options_ksh93	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _LIB_m	1	/* -lm is a library */
+#define _LIB_ast	1	/* upstream-ksh93/arch/linux.i386-64/lib/libast.a is a library */
+#define _LIB_util	1	/* -lutil is a library */
+#define _LIB_cmd	1	/* upstream-ksh93/arch/linux.i386-64/lib/libcmd.a is a library */
+#define _LIB_dll	1	/* upstream-ksh93/arch/linux.i386-64/lib/libdll.a is a library */
+#define SHELLMAGIC	1
+#ifndef SHOPT_DEVFD
+#   define SHOPT_DEVFD	1
+#endif
+#ifndef SHOPT_SYSRC
+#   define SHOPT_SYSRC	1
+#endif
+#if !_PACKAGE_ast && ( (MB_LEN_MAX-1)<=0 || !defined(_lib_mbtowc) )
+#   undef SHOPT_MULTIBYTE
+#endif
+
+#ifndef SHOPT_GLOBCASEDET
+#   define SHOPT_GLOBCASEDET	1
+#endif
+#define NV_PID	(NV_INTEGER)	/* integer attribute(s) corresponding to sizeof(pid_t)==4 */
+#endif

@@ -1,0 +1,2 @@
+add_executable(resource_merge merge.c)
+target_link_libraries(resource_merge PRIVATE cde_build_options DtSvc)

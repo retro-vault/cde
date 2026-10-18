@@ -1,0 +1,16 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/fcntl.c by iffe version 2022-01-09 : : */
+#ifndef _def_fcntl_ast
+#define _def_fcntl_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#include <ast_fs.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+
+#define F_dupfd_cloexec	F_DUPFD_CLOEXEC
+#define O_BINARY		0
+#define O_cloexec		O_CLOEXEC
+#define O_TEMPORARY		0
+#define O_TEXT			0
+
+#include <ast_fs.h>
+#endif

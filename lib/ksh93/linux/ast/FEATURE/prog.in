@@ -1,0 +1,6 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/prog by iffe version 2022-01-09 : : */
+#ifndef _def_prog_ast
+#define _def_prog_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _PROC_PROG	"/proc/self/exe"
+#endif

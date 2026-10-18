@@ -1,0 +1,17 @@
+find_program(XVFB_RUN xvfb-run REQUIRED)
+add_executable(test_editor test_editor.c)
+target_link_libraries(test_editor PRIVATE cde_build_options DtWidget DtSvc tt)
+add_test(NAME DtWidget.editor_roundtrip
+    COMMAND ${XVFB_RUN} -a $<TARGET_FILE:test_editor>)
+set_tests_properties(DtWidget.editor_roundtrip PROPERTIES TIMEOUT 20)
+add_executable(test_motif test_motif.c)
+target_link_libraries(test_motif PRIVATE Motif::Xm X11::Xt X11::X11)
+add_test(NAME Dependencies.motif_widget COMMAND ${XVFB_RUN} -a $<TARGET_FILE:test_motif>)
+set_tests_properties(Dependencies.motif_widget PROPERTIES TIMEOUT 20)
+add_executable(test_mail_control test_mail_control.c)
+target_link_libraries(test_mail_control PRIVATE cde_build_options DtWidget DtSvc tt)
+add_test(NAME DtWidget.mail_without_environment
+    COMMAND ${XVFB_RUN} -a $<TARGET_FILE:test_mail_control>)
+set_tests_properties(DtWidget.mail_without_environment PROPERTIES TIMEOUT 20)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/home)
+set_tests_properties(DtWidget.editor_roundtrip Dependencies.motif_widget DtWidget.mail_without_environment PROPERTIES ENVIRONMENT "HOME=${CMAKE_CURRENT_BINARY_DIR}/home")

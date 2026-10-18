@@ -1,0 +1,165 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/float by iffe version 2022-01-09 : : */
+#ifndef _def_float_ast
+#define _def_float_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _hdr_float	1	/* #include <float.h> ok */
+#define _hdr_limits	1	/* #include <limits.h> ok */
+#define _hdr_math	1	/* #include <math.h> ok */
+#define _hdr_values	1	/* #include <values.h> ok */
+#define _LIB_m	1	/* -lm is a library */
+#define _lib_frexp	1	/* frexp() in default lib(s) */
+#define _lib_ldexp	1	/* ldexp() in default lib(s) */
+#define _lib_finite	1	/* finite() in default lib(s) */
+#define _lib_finitel	1	/* finitel() in default lib(s) */
+#define _lib_isinfl	1	/* isinfl() in default lib(s) */
+#define _lib_isnanl	1	/* isnanl() in default lib(s) */
+#define _lib_copysign	1	/* copysign() in default lib(s) */
+#define _lib_copysignl	1	/* copysignl() in default lib(s) */
+#define _lib_powf	1	/* powf() in default lib(s) */
+#define _lib_pow	1	/* pow() in default lib(s) */
+#define _lib_powl	1	/* powl() in default lib(s) */
+#define _lib_frexpl	1	/* frexpl present and works */
+#define _lib_ldexpl	1	/* ldexpl present and works */
+#define _hdr_stdlib	1	/* #include <stdlib.h> ok */
+#define _hdr_unistd	1	/* #include <unistd.h> ok */
+#define _npt_frexpl	1	/* frexpl() needs a prototype */
+#define _npt_ldexpl	1	/* ldexpl() needs a prototype */
+#define _lib_fpclassify	1	/* fpclassify present and works */
+#define _lib_isinf	1	/* isinf present and works */
+#define _lib_isnan	1	/* isnan present and works */
+#define _lib_signbit	1	/* signbit present and works */
+#include <ast_common.h>
+#include <float.h>
+#include <math.h>
+#ifndef FLT_DIG
+#define FLT_DIG 6
+#endif
+#ifndef FLT_MAX
+#define FLT_MAX 3.40282346638528859811704183484516925e+38F
+#endif
+#ifndef FLT_MAX_10_EXP
+#define FLT_MAX_10_EXP 38
+#endif
+#ifndef FLT_MAX_EXP
+#define FLT_MAX_EXP 128
+#endif
+#ifndef FLT_MIN
+#define FLT_MIN 1.17549435082228750796873653722224568e-38F
+#endif
+#ifndef FLT_MIN_10_EXP
+#define FLT_MIN_10_EXP (-37)
+#endif
+#ifndef FLT_MIN_EXP
+#define FLT_MIN_EXP (-125)
+#endif
+#ifndef DBL_DIG
+#define DBL_DIG 15
+#endif
+#ifndef DBL_MAX
+#define DBL_MAX ((double)1.79769313486231570814527423731704357e+308L)
+#endif
+#ifndef DBL_MAX_10_EXP
+#define DBL_MAX_10_EXP 308
+#endif
+#ifndef DBL_MAX_EXP
+#define DBL_MAX_EXP 1024
+#endif
+#ifndef DBL_MIN
+#define DBL_MIN ((double)2.22507385850720138309023271733240406e-308L)
+#endif
+#ifndef DBL_MIN_10_EXP
+#define DBL_MIN_10_EXP (-307)
+#endif
+#ifndef DBL_MIN_EXP
+#define DBL_MIN_EXP (-1021)
+#endif
+#ifndef LDBL_DIG
+#define LDBL_DIG 18
+#endif
+#ifndef LDBL_MAX
+#define LDBL_MAX 1.18973149535723176502126385303097021e+4932L
+#endif
+#ifndef LDBL_MAX_10_EXP
+#define LDBL_MAX_10_EXP 4932
+#endif
+#ifndef LDBL_MAX_EXP
+#define LDBL_MAX_EXP 16384
+#endif
+#ifndef LDBL_MIN
+#define LDBL_MIN 3.36210314311209350626267781732175260e-4932L
+#endif
+#ifndef LDBL_MIN_10_EXP
+#define LDBL_MIN_10_EXP (-4931)
+#endif
+#ifndef LDBL_MIN_EXP
+#define LDBL_MIN_EXP (-16381)
+#endif
+
+
+#define USHRT_DIG		4
+#define UINT_DIG		9
+#define ULONG_DIG		19
+#define UINTMAX_DIG		ULONG_DIG
+
+#define FLT_ULONG_MAX		18446744073709551615.0F
+#define FLT_ULLONG_MAX		FLT_ULONG_MAX
+#define FLT_UINTMAX_MAX		FLT_ULONG_MAX
+#define FLT_LONG_MAX		9223372036854775807.0F
+#define FLT_LLONG_MAX		FLT_LONG_MAX
+#define FLT_INTMAX_MAX		FLT_LONG_MAX
+#define FLT_LONG_MIN		(-9223372036854775808.0F)
+#define FLT_LLONG_MIN		FLT_LONG_MIN
+#define FLT_INTMAX_MIN		FLT_LONG_MIN
+
+#define DBL_ULONG_MAX		18446744073709551615.0
+#define DBL_ULLONG_MAX		DBL_ULONG_MAX
+#define DBL_UINTMAX_MAX		DBL_ULONG_MAX
+#define DBL_LONG_MAX		9223372036854775807.0
+#define DBL_LLONG_MAX		DBL_LONG_MAX
+#define DBL_INTMAX_MAX		DBL_LONG_MAX
+#define DBL_LONG_MIN		(-9223372036854775808.0)
+#define DBL_LLONG_MIN		DBL_LONG_MIN
+#define DBL_INTMAX_MIN		DBL_LONG_MIN
+
+#define LDBL_ULONG_MAX		18446744073709551615.0L
+#define LDBL_ULLONG_MAX		LDBL_ULONG_MAX
+#define LDBL_UINTMAX_MAX	LDBL_ULONG_MAX
+#define LDBL_LONG_MAX		9223372036854775807.0L
+#define LDBL_LLONG_MAX		LDBL_LONG_MAX
+#define LDBL_INTMAX_MAX		LDBL_LONG_MAX
+#define LDBL_LONG_MIN		(-9223372036854775808.0L)
+#define LDBL_LLONG_MIN		LDBL_LONG_MIN
+#define LDBL_INTMAX_MIN		LDBL_LONG_MIN
+
+#define FLTMAX_UINTMAX_MAX	LDBL_UINTMAX_MAX
+#define FLTMAX_INTMAX_MAX	LDBL_INTMAX_MAX
+#define FLTMAX_INTMAX_MIN	LDBL_INTMAX_MIN
+
+extern long double	frexpl(long double, int*);
+extern long double	ldexpl(long double, int);
+typedef union _ast_dbl_exp_u
+{
+	uint32_t		e[sizeof(double)/4];
+	double			f;
+} _ast_dbl_exp_t;
+
+#define _ast_dbl_exp_index	1
+#define _ast_dbl_exp_shift	20
+
+typedef union _fltmax_exp_u
+{
+	uint32_t		e[sizeof(_ast_fltmax_t)/4];
+	_ast_fltmax_t		f;
+} _ast_fltmax_exp_t;
+
+#define _ast_fltmax_exp_index	2
+#define _ast_fltmax_exp_shift	0
+
+#define _ast_flt_unsigned_max_t	unsigned long long
+#define _ast_flt_nan_init	0x00,0x00,0xc0,0x7f
+#define _ast_flt_inf_init	0x00,0x00,0x80,0x7f
+#define _ast_dbl_nan_init	0x00,0x00,0x00,0x00,0x00,0x00,0xf8,0x7f
+#define _ast_dbl_inf_init	0x00,0x00,0x00,0x00,0x00,0x00,0xf0,0x7f
+#define _ast_ldbl_nan_init	0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xc0,0xff,0x7f,0x00,0x00,0x00,0x00,0x00,0x00
+#define _ast_ldbl_inf_init	0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x80,0xff,0x7f,0x00,0x00,0x00,0x00,0x00,0x00
+#endif

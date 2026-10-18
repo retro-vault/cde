@@ -1,0 +1,5 @@
+add_subdirectory(pass1)
+add_subdirectory(canon1)
+add_subdirectory(pass2)
+configure_file(dthelptag.in dthelptag @ONLY)
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/dthelptag DESTINATION bin)

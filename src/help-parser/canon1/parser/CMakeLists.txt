@@ -1,0 +1,45 @@
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/context.h
+        ${CMAKE_CURRENT_BINARY_DIR}/delim.h ${CMAKE_CURRENT_BINARY_DIR}/case.c
+    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/context.dat ${CMAKE_CURRENT_BINARY_DIR}/context.dat
+    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/../helptag/delim.par ${CMAKE_CURRENT_BINARY_DIR}/delim.dat
+    COMMAND ${CMAKE_COMMAND} -DTOOL=$<TARGET_FILE:help_canon1_context> -DARGS=
+        -DWORK_DIR=${CMAKE_CURRENT_BINARY_DIR} -DLOG=${CMAKE_CURRENT_BINARY_DIR}/context.log
+        -P ${PROJECT_SOURCE_DIR}/cmake/RunHelpTool.cmake
+    DEPENDS help_canon1_context context.dat ../helptag/delim.par
+    VERBATIM)
+add_custom_target(help_canon1_parser_context DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/context.h
+    ${CMAKE_CURRENT_BINARY_DIR}/delim.h ${CMAKE_CURRENT_BINARY_DIR}/case.c)
+add_executable(dthelp_ctag1
+    parser.c
+    actutil.c
+    closent.c
+    code.c
+    cyclent.c
+    dcurelt.c
+    end.c
+    entity.c
+    error.c
+    getsign.c
+    input.c
+    level.c
+    lookent.c
+    minim.c
+    optstrg.c
+    param.c
+    parent.c
+    parutil.c
+    pi.c
+    scan.c
+    setpar.c
+    start.c
+    string.c
+    struct.c
+    text.c
+)
+add_dependencies(dthelp_ctag1 help_canon1_parser_context help_canon1_elements)
+target_include_directories(dthelp_ctag1 PRIVATE ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_BINARY_DIR}/../eltdef ${CMAKE_CURRENT_BINARY_DIR}/../build ${CMAKE_CURRENT_SOURCE_DIR}/../helptag ${CMAKE_CURRENT_SOURCE_DIR}/../util)
+target_link_libraries(dthelp_ctag1 PRIVATE help_canon1_application help_canon1_util DtSvc tt)
+set_target_properties(dthelp_ctag1 PROPERTIES INSTALL_RPATH "$ORIGIN/../../lib")
+install(TARGETS dthelp_ctag1 RUNTIME DESTINATION libexec/cde)
+target_include_directories(dthelp_ctag1 BEFORE PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../include/helptag ${CMAKE_CURRENT_SOURCE_DIR}/../../include/parser)

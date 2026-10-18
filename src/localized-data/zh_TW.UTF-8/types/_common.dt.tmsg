@@ -1,0 +1,4742 @@
+$ $XConsortium: _common.dt.tmsg /main/5 1996/06/25 17:45:27 drk $
+$set 1
+$ *
+$ *****************************************************************************
+$ * _common.dt.tmsg
+$ *
+$ * Translatable Strings for Action and DataType
+$ *
+$ * Copyright (c) 1993, 1994 Hewlett-Packard Company
+$ * Copyright (c) 1993, 1994 International Business Machines Corp.
+$ * Copyright (c) 1993, 1994 Sun Microsystems, Inc.
+$ * Copyright (c) 1993, 1994 Novell, Inc.
+$ *
+$ *****************************************************************************
+$ 
+$ *****************************************************************************
+$ *
+$ *  Format of this message file.
+$ *    $set n [comment] ... n must be 1.
+$ *    $ [comment]
+$ *    m message-text ... Message text may contain following spcial characters
+$ *                       and escape sequences.
+$ *                         \\                  backslash
+$ *                         \n                  newline
+$ *                         \t                  horizontal tab
+$ *                         \ (at end of line)  continue on same line
+$ *
+$ *****************************************************************************
+$ 
+$ **************************************************************************
+$ *  These are messages that are commonly used
+$ **************************************************************************
+$ ----------------------------------------------------------------------------
+$ Messages 1 - 7 must be one word. They cannot be separated by blank.
+$ ----------------------------------------------------------------------------
+$ 
+$ * ACTIONS of FILETYPE
+$ 
+1 開啟
+$ 
+2 列印
+$ 
+3 執行
+$ 
+4 (無)
+$ 
+5 建立
+$ 
+$ Message 6 is a common button label for many dialogs.
+$ 
+6 確定
+$ 
+$ Message 7 is used by many actions after all the output has been supplied
+$  to the user.  It tells the user how to get rid of the window which has
+$  the output in it.
+$ 
+$  Translate 'Select Close or Exit from the window menu to close this window' 
+$   only.
+$ 
+7 \\\\n*** 請從「視窗」功能表中選擇「關閉」或「結束」以關閉此視窗 ***
+$ 
+8 置於現行視窗
+$ 
+9 開啟新視區
+$ 
+$ Message 10:
+$         This Message is a header to every *.dt file.
+$         NOTE: make sure each new line begins with a "#".  This indicates
+$         that it is a comment.  Also, keep the \n\ at the end of each
+$         line.
+$   Don't translate /etc/dt/types.
+$ 
+10 #      此檔案可能會被覆蓋過去。  因此整個系統需做變更時，\n\
+#      請更改在類似的 /etc/dt/types 資料庫檔案中，\n\
+#      而不要更改在此檔案。
+$ 
+$ Message 11 and 12:
+$         These Messages are headers in every *.dt file used to break up
+$         the File into ACTIONS and DATATYPES.
+$         NOTE: make sure each line begins with a "#  ".  This indicates
+$         that it is a comment. 
+$ 
+11 # 資料屬性
+12 # 動作
+$ 
+$ Message 13:
+$    This is a title of a dialog invoked when an error occurs.  Many actions
+$    invoke an information dialog when something the action needs is 
+$    not present.
+$ 
+13 資訊
+$ 
+$ ----------------------------------------------------------------------------
+$ Do not translate message 14.
+$ This is not a messages, but a locale dependent value.
+$ ----------------------------------------------------------------------------
+$ * LANG variable for this message file.
+$ 
+14 zh_TW.eucTW
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 15 is another commonly used message.
+$ ----------------------------------------------------------------------------
+$ Message 15 - translate into 1 word with no blanks.
+$ 
+15 編輯
+$ 
+16 錯誤
+17 由定位物件到資料類型所調用的動作, \\\n\
+對該資料類型無法即刻應用。
+$ 
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  autoStart.dt
+$ **************************************************************************
+$ * DESCRIPTION:
+$ * The following are all the help strings defined for the actions used to
+$ * auto-start the CDE clients, when a request is sent to one of them, but
+$ * the client is not currently running.
+$ *
+$ ----------------------------------------------------------------------------
+$ Message 1001 - 1003
+$ Do not translate XXX in the messages "The XXX action ...".  It is a 
+$ defined Action name.  Use \\\ at the end of the line if the message 
+$ continues to the next line.
+$ ----------------------------------------------------------------------------
+1001 InvokeFILEMGR 動作啟動檔案\\\n\
+                        管理者 (dtfile 客戶程式)。
+1002 InvokeDTPAD 動作啟動桌上管理系統的\\\n\
+                        文字編輯器 (dtpad 客戶程式)。
+1003 InvokeMAILER 動作啟動桌上管理系統的\\\n\
+                        郵件程式 (dtmail 客戶程式)。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dt.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dt.dt types file defines all the Actions, Datatypes, and descriptions
+$ * of those Actions and Datatypes that are defined specifically for the
+$ * Common Desktop Environment (CDE). 
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2001 - 2003 refer to the DT (*.dt) datatype.
+$ 
+$ 2001 - Do not translate DT or '.dt' in the message.  DT is a 
+$        defined datatype name and it doesn't get translated and '.dt' 
+$        is the filename pattern which matches this datatype.  
+$ 
+2001 這是桌上管理系統資料庫檔案，具有動作 \\\n\
+                        和資料類型的定義。  其資料類型 \\\n\
+                        稱為 DT。  DT 檔案的附檔名為 '.dt'。
+$ 
+$ Messages 2002 - 2003 refer to the Reload Actions action which get used
+$    by the 'DT' datatype.
+$ 
+2002 重新載入動作
+$ 
+2003 「重新載入動作」會重新載入動作、資料類型\\\n\
+                        和前方面板定義的資料庫。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 2004 refers to the FP (*.fp) datatype.
+$ 
+$ 2004 - Do not translate FP or '.fp' in the message.  FP is a 
+$        defined datatype name and it doesn't get translated and '.fp' 
+$        is the filename pattern which matches this datatype.  
+$ 
+2004 這是桌上管理系統資料庫檔案，具有前方面板\\\n\
+                        配置的定義。其資料類型\\\n\
+                        名稱為 FP。FP 檔案的副檔名為 '.fp'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 2005 refers to the DTFILE_FILE (file which starts with a .!) 
+$  datatype.
+$ 
+$ 2005 - Do not translate 'DTFILE_FILE' in the message.  
+$        It is a defined datatype name and it doesn't get translated.  
+$ 
+2005 這是檔案管理者使用的隱藏檔案，用以保存某些\\\n\
+                        配置資訊。其資料類型\\\n\
+                        名稱為 DTFILE_FILE。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 2006 refers to the DTKSH_SCRIPT (*.ds) datatype.
+$ 
+$ 2006 - Do not translate 'DTKSH_SCRIPT' in the message. 
+$        It is a defined datatype name and it 
+$        doesn't get translated.  Also, don't translate the word 'dtksh'.  
+$ 
+2006 這是執行檔，具有 'dtksh' \\\n\
+                        命令集。其資料類型名稱為 DTKSH_SCRIPT。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 2007 refers to the DTKSH_CONV (*.dtsh) datatype.
+$ 
+$ 2007 - Do not translate 'DTKSH_CONV' in the message. 
+$        It is a defined datatype name and it doesn't get translated.  
+$        Also, don't translate the word 'dtksh'.  
+$ 
+$ 
+2007 這個檔案具有 'dtksh' 命令集可使用的便利功能。 \\\n\
+                        其資料類型名稱為 \\\n\
+                        DTKSH_CONV。
+$ ----------------------------------------------------------------------------
+$ Messages 2008 - 2009 refer to the Style Manager (Dtstyle) action
+$ 
+2008 外型式樣管理者
+$ 
+$ 2009 - do not translate '(Dtstyle)'
+$ 
+2009 「外型式樣管理者」(Dtstyle) 動作啟動\\\n\
+                        桌上管理系統的外型式樣管理者。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2010 - 2011 refer to the DtHelpManager action
+$ 
+$ 2010 - translate into 1 word with no blanks.
+$ 
+2010 DtHelpManager
+$ 
+$ 2011 - use the same word as Message 2010 to translate 'DtHelpManager'
+$ 
+2011 DtHelpManager 動作開啟頂層\\\n\
+                        輔助說明管理者視窗。
+$ ----------------------------------------------------------------------------
+$ Messages 2012 - 2013 refer to the OpenDtInto action
+$ 
+2012 桌上管理系統簡介
+$ 
+$ 2013 - use the same word as Message 2012 to translate 'OpenDtIntro'
+$ 
+2013 桌上管理系統簡介動作顯示的輔助說明容體，\\\n\
+                        包括有關桌上管理系統的簡單介紹\\\n\
+                        和基本技巧的說明。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2014 - 2015 refer to the FPHelp action
+$ 
+$ 2014 - translate into 1 word with no blanks.
+$ 
+2014 FPHelp
+$ 
+$ 2015 - use the same word as Message 2014 to translate 'FPHelp'
+$ 
+2015 FPHELP 動作圖像顯示前方面板\\\n\
+                        輔助說明容體。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2016 - 2017 refer to the LockDisplay action
+$ 
+$ 2016 - translate into 1 word with no blanks.
+$ 
+2016 LockDisplay
+$ 
+$ 2017 - use the same word as Message 2016 to translate 'LockDisplay'
+$ 
+2017 LockDisplay 動作鎖定工作站。\\\n\
+                        必須有使用者或根密碼\\\n\
+                        才可解除工作站的鎖定。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2018 - 2019 refer to the ExitSession action
+$ 
+$ 2018 - translate into 1 word with no blanks.
+$ 
+2018 ExitSession
+$ 
+$ 2019 - use the same word as Message 2018 to translate 'ExitSession'
+$ 
+2019 ExitSession 動作結束使用者的桌上管理系統\\\n\
+                        階段作業，並顯示登入螢幕。\\\n\
+                        如果要開始另一個階段作業，使用者必須再登入。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2020 - 2021 refer to the ReloadApps action.  Reload apps executes
+$   the action 'ReloadActions' then runs the clients dtappgather and 
+$   dthelpgen.
+$ 
+2020 重新載入應用程式
+$ 
+2021 「重新載入應用程式」動作重新載入動作、\\\n\
+                        資料類型和前方面板定義的\\\n\
+                        資料庫 。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2022 - 2023 refer to the Create Action (Dtcreate) action.  
+$ 
+2022 建立動作
+$ 
+$ 2023 - do not translate '(Dtcreate)'.
+$ 
+2023 「建立動作」 (Dtcreate) 執行建立動作應用程式。\\\n\
+                        使用建立動作以建立應用程式的\\\n\
+                        動作和資料類型定義。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2024 - 2025 refer to the Edit Dtwmrc (DtwmrcEdit) action.  
+$ 
+2024 編輯 Dtwmrc
+$ 
+$ 2025 - Don't translate '\$HOME/.dt/dtwmrc', 'EDITOR', or (DtwmrcEdit).
+$ 
+2025 「編輯 Dtwmrc」(DtwmrcEdit) 動作會在您的系統編輯器\\\n\
+			(EDITOR 環境變數指定的編輯器)\\\n\
+                        中開啟 $HOME/.dt/dtwmrc 檔案。\\\n\
+                        如果 $HOME/.dt/dtwmrc 不存在，此\\\n\
+                        動作會以複製 /usr/dt/config/<language>/sys.dtwmrc \\\n\
+                        的方式建立該檔案。當您儲存\\\n\
+                        檔案並離開編輯器後，必須\\\n\
+                        從工作空間功能表選擇重新啟動工作空間管理者，\\\n\
+                        以再次啟動它。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2026 - 2027 refer to the Mailer (Dtmail) action.  
+$ 
+$ 2026 - translate into 1 word with no blanks.
+$ 
+2026 郵件程式
+$ 
+$ 2027 - do not translate '(Dtmail)'.
+$ 
+2027 「郵件程式」(Dtmail) 動作執行桌上管理系統的\\\n\
+                        郵件程式應用程式。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2028 - 2029 refer to the 'Dtcalc' action.  
+$ 
+$ 2028 - translate into 1 word with no blanks.
+$ 
+2028 計算機
+$ 
+$ 2029 - Don't translate '(Dtcalc)'
+$ 
+2029 「計算機」(Dtcalc) 動作執行桌上管理系統的\\\n\
+                        計算機應用程式。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2030 - 2031 refer to the Terminal (Dtterm) action.  
+$ 
+$ 2030 - translate into 1 word with no blanks.
+$ 
+2030 終端機
+$ 
+$ 2031 - do not translate '(Dtterm)'.
+$ 
+2031 「終端機」(Dtterm) 動作執行桌上管理系統的終端機\\\n\
+                        模擬應用程式。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2032 - 2034 refer to the Icon Editor (Dticon) action.  
+$ 
+2032 圖像編輯器
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 2033. Do not remove the ':'.
+$   This message prompts the user for which file to edit when invoking
+$   the IconEdit action.
+$ ----------------------------------------------------------------------------
+2033 欲編輯的圖像檔案:
+$ 
+$ 2034 - do not translate '(Dticon)'.
+$ 
+2034 「圖像編輯器」(Dticon) 動作執行桌上管理系統的圖像\\\n\
+                        編輯器。  使用圖像編輯器以建立及編輯\\\n\
+                        位元映射和圖素映射的影像檔案。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2035 - 2037 refer to the '(None)' action.  
+$ 
+$ Messages 2035 - 2037 are in the dialog that gets posted when a user selects
+$  (i.e. runs) the (None) action.  Message 2034 is the text of the message,
+$  and Message 2036 is the title of the dialog.  NOTE: the '\\\\n' inserts
+$  a newline into the message. Put the newline where you feel appropriate.
+$ 
+2035 該類型的檔案無法動作。
+2036 無法動作。
+$ 
+$ 2037 - use the same word as Message 4 to translate '(None)'.
+$ 
+2037 (無) 動作是一特別的動作，用以\\\n\
+                        告知某一特殊的資料類型\\\n\
+                        無法動作。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2038 - 2040 refer to the Watch Errors (DttermErrorlog)action.  
+$ 
+2038 偵測錯誤
+$ 
+$ Message 2039. This is the title of the terminal window which displays the
+$   contents of the errorlog.  Blanks are ok.
+$ 
+2039 偵測錯誤
+$ 
+$ 2040 - use the same word as Message 2038 to translate 'WatchErrors'. Also,
+$   don't translate the string '\$HOME/.dt/errorlog'.
+$ 
+2040 「偵測錯誤」動作開啟一個終端機視窗，持續顯示錯誤\\\n\
+                        登錄檔 $HOME/.dt/errorlog 的內容。\\\n\
+                        如果將視窗縮小，\\\n\
+                        當它接收到錯誤時，\\\n\
+                        會自動回復成正常視窗。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2041 - 2042 refer to the Types and Actions (Dttypes) action(s).
+$ 
+2041 類型和動作
+$ 
+$ 2042 - do not translate dttypes or '(Dttypes)'.
+$ 
+2042 「類型和動作」(Dttypes) 執行 \\\n\
+                        'dttypes' 公用程式，可提供動作和資料\\\n\
+                        類型資料庫的問題排解資訊。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2043 - 2047 refer to the 'NoPrint' action.  
+$ 
+$ Message 2043
+$         This Message is a header which points out the default NoPrint
+$         Action.  Don't translate the word 'NoPrint'.
+$         NOTE: make sure the line begins with a "#  ".  This indicates
+$         that it is a comment. 
+2043 #  這是內定的 'NoPrint' 動作。
+$ 
+$ 2044 - translate into 1 word with no blanks.
+$ 
+2044 無列印
+$ 
+$ Messages 2045 - 2046 are in the dialog that gets posted when a user selects
+$  (i.e. runs) the NoPrint action.  Message 2045 is the text of the message,
+$  and Message 2046 is the title of the dialog.
+$ 
+2045 無法列印該檔案類型。
+2046 無法列印
+$ 
+$ 2047 - use the same word as Message 2044 to translate 'NoPrint'.
+$ 
+2047 NoPrint 動作出現錯誤對話框，\\\n\
+                       表示使用者想列印的檔案\\\n\
+                       為無定義列印動作的\\\n\
+                       資料類型。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 2048
+$         This Message is a header which points out the default Open
+$         Action.  Translate the word 'Open' to what message number 1 is.
+$         NOTE: make sure the line begins with a "#  ".  This indicates
+$         that it is a comment. 
+2048 #  這是內定的開啟動作。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 2049 - 2050 refer to the 'RestorePanel' action.
+$ 
+2049 回復前方面板
+$ 
+2050 「回復前方面板」動作回復\\\n\
+                        前方面板成內定狀態。
+$ 
+$ Messages 2051 - 2052 refer to the Save Session action. 2051 is the
+$   action definition's LABEL and 2052 is the action's DESCRIPTION.
+$ 
+$ "NEW-"
+2051 Save Session
+$ 
+$ "NEW-"
+2052 The Save Session action causes the currently \\\n\
+                                running session to be saved.
+
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  datatypes.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The datatypes.dt types file defines Datatypes and descriptions
+$ * of those and Datatypes that are 'psuedo standards' in the computer
+$ * world.  (i.e. postcript, bitmap, pixmap, etc.)
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3001 is the description of the BM (BitMap) datatype. 
+$ 3001 - Do not translate BM, '.xbm',  or '.bm' in the message.  BM is a 
+$        defined datatype name and it doesn't get translated and '.bm' 
+$        and '.xbm' are the filename patterns which match this datatype.  
+$ 
+3001 該檔案的資料為 X11 位元映射\\\n\
+                        格式。其資料類型名稱為 BM。 BM 檔案\\\n\
+                        的副檔名為 '.bm' 或 '.xbm'。
+$ ----------------------------------------------------------------------------
+$ Message 3002 is the description of the PM (PixMap) datatype. 
+$ 3002 - Do not translate PM, '.pm', '.xpm' or "! XPM2" in the message.  
+$        PM is a defined datatype name and it doesn't get translated 
+$        and '.pm', '.xpm', and "! XPM2" are the filename and CONTENT patterns
+$        used to match this datatype. 
+$ 
+3002 這是具有多種色彩影像的圖素映射檔案。\\\n\
+                        其資料類型名稱為 PM。 PM 檔案\\\n\
+                        的副檔名為 '.pm' 或 '.xpm'，或在內容中有 \\\n\
+                        "! XPM2" 字元。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3003 is the description of the PCL (Printer Control Language) 
+$  datatype. 
+$ 3003 - Do not translate PCL, or '.pcl' in the message.  
+$        PCL is a defined datatype name and it doesn't get translated 
+$        and '.pcl' is the filename patterns used to match this datatype. 
+$ 
+3003 該檔案的資料格式為\\\n\
+                        印表機控制語言 (PCL)。其資料類型\\\n\
+                        名稱為 PCL. PCL 檔案的副檔名為 '.pcl'。
+$ 
+$ Message 3004 is the description of the PCL (Printer Control Language) 
+$  'Open' action.
+$ 3004 - Do not translate PCL in the message.  
+$ 
+3004 您的系統無法查看 PCL 檔案。\\\n\
+                        若要開啟這個檔案則會出現\\\n\
+                        錯誤對話框。
+$ 
+$ 3005 - This message is used by the PCL datatype. It puts out this error
+$   message when a user tries to "Open" a PCL file.
+$ 
+3005 無法開啟 - 沒有 PCL 察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3006 is the description of the PS (PostScript) datatype.
+$ 3006 - Do not translate PS, '.ps', '.PS' or "%!" in the message.  
+$        PS is a defined datatype name and it doesn't get translated 
+$        and '.ps', '.PS', and "%!" are the filename and CONTENT patterns
+$        used to match this datatype. 
+$ 
+3006 該檔案為 postscript 資料。其資料類型\\\n\
+                        名稱為 PS。PS 檔案的副檔名為 '.ps' \\\n\
+                        或 '.PS'，或含有 "%!" 字元。
+$ 
+$ Message 3007 is obsolete.
+$ Message 3007 is the description of the PS (PostScript) 'Open' action.
+$ 
+3007 您的系統無法查看 postscript 檔案。\\\n\
+                        若要開啟這個檔案則會出現\\\n\
+                        錯誤對話框。
+$ 
+$ 3008 - This message is used by the Postscript datatype. It puts out an error
+$   message when a user tries to "Open" a postscript file.
+$ 
+3008 無法開啟 - 沒有 Postscript 察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3009 is the description of the AUDIO datatype.
+$ 3009 - Do not translate AUDIO, '.snd', '.wav', '.au',  or ".snd" in the
+$        message.  AUDIO is a defined datatype name and it doesn't get 
+$        translated and '.snd', '.wav', '.au', '.l16', '.lo8', '.al',
+$        '.u' and '.snd' are the filename
+$        and CONTENT patterns used to match this datatype. 
+$ 
+3009 這個檔案為聲音資料。  其資料類型\\\n\
+                        稱為 AUDIO。  AUDIO 檔案的附檔名\\\n\
+                        為 '.snd'、'.wav' 或 '.au'，或含有\\\n\
+                        ".snd" 字元。
+$ 
+$ Message 3010 is the description of the AUDIO 'Open' action.
+$ 
+3010 該動作會播放一個聲音檔案。
+$ 
+$ Message 3011 is the description of the AUDIO 'Play' action.
+$ 
+3011 該動作會播放一個聲音檔案。
+$ 
+$ 3012 - translate into 1 word with no blanks.  This is the AUDIO 'Play' action.
+$ 
+3012 播放
+$ 
+$ 3013 - This message is used by the AUDIO datatype. It is the error
+$   message when a user tries to "Open" or "Play" an AUDIO file.
+$ 
+3013 無法開啟或播放 - 沒有音樂播放程式。
+$ 
+$ AUDIO Messages continued below starting with Message 3031
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3014 is the description of the TIFF datatype.
+$ 3014 - Do not translate TIFF, '.TIFF', '.TIF', '.tiff',  or '.tif' in the
+$        message.  TIFF is a defined datatype name and it doesn't get
+$        translated and '.TIFF', '.TIF', '.tiff', and '.tif' are the filename
+$        patterns used to match this datatype.
+$ 
+3014 該檔案為 TIFF 格式的圖形影像。\\\n\
+                        其資料類型名稱為 TIFF。 TIFF 檔案的\\\n\
+                        副檔名為 '.TIFF'、'.TIF'、'.tiff' 或 '.tif'。
+$ 
+$ Message 3015 is obsolete.
+$ Message 3015 is the description of the TIFF 'Open' action.
+$ 
+3015 您的系統沒有提供 TIFF 察看器。\\\n\
+                        若要開啟這個檔案則會出現\\\n\
+                        錯誤對話框。
+$ 
+$ 3016 - This message is used by the TIFF datatype. It is the error
+$   message when a user tries to "Open" a TIFF file.
+$ 
+3016 無法開啟 - 沒有 TIFF 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3017 is the description of the JPEG datatype.
+$ 3017 - Do not translate JPEG, '.JPEG', '.jpg', '.jpeg',  or '.JPG' in the
+$        message.  JPEG is a defined datatype name and it doesn't get
+$        translated and '.JPEG', '.jpg', '.jpeg', and '.JPG' are the filename
+$        patterns used to match this datatype.
+$ 
+3017 該檔案為 JPEG 互換檔案格式的圖形影像。\\\n\
+                        其資料類型名稱為 \\\n\
+                        JPEG。 JPEG 檔案的副檔名為 '.JPEG'、\\\n\
+                        '.jpg'、'.jpeg' 或 '.JPG'。
+$ 
+$ Message 3018 is obsolete.
+$ Message 3018 is the description of the JPEG 'Open' action.
+$ 
+3018 您的系統沒有提供 JPEG 察看器。\\\n\
+                        做要開啟這個檔案則會出現\\\n\
+                        錯誤對話框。
+$ 
+$ 3019 - This message is used by the JPEG datatype. It is the error
+$   message when a user tries to "Open" a JPEG file.
+$ 
+3019 無法開啟 - 沒有 JPEG 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3020 is the description of the MPEG datatype.
+$ 3020 - Do not translate MPEG, '.MPEG', '.Mpg', '.Mpeg',  or '.MPG' in the
+$        message.  MPEG is a defined datatype name and it doesn't get
+$        translated and '.MPEG', '.mpg', '.mpeg', and '.MPG' are the filename
+$        patterns used to match this datatype.
+$ 
+3020 該檔案含 MPEG 互換檔案格式的圖形影像電影。\\\n\
+                        其資料類型名稱為 \\\n\
+                        MPEG。 MPEG 檔案的副檔名為 \\\n\
+                        '.MPEG'、'.mpg'、'.mpeg' 或 '.MPG'。
+$ 
+$ Message 3021 is the description of the MPEG 'Open' action.
+$ 
+3021 您的系統沒有提供 MPEG 察看器。\\\n\
+                        若要開啟這個檔案則會出現\\\n\
+                        錯誤對話框。
+ 
+$ 3022 - This message is used by the MPEG datatype. It is the error
+$   message when a user tries to "Open" a MPEG file.
+$ 
+3022 無法開啟 - 沒有 MPEG 播放程式。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3023 is the description of the GIF datatype.
+$ 3023 - Do not translate GIF, '.GIF', '.gif', "GIF87a",  or "GIF89a" in the
+$        message.  GIF is a defined datatype name and it doesn't get
+$        translated and '.GIF', '.gif', "GIF87a", and "GIF89a" are the filename
+$        or CONTENT patterns used to match this datatype.
+$ 
+3023 該檔案為 GIF 格式的圖形影像。\\\n\
+                        其資料類型名稱為 GIF。 GIF 檔案的\\\n\
+                        副檔名為 .gif 或 .GIF 或含有 \\\n\
+                        "GIF87a" 或 "GIF89a" 字元。
+$ 
+$ Message 3024 is obsolete.
+$ Message 3024 is the description of the GIF 'Open' action.
+$ 
+3024 您的系統沒有提供 GIF 察看器。\\\n\
+                        若要開啟這個檔案則會出現\\\n\
+                        錯誤對話框。
+$ 
+$ 3025 - This message is used by the GIF datatype. It is the error
+$   message when a user tries to "Open" a GIF file.
+$ 
+3025 無法開啟 - 沒有 GIF 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3026 is the description of the README datatype.
+$ 3026 - Do not translate README, READ, or ME in the
+$        message.  README is a defined datatype name and it doesn't get
+$        translated and READ and ME are the parts of the filename
+$        pattern used to match this datatype.
+$ 
+3026 此檔案為有關目前檔案夾內檔案 \\\n\
+                        資訊的文字檔。  其資料類型\\\n\
+                        稱為 README。  README 檔案\\\n\
+                        的開頭為 READ、附檔名為 ME，\\\n\
+                        中間也許有也許沒有字元，\\\n\
+                        大小寫不拘。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3027 is the description of the HTML datatype.
+$ 3027 - Do not translate HTML, "<HTML>", "<html>", or '.html' in the
+$        message.  HTML is a defined datatype name and it doesn't get
+$        translated  '.html', "<HTML>", or "<html>" are used as filename 
+$        and CONTENT patterns which match this data type.
+$ 
+3027 該檔案為文字檔，含 World Wide Web 的 \\\n\
+                        Hyper-Text Markup 語言。其資料\\\n\
+                        類型名稱為 HTML。 HTML 檔案的副檔名\\\n\
+                        為 '.html'，或含 "<HTML>" \\\n\
+                        或 "<html>" 字元。 
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3028 is the description of the RICHTEXT datatype.
+$ 3028 - Do not translate RICHTEXT, or '.rt' in the
+$        message.  RICHTEXT is a defined datatype name and it doesn't get
+$        translated  '.rt' is used as filename pattern which matches 
+$        this data type.
+$ 
+3028 此檔案為文字檔，含多種字型\\\n\
+                        定義及純文字。  其資料\\\n\
+                        類型稱為 RICHTEXT。  RICHTEXT 檔案的附檔名\\\n\
+                        為 '.rt'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3029 is the description of the MSDOS_EXE datatype.
+$ 3029 - Do not translate MSDOS_EXE, '.exe', or '.EXE' in the
+$        message.  MSDOS_EXE is a defined datatype name and it doesn't get
+$        translated and '.exe' and '.EXE' are the parts of the filename
+$        pattern used to match this datatype.
+$ 
+3029 該檔案為執行檔，可在 MSDOS 相容\\\n\
+                        的個人電腦上執行。 其資料\\\n\
+                        類型名稱為 MSDOS_EXE。 MSDOS_EXE 檔案\\\n\
+                        的副檔名為 '.exe' 或 '.EXE'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3030 is the description of the UIL datatype.
+$ 3030 - Do not translate UIL, '.uil', or '.UIL' in the
+$        message.  UIL is a defined datatype name and it doesn't get
+$        translated and '.uil' and '.UIL' are the parts of the filename
+$        pattern used to match this datatype.
+$ 
+3030 這是一個文字檔，內含 UIL 解譯器可\\\n\
+                        用來建立一個 Motif 使用者介面的原始\\\n\
+                        程式碼。 UIL 檔案的副檔名為 '.uil' 或 \\\n\
+                        '.UIL'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3031 is the description of the 'Audio Editor' action.
+$ 
+3031 該動作會啟動聲訊編輯器。
+$ 
+$ 3032 - This is the 'Audio Editor' action label.
+$ 
+3032 聲訊編輯器
+$ 
+$ 3033 - This message is used by the AUDIO datatype. It is the error
+$   message when a user tries to "Edit" an AUDIO file.
+$ 
+3033 無法 '編輯'  - 没有聲訊編輯器可用。
+$ 
+$ Message 3034 is the description of the 'Audio' action.
+$ 
+3034 該動作會啟動聲訊控制面板。
+$ 
+$ 3035 - This is the 'Audio' action label.
+$ 
+3035 聲訊
+$ 
+$ 3036 - This message is used by the 'Audio' action. It is the error
+$   message when a user tries to start the audio control panel.
+$ 
+3036 您的系統没有提供聲訊控制面板。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3037 is the description of the 'ImageView' action.
+$ 
+3037 該動作會啟動影像察看程式。
+$ 
+$ 3038 - This is the 'ImageView' action label.
+$ 
+3038 影像察看
+$ 
+$ 3039 - This message is used by ImageView 'Audio' action. It is the error
+$   message when a user tries to start the image viewer.
+$ 
+3039 您的系統没有提供影像察看程式。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3040 is the description of the EPS (Encapsulated PostScript) datatype.
+$ 3040 - Do not translate 'PS', 'EPS' or'.eps' in the message.
+$ 
+3040 該檔案內含以 Encapsulated PS 格式儲存\\\n\
+			的混合文字和圖形。 其資料類型名稱為 EPS。\\\n\
+			EPS 檔案的副檔名為 '.eps'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3041 is the description of the IMG datatype.
+$ 3041 - Do not translate 'IMG', '.img', '.IMG' or '.Img' in the message.
+$ 
+3041 該檔案內含以 IMG 格式儲存的圖形\\\n\
+			影像。 其資料類型名稱為 IMG。 IMG 檔案\\\n\
+			的副檔名為 '.img'、 '.IMG' 或 '.Img'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3042 is the description of the PCX datatype.
+$ 3042 - Do not translate 'PCX', '.pcx', '.PCX' or '.Pcx' in the message.
+$ 
+3042 該檔案內含以 PCX 格式儲存的圖形\\\n\
+			影像。 其資料類型名稱為 PCX。 PCX 檔案\\\n\
+			的副檔名為 '.pcx'、 '.PCX' 或 '.Pcx'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3043 is the description of the BMP datatype.
+$ 3043 - Do not translate 'BMP', '.bmp', '.BMP' or '.Bmp' in the message.
+$ 
+3043 該檔案內含以 BMP 格式儲存的\\\n\
+			圖形影像。 其資料類型名稱為 BMP。 BMP 檔\\\n\
+			案的副檔名為 '.bmp'、 '.BMP' 或 '.Bmp'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 3044 is the description of the BMF datatype.
+$ 3044 - Do not translate 'BMF' or '.bmf' in the message.
+$ 
+3044 該檔案內含以 Starbase 格式儲存\\\n\
+			的圖形影像。 其資料類型名稱為 BMF。\\\n\
+			BMF 檔案的副檔名為 '.bmf'。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtfile.dt
+$ **************************************************************************
+$ * DESCRIPTION
+$ * The dtfile.dt types file defines Datatypes, Actions, and descriptions
+$ * of those Actions and Datatypes that are commonly used within in the 
+$ * File Manager (i.e. folder definitions, file system datatypes, etc.)
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 4001 and 4002:
+$         These Messages are headers used to break up the dtfile.dt file
+$         into ACTIONS and DATATYPES.
+$         NOTE: make sure each line begins with a "#  ".  This indicates
+$         that it is a comment.
+$ 
+4001 # 資料屬性 - 主要為檔案管理者所用
+4002 # 檔案夾
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4003 is the description of the TRASH_FOLDER datatype.
+$ 
+4003 該檔案夾為垃圾桶暫放區。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4004 is the description of the PARENT_FOLDER datatype.
+$ 4004 - Do not translate PARENT_FOLDER in the message. PARENT_FOLDER is a 
+$        defined datatype name that doesn't get translated.
+$ 
+4004 '..' 圖像代表現行檔案夾的母檔案夾。\\\n\
+                        開啟它可從檔案夾樹往上\\\n\
+                        移一層。其資料類型名稱為 \\\n\
+                        PARENT_FOLDER。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4005 is the description of the CURRENT_FOLDER datatype.
+$ 4005 - Do not translate CURRENT_FOLDER in the message. CURRENT_FOLDER 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4005 '.' 圖像代表現行的檔案夾。\\\n\
+                        其資料類型名稱為 CURRENT_FOLDER。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4006 is the description of the DOT_FOLDER datatype.
+$ 4006 - Do not translate DOT_FOLDER in the message. DOT_FOLDER 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4006 該檔案夾的資料類型名稱為 DOT_FOLDER。\\\n\
+                        DOT_FOLDER 檔案夾名稱開頭為\\\n\
+                        一點 (.)。 DOT_FOLDER 通常是隱藏的。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4007 is the description of the FOLDER_LOCK datatype.
+$ 4007 - Do not translate FOLDER_LOCK in the message. FOLDER_LOCK 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4007 您沒有該檔案夾的寫入許可權。\\\n\
+                        您無法增加或清除檔案。\\\n\
+                        其資料類型名稱為 FOLDER_LOCK。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4008 is the description of the FOLDER datatype.
+$ 4008 - Do not translate FOLDER in the message. FOLDER 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4008 這是檔案夾。  檔案夾為儲存\\\n\
+                        檔案或其他檔案夾的地方。 \\\n\
+                        其資料類型名稱為 FOLDER。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4009 is the description of the RECURSIVE-LINK datatype.
+$ 4009 - Do not translate RECURSIVE-LINK in the message. RECURSIVE-LINK 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4009 該圖像代表指向自己的象徵性連結，\\\n\
+                        可能是檔案夾或透過一連串的\\\n\
+                        中間象徵性連結。  其檔案類型稱為\\\n\
+                        RECURSIVE_LINK。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4010 is the description of the BROKEN_LINK datatype.
+$ 4010 - Do not translate BROKEN_LINK in the message. BROKEN_LINK 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4010 該圖像代表指向不存在檔案的象徵性\\\n\
+                        連結。其資料類型名稱為 \\\n\
+                        BROKEN_LINK。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4011 is the description of the DOT_FILE datatype.
+$ 4011 - Do not translate DOT_FILE in the message. DOT_FILE 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4011 該檔案的資料類型名稱為 DOT_FILE。\\\n\
+                        DOT_FILE 檔案名稱開頭為\\\n\
+                        一點 (.)。 DOT_FILE 通常是隱藏的。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4012 is the description of the EXECUTABLE datatype.
+$ 4012 - Do not translate EXECUTABLE in the message. EXECUTABLE 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4012 該檔案為可執行的 shell 命令集或\\\n\
+                        編譯過的程式。其資料類型\\\n\
+                        名稱為 EXECUTABLE。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4013 is the description of the UNKNOWN datatype.
+$ 4013 - Do not translate UNKNOWN in the message. UNKNOWN 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4013 該檔案不符合任何資料類型，\\\n\
+                         因此指定其資料類型名稱為 UNKNOWN。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4014 is the description of the DATA datatype.
+$ 4014 - Do not translate DATA in the message. DATA 
+$        is a defined datatype name that doesn't get translated.
+$ 
+4014 該檔案不符合任何資料類型，\\\n\
+                        因此指定其資料類型名稱為 DATA。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4015:
+$         This Message is a header used to break up the dtfile.dt file
+$         into its ACTIONS portion.
+$         NOTE: make sure each line begins with a "#  ".  This indicates
+$         that it is a comment.
+$ 
+4015 #  一般桌上管理系統環境檔案管理者提供的動作。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 4016 - 4017 refer to the File Manager Home 'DtfileHome' action.
+$ 
+4016 檔案管理者 - 起始目錄
+$ 
+$ 4017 - do not translate (DtfileHome).
+$ 
+4017 「檔案管理者 - 起始目錄」(DtfileHome) 動作開啟\\\n\
+                        檔案管理者以查看使用者的起始檔案夾。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 4018 - 4020 refer to the File Manager (Dtfile) action.
+$ 
+4018 檔案管理者
+$ 
+$ Message 4019 - Requests which folder to open when no folder is
+$      is provided to the 'Dtfile' action.  Do not remove the ':'.
+$ 
+4019 欲開啟的目錄:
+$ 
+$ 4020 - do not translate '(Dtfile)'.
+$ 
+4020 「檔案管理者」(Dtfile) 動作開啟檔案管理者\\\n\
+                        以查看指定的檔案夾。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 4021 - 4023 refer to the Application Manager (Dtappmgr) action.
+$ 
+4021 應用程式管理者
+$ 
+$ 
+$ Message 4022 - The title of the Application Manager.
+$ 
+4022 應用程式管理者
+$ 
+$ 4023 - do not translate '(Dtappmgr)'.
+$ 
+4023 「應用程式管理者」(Dtappmgr) 動作開啟\\\n\
+                        檔案管理者以查看應用程式管理者。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 4024 - 4026 refer to the 'TrashFile' action.
+$ 
+$ 4024 - translate into 1 word with no blanks.
+$ 
+4024 垃圾桶
+$ 
+$ Message 4025 - Requests which file to trash when no file/folder is
+$      is provided to the 'TrashFile' action.  Do not remove the ':'.
+$ 
+4025 欲丟入垃圾桶的檔案:
+$ 
+$ 4026 - use the same word as Message 4024 to translate 'TrashFile'.
+$ 
+4026 「垃圾桶」動作將檔案放入\\\n\
+                        桌上管理系統的檔案垃圾桶。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 4027 - 4028 refer to the Trash Can (Dttrash) action.
+$ 
+4027 檔案垃圾桶
+$ 
+$ 4028 - do not translate (Dttrash).
+$ 
+4028 連按兩下動作圖像時，「檔案垃圾桶」(Dttrash) 動作會\\\n\
+                        開啟桌上管理系統的垃圾桶視窗。\\\n\
+                        將檔案拖曳定位到該圖像後，檔案\\\n\
+                        即被搬移到垃圾桶。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 4029 refers to the 'Open New View' action.
+$ 
+4029 「開啟新視區」動作顯示檔案管理者，\\\n\
+                        以便在新檔案管理者視窗查看\\\n\
+                        指定的檔案夾。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 4030 - 4031 refer to the 'PrintFolderList' action.
+$ 
+$ 4030 - translate into 1 word with no blanks.
+$ 
+4030 PrintFolderList
+$ 
+$ 
+$ 4031 - use the same word as Message 4030 to translate 'PrintFolderList'.
+$ 
+4031 PrintFolderList 動作將檔案夾的內容列印\\\n\
+                        到內定的印表機上。
+$ 
+$ Messages 4032 through 4041 are new messages since the CDE/Sample.
+$  Messges 4032 and 4033 are
+$  for a new action (PutOnWorkspace).  This an action used by other clients
+$  which tells the File Manager to put an object on the desktop.
+$ 
+$ 4032 is the Label of the action
+$ 
+4032 放入工作空間
+$ 
+$ 4033 is the Description of what that action does.
+$   Don't translate 'PutOnWorkspace -workspace wsX'
+$ 
+4033 放入工作空間 (PutOnWorkspace) 允許\\\n\
+			一般桌上管理系統環境配合應用程式\\\n\
+			執行動作，放置一個物件於桌上管理系統。\\\n\
+			該動作的格式為: \\\n\
+			  'PutOnWorkspace -workspace wsX <path/filename>' \\\n\
+		        X 是以 0 開始的工作空間數目。
+$ 
+$  Messges 4034 and 4035 are
+$  for a new action (FILESYSTEM_MOVE).  This an action used by other clients
+$  to tell the file Manager to move a file.
+$ 
+$ 4034 is the Label of the action
+$ 
+4034 移動到一個檔案夾
+$ 
+$ 4035 is the Description of what that action does.
+$   Don't translate FILESYSTEM_MOVE
+$ 
+4035 FILESYSTEM_MOVE 動作允許\\\n\
+ 	         	一般桌上管理系統環境配合應用程式\\\n\
+			執行動作, 讓檔案管理者執行檔案的搬移。 \\\n\
+			該動作的格式為: \\\n\
+         		  'FILESYSTEM_MOVE <folder_name_to> <files>' \\\n\
+                	files 是檔案完整的路徑名稱列示, 以空格隔開。
+$ 
+$  Messges 4036 and 4037 are
+$  for a new action (FILESYSTEM_COPY).  This an action used by other clients
+$  to tell the file Manager to copy a file.
+$ 
+$ 4036 is the Label of the action
+$ 
+4036 複製到一個檔案夾
+$ 
+$ 4037 is the Description of what that action does.
+$   Don't translate FILESYSTEM_COPY
+$ 
+4037 FILESYSTEM_COPY 動作允許\\\n\
+			一般桌上管理系統環境配合應用程式\\\n\
+			執行動作讓檔案管理者執行檔案的複製。 \\\n\
+			該動作的格式為: \\\n\
+			  'FILESYSTEM_COPY <folder_name_to> <files>' \\\n\
+                        files 是檔案完整的路徑名稱列示, 以空格隔開。
+$ 
+$  Messges 4038 and 4039 are
+$  for a new action (FILESYSTEM_LINK).  This an action used by other clients
+$  to tell the file Manager to link a file.
+$ 
+$ 4038 is the Label of the action
+$ 
+4038 連結到一個檔案夾
+$ 
+$ 4039 is the Description of what that action does.
+$   Don't translate FILESYSTEM_LINK
+$ 
+4039 FILESYSTEM_LINK 動作允許\\\n\
+                       一般桌上管理系統環境配合應用程式\\\n\
+		       執行動作讓檔案管理者執行檔案的連結。 \\\n\
+		       該動作的格式為: \\\n\
+			  'FILESYSTEM_LINK <folder_name_to> <files>' \\\n\
+                       files 是檔案完整的路徑名稱列示, 以空格隔開。
+$ 
+$  Messges 4040 and 4041 are
+$  for a new action DtEmptyTrash.  This an action used by other clients
+$  to tell the file Manager to empty the trash can.
+$ 
+$ 4040 is the Label of the action
+$ 
+4040 清空垃圾桶
+$ 
+$ 4041 is the Description of what that action does.
+$  Don't translate DtEmptyTrash
+$ 
+4041 清空垃圾桶 (DtEmptyTrash) 動作\\\n\
+			清空垃圾桶。 一旦清空要除去的物件\\n\
+			就不能再回復了。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtpad.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dtpad.dt types file defines Datatypes, Actions, and descriptions
+$ * of those Actions and Datatypes that are commonly used within in the 
+$ * Text Editor (dtpad). 
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 5001 refers to the TEXTFILE (*.txt) datatype.
+$ 
+$ 5001 - Do not translate TEXTFILE or '.txt' in the message.  TEXTFILE is a
+$        defined datatype name and it doesn't get translated and '.txt'
+$        is the filename pattern which matches this datatype.
+$ 
+5001 該檔案為純文字資料。\\\n\
+                        其資料類型名稱為 TEXTFILE。 TEXTFILE 的副檔名\\\n\
+                        必須是 '.txt'。
+$ 
+$ Messages 5002 - 5006 are comments.  NOTE: make sure each new line 
+$                begins with a "#".  This indicates that it is a comment.  
+$                Also, keep the \n\ at the end of each line where used.
+$ 
+5002 # 列印動作
+5003 # 編輯動作
+5004 # 下列動作的啟動時間較文字編輯器動作快。
+$ 
+$ Message 5005 - is a header in dtpad.dt.  It is actually a comment
+$                but it explains how the print action for dtpad works so it 
+$                should localized.  Don't translate PRINT_DTPAD and translate
+$                "Print" as it is translated in message 2.  Don't translate
+$                'dtpad'. Make sure each line ends with a \n\. 
+$ 
+5005 # PRINT_DTPAD 動作模擬內定列印動作，\n\
+# 除此之外, 它會清除正在列印的暫存檔。 該動作\n\
+# 為客戶程式 'dtpad' 所使用。
+$ 
+$ Message 5006 - is a header in dtpad.dt.  It is actually a warning comment
+$                that explains how the follow DATA_CRITERIA rule is used
+$                and what the consequences are if it is changed (dtmail is
+$                effected.  Don't translate DATA_CRITERIA, dtmail, TEXTFILE, and
+$                DATA_ATTRIBUTE.  Keep the WARNING in all capitals.
+$                Make sure each line ends with a \n\ except the last. 
+$ 
+5006 #  警告  警告  警告 \n\
+#\n\
+# dtmail 使用下列的 DATA_CRITERIA 規則來辨識\n\
+# 系統的 TEXTFILE DATA_ATTRIBUTE。 如果您刪除\n\
+# 或修改此規則，dtmail 可能無法正確顯示文字\n\
+# 訊息。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 5007 - 5008 refer to the Text Editor (Dtpad) action.
+$ 
+5007 文字編輯器
+$ 
+$ 5008 - do not translate '(Dtpad)'.
+$ 
+5008 「文字編輯器」(Dtpad) 動作在桌上管理系統文字編輯器視窗\\\n\
+                        開啟指定的檔案。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 5009 - 5010 refer to the Text Editor Quick (DtpadQ) action.
+$ 
+5009 快速文字編輯器
+$ 
+$ 5010 - do not translate '(DtpadQ)'.
+$ 
+5010 「快速文字編輯器」(DtpadQ) 動作在桌上管理系統文字編輯器\\\n\
+                        開啟指定的檔案。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  develop.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The develop.dt types file defines Actions, Datatypes, and descriptions
+$ * of those Actions and Datatypes that are used by developers.
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6001 is the description of the CORE (core) datatype.
+$ 6001 - Do not translate CORE in the message.  CORE is a
+$        defined datatype name and it doesn't get translated.
+$ 
+6001 該檔案含不正常結束處理的核心影像。\\\n\
+                        其資料類型名稱為 \\\n\
+                        CORE。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6002 is the description of the OBJECT (*.o) datatype.
+$ 6002 - Do not translate OBJECT or '.o' in the message.  OBJECT is a
+$        defined datatype name and it doesn't get translated and '.o'
+$        is the filename pattern which matches this datatype.
+$ 
+6002 這個檔案包含編譯器從來源檔案所產生的二進制資料。\\\n\
+                        其資料類型名稱為 OBJECT。 OBJECT 檔\\\n\
+                        案的副檔名為 '.o'。
+ 
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6003 is the description of the ASSEMBLER (*.s) datatype.
+$ 6003 - Do not translate ASSEMBLER or '.s' in the message.  ASSEMBLER is a
+$        defined datatype name and it doesn't get translated and '.s'
+$        is the filename pattern which matches this datatype.
+$ 
+6003 這個檔案包含一個已知架構的 assembler 程式碼。\\\n\
+                        其資料類型名稱為 ASSEMBLER。\\\n\
+                        ASSEMBLER 檔案的副檔名為 '.s'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6004 is the description of the ARCH_LIB datatype.
+$ 6004 - Do not translate ARCH_LIB or '.a' in the message.  ARCH_LIB is a
+$        defined datatype name and it doesn't get translated and '.a'
+$        is the filename pattern which matches this datatype.
+$ 
+6004 這個檔案包含一個保存物件檔案的二進制程式庫。\\\n\
+                        其資料類型名稱為 ARCH_LIB。\\\n\
+                        ARCH_LIB 檔案的副檔名為 '.a'。
+$ 
+$ Leaving 6005 free, may need a different definition for ARCH_LIB for IBM.
+$ 
+$ 6005
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6006 is the description of the SHARED_LIB datatype.
+$ 6006 - Do not translate SHARED_LIB or '.sl' in the message.  SHARED_LIB is a
+$        defined datatype name and it doesn't get translated and '.sl'
+$        is the filename pattern which matches this datatype.
+$ 
+6006 這個檔案包含一個共用物件檔案的二進制程式庫。\\\n\
+                        其資料類型名稱為 SHARED_LIB。\\\n\
+                        SHARD_LIB 檔案的副檔名為 '.sl' 或 '.so'。
+$ 
+$ Leaving 6007 free, may need a different definition for SHARED_LIB for IBM.
+$ 
+$ 6007
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6008 is the description of the C_SRC datatype.
+$ 6008 - Do not translate C_SRC or '.c' in the message.  C_SRC is a
+$        defined datatype name and it doesn't get translated and '.c'
+$        is the filename pattern which matches this datatype.
+$ 
+6008 這個檔案是一個以 C 程式語言所撰寫的來源檔案。\\\n\
+                        其資料類型名稱為 C_SRC。\\\n\
+                        C_SRC 檔案的副檔名為 '.c'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6009 is the description of the Make action associated with the
+$    C_SRC datatype.
+$ 6009 - Do not translate C_SRC or 'make' in the message.  
+$   Translate Make the same as message 5.
+$ 
+6009 C_SRC 檔案的 Make 命令使用 Unix 的 \\\n\
+                        'make' 命令來製作相關物件檔案。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6010 is the description of the CPLUSPLUS_SRC datatype.
+$ 6010 - Do not translate CPLUSPLUS_SRC, '.C', or '.cc' in the message.  
+$        CPLUSPLUS_SRC is a defined datatype name and it doesn't get 
+$        translated and '.cc' and '.C'is the filename pattern which 
+$        matches this datatype.
+$ 
+6010 這是一個以 C++ 程式語言撰寫的來源檔案。\\\n\
+                        其資料類型名稱為 CPLUSPLUS_SRC。\\\n\
+                        CPLUSPLUS_SRC 檔案的副檔名為 '.C' \\\n\
+                        或 '.cc'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6011 is the description of the Make action associated with the
+$    CPLUSPLUS_SRC datatype.
+$ 6011 - Do not translate CPLUSPLUS_SRC or 'make' in the message.  
+$   Translate Make the same as message 5.
+$ 
+6011 CPLUSPLUS_SRC 檔案的 Make 命令使用 Unix 的 \\\n\
+                        'make' 命令來製作相關物件檔案。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6012 is the description of the H_SRC datatype.
+$ 6012 - Do not translate H_SRC or '.h' in the message.  H_SRC is a
+$        defined datatype name and it doesn't get translated and '.h'
+$        is the filename pattern which matches this datatype.
+$ 
+6012 這是一個 C 語言程式的起始檔。其資料類型名稱為 \\\n\
+                        H_SRC。H_SRC 檔案的副檔名為 *.h。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6013 is the description of the MAKEFILE datatype.
+$ 6013 - Do not translate MAKEFILE, Makefile, makefile, or '.mk' in the 
+$        message.  MAKEFILE is a defined datatype name and it doesn't get 
+$        translated and Makefile, makefile, and '.mk' are the filename 
+$        patterns which match this datatype.
+$ 
+6013 這是一個 Makefile。 Makefile 說明如何從一組來源\\\n\
+                        檔中產生可執行檔。其資料類型名稱為 MAKEFILE。\\\n\
+                        MAKEFILE 檔案的名稱必須是 Makefile 或 makefile，\\\n\
+                        或以 Makefile 或 makefile 開頭，或者將副檔名定為 \\\n\
+                        '.mk'。
+$ 
+$ Message 6014 - Requests which "target" (i.e. file) to make when no
+$      file/folder is is provided to the 'Make' action for the MAKEFILE
+$      datatype.  Do not remove the ':'.
+$ 
+6014 要 Make 的目標檔:
+$ 
+$ Message 6015 is the description of the Make action associated with the
+$    MAKEFILE datatype.
+$ 6015 - Do not translate Makefiles, or 'make' in the message.  
+$   Translate Make the same as message 5.
+$ 
+6015 Makefiles 的 Make 動作要求使用者輸入目標檔，\\\n\
+                        然後使用 Unix 的 'make' 命令來處理。如\\\n\
+                        果不指定目標檔，這個命令就會對現行\\\n\
+                        檔案夾內的所有檔案執行。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 6016 is the description of the IMAKEFILE datatype.
+$ 6016 - Do not translate IMAKEFILE, Imakefile, or imakefile in the 
+$        message.  IMAKEFILE is a defined datatype name and it doesn't get 
+$        translated and Imakefile, and imakefile are the filename 
+$        patterns which match this datatype.
+$ 
+6016 這是一個 Imakefile。 Imakefile 描述如何\\\n\
+                        從一組來源檔中產生一個可執行檔。\\\n\
+                        它會被 make 命令所使用。其資料類型名稱為 \\\n\
+                        IMAKEFILE。 IMAKEFILE 檔案的檔名為 \\\n\
+                        imakefile 或 Imakefile，或者以 imakefile \\\n\
+                        或 Imakefile 開頭。
+$ 
+$ Message 6017 is the description of the Make action associated with the
+$    IMAKEFILE datatype.
+$ 6017 - Do not translate Imakefiles, Makefile, or 'make' in the message.  
+$   Translate Make the same as message 5.
+$ 
+6017 Imakefile 的 Make 命令使用 Unix 的 \\\n\
+                        'make' 命令來製作相關的 Makefile。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 6018 - 6020 refer to the Symbols List (Nm) action.
+$ 
+6018 符號列示
+$ 
+$ 6019 - Is a prompt to the user for the filename to list the symbols
+$  for if not file is supplied. Do not remove the ':'.  
+$ 
+6019 檔名:
+$ 
+$ 6020 - do not translate 'nm' or '(Nm)'.
+$ 
+6020 「符號列示」(Nm) 動作列出一個物件檔案\\\n\
+                        或程式庫檔案的符號表。它使用的是 \\\n\
+                        'nm' 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 6021 - 6022 refer to the Print Symbol List (PrintNm) action.
+$ 
+6021 列印符號列示
+$ 
+$ 6022 - do not translate 'nm' or '(PrintNm)'.
+$ 
+6022 「列印符號列示」(PrintNm) 動作使用內定\\\n\
+                        印表機列印 'nm' 命令的輸出。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 6023 - 6024 refer to the 'Make' action.
+$ 
+$ 6023 - Is a prompt to the user for the Makefile to make from.
+$  Do not remove the ':'.  
+$ 
+6023 Makefile:
+$ 
+$ Message 6024 is the description of the Make action not associated with
+$    any particular type.
+$ 6024 - Do not translate Makefile, or 'make' in the message.  
+$   Translate Make the same as message 5.
+$ 
+6024 沒有引數的 Make 動作要求使用者輸入\\\n\
+                        一個 Makefile 及目標檔，然後使用 Unix 的 \\\n\
+                        'make' 命令來處理。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  print.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The print.dt types file defines Actions, Datatypes, and descriptions
+$ * of those Actions and Datatypes that are of global use to the printer. 
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 7001 through 7008:
+$         These Messages are comments used to explain to the user what the
+$         Actions and Datatypes are used for within the print.dt file.
+$         NOTE: make sure each new line begins with a "#  ".  This indicates
+$         that it is a comment.  Make sure each line ends with a \n\. 
+$ 
+7001 #  CDE 的印表機機型集中於「列印」動作中。\n\
+#\n\
+#  您可以定義多個「列印」動作，一個動作具有一種資料類型。\n\
+#  如果「列印」動作未提供引數，那麼就會調用 dtprintinfo \n\
+#  命令來顯示印表機與工作狀態。#\n\
+#\n\
+#  'dtprintinfo' 是一個管理工具，用來建立格式為 \n\
+#  '<printer name>_Print' 的內定印表機動作。\n\
+#\n\
+#  如果系統中增加新的類型，就會建立一個檔案類型\n\
+#  特定的「列印」動作，而桌上管理系統動作引擎就\n\
+#  會自動使用這個動作，以取代內定動作。 新的動作\n\
+#  可能使用 'dtlp'，或依據其列印功能所得到之應用\n\
+#  程式特定的引數。
+7002 # 內定的印表機動作，調用同屬 ARG_TYPE；亦即未定\n\
+# 義其他列印動作的檔案。
+7003 #   如果未提供任何引數，則調用 Dtprintinfo 動作。
+7004 #   「列印工作」(Dtprintinfo) 動作調用 dtprintinfo \n\
+#  命令或 'dtprintinfo -p printer' 命令。
+7005 #   內定印表機的動作。
+7006 #   若提供一個檔案引數，則調用「列印」動作。
+7007 #   若未提供檔案引數，則調用 Dtprintinfo 動作。
+7008 #   此處是未知與未設定配置的印表機物件的動作與\n\
+#   資料類型。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 7009 is the description of the PRINTER_UNKNOWN datatype.
+$ 
+7009 這個圖像代表未在您的桌上管理系統註冊的印表機。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 7010 refers to the 'Print' action.
+$ 
+$ 7010 - description for the default print action.
+$ 
+7010 這是內定的列印動作。  如果執行時加上一個檔案\\\n\
+                        引數，它會收集印表機特定的選項，然\\\n\
+                        後列印該檔案。如果執行時沒有引數，\\\n\
+                        它會顯示「印表機工作」視窗。
+                        
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 7011 - 7012 refer to the Print Job 'Dtprintinfo' action.
+$ 
+$ 7011 - translate into 1 word with no blanks.
+$ 
+7011 列印工作
+$ 
+$ 7012 - do not translate '(Dtprintinfo)'.
+$ 
+7012 「列印工作」(Dtprintinfo) 動作讓您可以決\\\n\
+                        定印表機狀態並察看列印工作。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 7013 refer to the 'DtPrint' action.  It uses the Description
+$  of message 7010 or 7012 depending if there is a file or not.
+$ 
+7013 內定印表機
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 7014 - 7017 refer to the 'PrinterUnconfigured' action.
+$ 
+$ 7014 - translate into 1 word with no blanks.
+$ 
+7014 PrinterUnconfigured
+$ 
+$ Messages 7015 and 7016 are the message and the title of the message
+$   dialog that pop's up when the PrinterUnconfigured action is run.
+$   Message 7015 is the message, 7016 is the title of the dialog.
+$   NOTE: The '\\\\n' inserts a newline at that location, insert this
+$   where you feel it's appropriate.
+$ 
+7015 印表機控制未配置。\\\\n若要配置印表機控制，\\\n\
+                        請按「輔助說明」然後依其中的\\\\n指示進行。
+7016 印表機未配置
+$ 
+$ 7017 - use the same word as Message 7014 to translate 'PrinterUnconfigured'.
+$ 
+7017 PrinterUnconfigured 動作顯示一個對話，說明\\\n\
+                        印表機尚未配置。
+$ 
+$ Messages 7018 and 7019 are the message and the title of the message
+$   dialog that pop's up when the user tries to drop a printer in the
+$   trash can.
+$   Message 7018 is the message, 7019 is the title of the dialog.
+$   NOTE: The '\\\\n' inserts a newline at that location, insert this
+$   where you feel it's appropriate.
+$ 
+7018 將一部印表機放入垃圾桶並不會\\\\n\\\n\
+                        將它從系統中刪除。 要將印表機從系統中刪除，\\\\n\\\n\
+                        請查閱系統管理文件。
+7019 刪除印表機
+7020 Printer_Trash 動作會顯示一個對話，\\\n\
+                        告訴您將一部印表機放入垃圾桶並不會\\\n\
+                        將它從系統中刪除。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 7022 - 7024 refer to the Print Manager 'DtPrintManager' action.
+$ 
+$ 7022 - translate into 1 word with no blanks.
+$ 
+7022 列印管理者
+$ 
+$ 7023 - do not translate '(DtPrintManager)'.
+$ 
+7023 #   「列印管理者」(DtPrintManager) 動作會調用 \n\
+#  'dtprintinfo -all' 命令。
+7024 「列印管理者」(DtPrintManager) 動作能讓您決定數部印表機\\\n\
+                        的狀態並察看列印工作。  它也能讓您將印表機\\\n\
+                        拖曳到次面板上的「安裝圖像」控制。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dthelpprint.dt
+$ *************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dthelpprint.dt types file defines Actions, Datatypes, and descriptions
+$ * of those Actions and Datatypes that are used by the help system to
+$ * print out it's text.
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 8001 refers to the DTHELP_PRINT_FILE (_phlp*) datatype.
+$ 
+$ 8001 - Do not translate DTHELP_PRINT_FILE or '_phlp' in the message.  
+$        DTHELP_PRINT_FILE is a defined datatype name and it doesn't get 
+$        translated and '_phlp' is the filename pattern which matches 
+$        this datatype.  
+$ 
+$ 
+8001 這個檔案是在您列印輔助說明系統時\\\n\
+                        所產生的。其資料類型名稱為 \\\n\
+                        DTHELP_PRINT_FILE。DTHELP_PRINT_FILE 檔案\\\n\
+                        的檔名須以 '_phlp' 開頭。
+$ **************************************************************************
+$ **************************************************************************
+$ *  uxstd.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The uxstd.dt types file defines all the Actions, Datatypes, and descriptions
+$ * of those Actions and Datatypes that are defined by standare UNIX commands.
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 10001 refers to the MAN_PAGE datatype.
+$ 
+$ 10001 - Do not translate MAN_PAGE in the message.  MAN_PAGE is a
+$         defined datatype name and it doesn't get translated.
+$ 
+10001 這個檔案包含一個援助說明頁。其資料\\\n\
+                        類型名稱為 MAN_PAGE。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10002 - 10009 refer to the TAR (*.tar) datatype.
+$ 
+$ 10002 - Do not translate TAR or '.tar' in the message.  TAR is a
+$         defined datatype name and it doesn't get translated and '.tar'
+$         is the filename pattern which matches this datatype.
+$ 
+10002 這個檔案是一個保存檔案，其中包含\\\n\
+                        許多個別的檔案。其資料類型名稱為 \\\n\
+                        TAR。 TAR 檔案的副檔名為 '.tar'。
+$ 
+$ Messages 10003 and 10004 refer to the TarList action associated with the
+$    TAR datatype.
+$ 
+10003 保存檔案列示內容
+$ 
+$ 10004 - Do not translate TAR and (TarList) in the message.  
+$ 
+10004 「保存檔案列示內容」(TarList) 動作列出 \\\n\
+                        TAR 保存檔案中所含的檔案。
+$ 
+$ Messages 10005 and 10006 refer to the PrintTarList action associated with the
+$    TAR datatype.
+$ 10005 - translate into 1 word with no blanks.
+$ 
+10005 PrintTarList
+$ 
+$ 10006 - Do not translate TAR in the message.  Translate PrintTarList the same 
+$         as message 10005.
+$ 
+10006 PrintTarList 動作會在內定印表機上印出 TAR \\\n\
+                        保存檔案內所含檔案的列示。
+$ 
+$ Messages 10007, 10008, and 10009 refer to the TarUnpack action associated 
+$    with the TAR datatype.
+$ 
+10007 解開保存檔案
+$ 
+$ 10008 - Is a prompt to the user for the filename of the TAR file 
+$  if no file is supplied. Do not remove the ':'.  
+$ 
+10008 檔案名稱:
+$ 
+$ 10009 - Do not translate TAR and (TarUnpack) in the message.  
+$ 
+10009 「解開保存檔案」(TarUnpack) 動作接受 \\\n\
+                        TAR 檔案作為引數，並將保存檔案\\\n\
+                        解開成為數個各別的檔案。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10010 - 10012 refer to the COMPRESSED (*.Z) datatype.
+$ 
+$ 10010 - Do not translate COMPRESSED or '.Z' in the message.  COMPRESSED is a
+$         defined datatype name and it doesn't get translated and '.Z'
+$         is the filename pattern which matches this datatype.
+$ 
+10010 這個檔案已被 compress 命令壓縮，\\\n\
+                        以節省空間。 其資料類型名稱為 \\\n\
+                        COMPRESSED。 COMPRESSED 檔案\\\n\
+                        的副檔名為 '.Z'。
+$ 
+$ Messages 10011 and 10012 refer to the Uncompress action associated
+$    with the COMPRESSED datatype.
+$ 10011 - translate into 1 word with no blanks.
+$ 
+10011 檔案解壓縮
+$ 
+$ 10012 - Do not translate 'compress' and 'uncompress'.
+$ 
+10012 「檔案解壓縮」動作接受一個或多個\\\n\
+                        被 'compress' 命令所壓縮的檔案作為\\\n\
+                        引數，並將其解壓縮。 它使用的是 'uncompress' \\\n\
+                        命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 10013 refers to the SHELL (*.sh) datatype.
+$ 
+$ 10013 - Do not translate SHELL, BOURNE, '.sh', "#!/bin/sh", or "#! /bin/sh" 
+$         in the message.  SHELL is adefined datatype name and it doesn't 
+$         get translated. BOURNE is the name of type of shell which is named
+$         after a person, and '.sh', "#!/bin/sh", or "#! /bin/sh", are used as
+$         filename and CONTENT patterns which match this datatype.
+$ 
+10013 這個檔案包含一個以 BOURNE shell 命令集語言\\\n\
+                        所撰寫的可執行命令集。其資料類型名稱為 \\\n\
+                        SHELL。 SHELL 的副檔名為 '.sh'，或檔\\\n\
+                        案內包含字元 "#!/bin/sh" 或 "#! /bin/sh"。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 10014 refers to the CSHELL (*.csh) datatype.
+$ 
+$ 10014 - Do not translate C-SHELL, CSHELL, '.csh', "#!/bin/csh", or 
+$         "#! /bin/csh" in the message.  CSHELL is adefined datatype 
+$         name and it doesn't get translated. '.csh', "#!/bin/csh", or 
+$         "#! /bin/csh" are used as filename and CONTENT patterns which 
+$         match this datatype.
+$ 
+10014 這個檔案包含一個以 C-SHELL 命令集語言\\\n\
+                        所撰寫的可執行命令集。其資料類型名稱為 \\\n\
+                        CSHELL。 CSHELL 的副檔名為 '.csh'，或檔\\\n\
+                        案內包含字元 "#!/bin/csh" 或 "#! /bin/csh"。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 10015 refers to the KSHELL (*.ksh) datatype.
+$ 
+$ 10015 - Do not translate K-SHELL, KSHELL, '.ksh', "#!/bin/ksh", or
+$         "#! /bin/ksh" in the message.  KSHELL is adefined datatype
+$         name and it doesn't get translated. '.ksh', "#!/bin/ksh", or
+$         "#! /bin/ksh" are used as filename and CONTENT patterns which
+$         match this datatype.
+$ 
+10015 這個檔案包含一個以 K-SHELL 命令集語言\\\n\
+                        所撰寫的可執行命令集。其資料類型名稱為 \\\n\
+                        KSHELL。 KSHELL 的副檔名為 '.csh'，或檔\\\n\
+                        案內包含字元 "#!/bin/ksh" 或 "#! /bin/ksh"。
+$ ----------------------------------------------------------------------------
+$ Messages 10016 - 10018 refer to the SHAR (*.shar) datatype.
+$ 
+$ 10016 - Do not translate SHAR or '.shar' in the message.  SHAR is a
+$         defined datatype name and it doesn't get translated and '.shar'
+$         is the filename pattern which matches this datatype.
+$ 
+10016 這個檔案是一個 shell 保存封包。\\\n\
+                        Shell 保存封包通常被用來郵遞檔案。\\\n\
+                        其資料類型為 SHAR。 SHAR 檔案\\\n\
+                        的副檔名為 '.shar'。s
+$ 
+$ Messages 10017 and 10018 refer to the Unshar action associated
+$    with the SHAR datatype.
+$ 10017 - translate into 1 word with no blanks.
+$ 
+10017 Unshar
+$ 
+$ 10018 - Translate Unshar the same as message 10017.
+$ 
+10018 Unshar 動作接受利用 shar 命令處理的檔案\\\n\
+                        作為引數，並對它執行 unshar 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10019 - 10021 refer to the UUENCODE (*.uu) datatype.
+$ 
+$ 10019 - Do not translate UUENCODE or '.uu' in the message.  UUENCODE is a
+$         defined datatype name and it doesn't get translated and '.uu'
+$         is the filename pattern which matches this datatype.
+$ 
+10019 這是一個二進制檔案，透過郵件程式來進行傳輸。\\\n\
+                        其資料類型名稱為 UUENCODE。 UUENCODE \\\n\
+                        檔案的副檔名為 '.uu'。
+$ 
+$ Messages 10020 and 10021 refer to the Uudecode action associated
+$    with the UUENCODE datatype.
+$ 10020 - translate into 1 word with no blanks.
+$ 
+10020 Uudecode
+$ 
+$ 10021 - Translate Uudecode the same as message 10020.
+$ 
+10021 Uudecode 動作接受使用 uuencode 命令編碼的\\\n\
+                        檔案作為引數，並使用 uudecode 來解碼。
+$ 
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10022 - 1002x refer to the MESSAGE_CAT (*.cat) datatype.
+$ 
+$ 10022 - Do not translate MESSAGE_CAT or '.cat' in the message.  MESSAGE_CAT 
+$         is a defined datatype name and it doesn't get translated and '.cat'
+$         is the filename pattern which matches this datatype.
+$ 
+10022 這個檔案包含一個可執行檔的本土化\\\n\
+                        資訊。其資料類型名稱為 MESSAGE_CAT。\\\n\
+                        MESSAGE_CAT 檔案的副檔名為 \\\n\
+                        '.cat'。
+$ 
+$ Messages 10023 and 10024 refer to the DumpMessage action associated
+$    with the MESSAGE_CAT datatype.
+$ 10023 - translate into 1 word with no blanks.
+$ 
+10023 DumpMessage
+$ 
+$ 10024 - Translate DumpMessage the same as message 10023.
+$ 
+10024 DumpMessage 動作接受訊息目錄檔，並將\\\n\
+                        其中儲存的所有訊息全部傾印還原。
+$ 
+$ Messages 10025 and 10026 refer to the PrintDumpMsg action associated
+$    with the MESSAGE_CAT datatype.
+$ 10025 - translate into 1 word with no blanks.
+$ 
+10025 PrintDumpMsg
+$ 
+$ 10026- Translate PrintDumpMsg the same as message 10025.
+$ 
+10026 PrintDumpMsg 動作接受訊息目錄檔，並將\\\n\
+                        其中儲存的所有訊息全部印出來。
+$ 
+$ Messages 10027 - 10029 are comments.  NOTE: make sure each new line 
+$                begins with a "#".  This indicates that it is a comment.  
+$                Also, keep the \n\ at the end of each line where used.
+$ 
+10027 # Unix 編輯器
+10028 # Unix 命令
+$ 
+$ Message 10029 - Is a comment which explains how the next action for 
+$                 'TAR' works so it should localized.  Don't translate 
+$                 EXEC_STRING and 'true %(File)Args%'.  Make sure each 
+$                 line ends with a \n\. 
+$ 
+10029 # 下列動作使用 'true %(File)Args%' 於 EXEC_STRING。\n\
+# 這個述句唯一的作用，是讓所有引數在單一個動作調用時\n\
+# 全部被「用」到。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10030 - 10032 refer to the Text Editor (Vi) action.
+$ 
+10030 文字編輯器 (Vi)
+$ 
+$ Message 10031 - Requests which file to edit when no file/folder is
+$      is provided to the 'Vi' action.  Do not remove the ':'.
+$ 
+10031 要編輯的檔案
+$ 
+$ 10032 - use the same word as Message 10030 to translate 'Vi'.  Don't 
+$    translate 'vi'.
+$ 
+10032 「文字編輯器」(Vi) 動作在終端機視窗上\\\n\
+                        執行 'vi' 命令，如果您提供檔名，則會將\\\n\
+                        該檔案載入。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10033 - 10034 refer to the 'Vedit' action.
+$ 
+$ 10033 - translate into 1 word with no blanks.
+$ 
+10033 Vedit
+$ 
+$ 10034 - use the same word as Message 10033 to translate 'Vedit'.  Don't 
+$    translate 'vi' or 'vedit'.
+$ 
+10034 Vedit 動作在終端機視窗中以 'vedit' 模態\\\n\
+                        執行 'vi' 命令。  如果您提供檔名，則會將\\\n\
+                        該檔案載入。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10035 - 10043 refer to the 'Tar' action.
+$ 
+10035 保存檔案
+$ 
+$ Messages 10036 - 10037 are error (information) messages used when the user
+$    'drops'  more than one file/folder onto the TAR action in the
+$    application manager.  Translate Tar the same as in 10035. 
+$  10036 is the message.  NOTE: the '\\\\n' puts a new line into the message
+$        so it doesn't cover the whole screen.  Put the '\\\\n' where you feel
+$        a new line should be in your message.
+$  10037 is the title of the dialog.
+$ 
+10036 「保存檔案」動作只接受單一引數，且\\\\n \\\n\
+須為一個檔案夾。
+10037 引數無效
+$ 
+$ 10038 - Don't translate "tar", 'tar', or (Tar).
+$ 
+10038 「保存檔案」(Tar) 動作接受一個檔案夾引數，\\\n\
+                        並將其中包含的所有檔案保存成單一的 \\\n\
+                        "tar" 檔案。它使用的是 'tar' 命令。
+$ 
+$ Message 10039 - Requests which folder to tar when no folder is
+$      is provided to the 'Tar' action.  Do not remove the ':'.
+$ 
+10039 要保存的檔案夾:
+$ 
+$ Message 10040 - an error message when the file the user provided the Tar
+$    action is not a folder. Don't translate %(File)Arg_1%, it will be
+$    the bad file name when the message is shown to the user.
+$ 
+10040 錯誤：%(File)Arg_1% 不是一個檔案夾。
+$ 
+$ Messsages 10041 and 10042 are status messages for the user.  These are
+$    shown to the user when the Tar action is creating the tarball.
+$  10041 don't translate \\$FOLDER as it is the file (i.e. tarball)
+$    that is being created.
+$  10042 Translate "Please wait" only.
+10041 建立 \\$FOLDER 中。
+10042 [請稍候 ...]\\\\n
+$ 
+$ Message 10043 is displayed to the user when the tarball is completed. It
+$   tells the user where they can find the tarball that has been created. 
+$   \\$FOLDER is the complete path to the file that was created. 
+$ 10043 - Don't translate \\$FOLDER or \\\\n. 
+$ 
+10043 \\\\n保存檔案已建立，儲存於 \\$FOLDER 中。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 10044 refer to the 'TarList' action.  NOTE: most of the messages
+$  for TarList were defined in 10003 and 10004.  10044 is a request to
+$  the user for the name of the file (i.e. tarball) to list the contents of.
+$ 
+10044 要列示的保存檔案:
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 10045 refer to the 'TarUnpack' action.  NOTE: most of the messages
+$  for TarList were defined in 10007 through 10009.  10045 is a request to
+$  the user for the name of the file (i.e. tarball) to unpack.
+$ 
+10045 要解開的保存檔案:
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10046 - 10048 refer to the Compress File (Compress) action.
+$ 
+10046 壓縮檔案
+$ 
+$ Message 10047 - Requests which file to compress when no file is
+$      is provided to the 'Compress' action.  Do not remove the ':'.
+$ 
+10047 要壓縮的檔案:
+$ 
+$ 10048 - do not translate 'compress' or '(Compress)'.
+$ 
+10048 「壓縮檔案」(Compress) 動作接受一或多個\\\n\
+                        檔案，然後使用 'compress' 命令壓縮。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 10049 refer to the 'Uncompress' action.  NOTE: most of the messages
+$  for Uncompress were defined in 10010 through 10012.  10049 is a request to
+$  the user for the name of the file to uncompress.
+$ 
+10049 要解壓縮的檔案:
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10050 - 10051 refer to the Environment Variables (Env) action.
+$ 
+10050 環境變數
+$ 
+$ 10051 - do not translate 'env' or '(Env)'.
+$ 
+10051 「環境變數」(Env) 動作\\\n\
+                        使用 'env'  命令顯示使用者的環境變數。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10052 - 10056 refer to the Compare Files (Diff) action.
+$ 
+10052 比對檔案
+$ 
+$ Messages 10057 and 10058 prompt the users for the files to compare if no
+$   files were provided to the Compare Files action.  Don't translate
+$   (<), (>) or the :.
+$ 
+10053 第一個檔案 (<):
+$ 
+10054 第二個檔案 (>):
+$ 
+$ Message 10055. The \\$file1 and \\$file2 represent file names that were
+$  being compared.  Don't translate them and place them where the 2 file
+$  names should appear in the message.
+$ 
+10055 兩個檔案 \\$file1 和 \\$file2 是相同的。
+$ 
+$ 10056 - do not translate 'diff' or '(Diff)'.
+$ 
+10056 「比對檔案」(Diff) 動作使用 'diff' 命令\\\n\
+                        比對兩個檔案。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10057 - 10060 refer to the Shred File (Rm) action.
+$ 
+10057 清除檔案
+$ 
+$ Message 10059 - This gives the users a double check whether they really want
+$   to remove (Shred) the file.  Once the file is 'shred' it can't be restored.
+$   Translate "Enter y to delete a file, n to leave it" only.
+$ 
+10058 [要清除檔案請輸入 y，不清除請輸入 n ...]\\\\n
+$ 
+$ Message 10059 - Prompt the user for the file to shred if not was provided.
+$   Do not remove the ':'.
+$ 
+10059 要清除的檔案:
+$ 
+$ 
+$ 10060 - Don't translate 'rm -i' or (Rm).  
+$         Capitalize the last sentence to emphasis it.
+$ 
+10060 「清除檔案」(Rm) 動作使用 'rm -i' 命令直接\\\n\
+                        將檔案清除，不放入檔案垃圾桶。它\\\n\
+                        會要求您輸入每個檔案的檔名，並可\\\n\
+                        讓您確定是否要清除該檔案。被清除\\\n\
+                        的檔案就無法再復原。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10061 - 10065 refer to the Count Words (Wc) action.
+$ 
+10061 計算字數
+$ 
+$ Messages 10061 - 10062 - These messages provide a "friendly" layout to show
+$   the output from the count words action.  This is how the unix command
+$   'wc' outputs it's data.  Keep this layout as close as possible.
+$ 
+10062 "  行數   字數   字元  檔名"
+10063 "  ============================"
+$ 
+$ Message 10064 - Prompt the user for the file to do a word count on if it was
+$   not provided to the CountWords action.  Do not remove the ':'.
+$ 
+10064 要計算的檔案:
+$ 
+$ 10065 - do not translate 'wc' or '(Wc)'.
+$ 
+10065 「計算字數」(Wc) 動作計算檔案中的行數、\\\n\
+                        字數及字元數。  它使用的是 'wc' 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10066 - 10069 refer to the Check Spelling (Spell) action.
+$ 
+10066 拼字檢查
+$ 
+$ Message 10067 - Provides a 'friendly' output to the user providing the
+$   list of misspelled words.
+$   Translate "Misspelled words" and adjust "================" to the same
+$   size (length) of "Misspelled words".
+$ 
+10067 拼字錯誤\\\\n========\\\\n
+$ 
+$ Message 10068 - Prompt the user for the file to do a spell check on if it was
+$   not provided to the Check Spelling action.  Do not remove the ':'.
+$ 
+10068 要檢查拼字的檔案:
+$ 
+$ 10069 - do not translate 'spell' or (Spell).
+$ 
+10069 「拼字檢查」(Spell) 動作檢查檔案中所有字的\\\n\
+                        拼字是否正確。它使用的是 'spell' \\\n\
+                        命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10070 - 10071 refer to the Disk Usage (Df) action.
+$ 
+10070 磁碟使用量
+$ 
+$ 10071 - do no translate 'df' or (Df).
+$ 
+10071 「磁碟使用量」(Df) 動作顯示\\\n\
+                        所有裝設的磁碟中的可用空間。\\\n\
+                        它使用的是 'df' 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10072 - 10076 refer to the Folder Size (DuSort) action.
+$ 
+10072 檔案夾大小
+$ 
+$ Message 10073 - 10074 - Provide a 'friendly' layout for the 'du' unix
+$  command.  Keep this layout as close as possible.
+$ 
+10073 區段  檔案/目錄  - (一塊區段為 512 個位元組)
+10074 ============================================
+$ 
+$ Message 10075 - Prompt the user for the folder to do a size if one was
+$   not provided to the DirSize action.  Do not remove the ':'.
+$ 
+10075 要更改大小的檔案夾:
+$ 
+$ 10076 - do not translate 'du', 'sort', or '(DuSort)'.
+$ 
+10076 「檔案夾大小」(DuSort) 動作顯示\\\n\
+                        每個檔案及檔案夾中次檔案夾的大小。\\\n\
+                        它使用 'du' 與 'sort' 命令\\\n\
+                        的組合。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10077 - 10082 refer to the Search Text (Grep) action.
+$ 
+10077 搜尋文字
+$ 
+$ Message 10078 - Prompt the user for the file to search if one was
+$   not provided to the Search Text action.  Do not remove the ':'.
+$ 
+10078 要搜尋的檔案:
+$ 
+$ 10079 - is an error message which tells the user that the file provided
+$  \\$SEARCH_FILE is a  folder and the action Search Text (Grep) does not 
+$  for strings in folders.  Don't translate \\$SEARCH_FILE and use it
+$  as a folder name and translate StringSearch the same as in message 10077.
+$ 
+10079 錯誤：\\$SEARCH_FILE 是一個檔案夾，「搜尋文字」\\\\n\
+無法搜尋檔案夾內的字串。
+$ 
+$ Message 10080 - Prompt the user for the string to search for the 
+$  StringSearch action.  Do not remove the ':'.
+$ 
+10080 搜尋字串:
+$ 
+$ 10081 - the output provided to the user if no matches were found from the
+$   SearchString action.
+$ 
+10081 找不到符合的字串。
+$ 
+$ 10082 - do not translate 'grep' or '(Grep)'.
+$ 
+10082 「搜尋文字」(Grep) 動作使用 'grep' 命令在一組\\\n\
+                        檔案中擷取某個字串所有出現處。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10083 - 10085 refer to the Type File (File) action.
+$ 
+10083 檔案類型
+$ 
+$ Message 10084 - Prompt the user for the file to type for the
+$  TypeFile action.  Do not remove the ':'.
+$ 
+10084 要顯示類型的檔案:
+$ 
+$ 10085 - Do not translate '(File)'.
+$ 
+10085 「檔案類型」(File) 動作利用 file 命令以決定檔\\\n\
+                        案的類型。這和檔案的桌上管理系統資\\\n\
+                        料類型不同。要決定檔案的桌上管理系\\\n\
+                        統資料類型，請選取該檔案，然後從檔\\\n\
+                        案管理者視區中，選擇功能表命令「選取」\\\n\
+                        ->「更改許可權」。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10086 - 10090 refer to the 'Execute' action.
+$ 
+$ 10086 - translate into 1 word with no blanks.
+$ 
+10086 執行
+$ 
+$ Message 10087 - Prompt the user for the file to execute (run) for the
+$  Execute action.  Do not remove the ':'.
+$ 
+10087 要執行的檔案:
+$ 
+$ Message 10088 - Prompt the user for the any options which may go with the
+$  command being run from the Execute action.  Do not remove the ':'.
+$ 
+10088 選項:
+$ 
+$ Message 10089 - Prompt the user for the any arguments which may go with the
+$  command being run from the Execute action.  Do not remove the ':'.
+$ 
+10089 引數:
+$ 
+$ 10090 - use the same word as Message 10086 to translate 'Execute'.
+$ 
+10090 「執行」動作執行一個 shell 命令集或可執行的\\\n\
+                        二進制檔。它會要求使用者輸入選項與\\\n\
+                        引數，然後在一個終端機視窗中執行此\\\n\
+                        命令集或可執行檔。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 10091 - 10093 refer to the Execute Command (ExecuteCmd) action.
+$ 
+10091 執行命令
+$ 
+$ Message 10092 - Prompt the user for the command to execute (run) for the
+$  ExecuteCmd action.  Do not remove the ':'.
+$ 
+10092 命令:
+$ 
+$ 10093 - use the same word as Message 10091 to translate 'ExecuteCmd'.
+$ 
+10093 「執行命令」(ExecuteCmd) 動作會要求使用者輸入一\\\n\
+                        個命令，然後對作為引數的檔案執行此命令。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dthelp.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dthelp.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes that are defined by 
+$ * the CDE help system.
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 11001 refers to the DTHELP_VOL (*.sdl, *.hv) datatype.
+$ 
+$ 11001 - Do not translate DTHELP_VOL, '.sdl',  or '.hv' in the message.  
+$         DTHELP_VOL is a defined datatype name and it doesn't get translated 
+$         and '.sdl' and '.hv' are the filename patterns which match this 
+$         datatype.
+$ 
+11001 這是一個輔助說明容體的主容體檔案。它的資料\\\n\
+                        類型名稱為 DTHELP_VOL。\\\n\
+                        DTHELP_VOL 檔案的副檔名為 '.sdl' 或 '.hv'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 11002 refers to the DTHELP_HT (*.ht) datatype.
+$ 
+$ 11002 - Do not translate DTHELP_HT or '.ht' in the message.
+$         DTHELP_HT is a defined datatype name and it doesn't get translated
+$         and '.ht' is the filename pattern which matches this
+$         datatype.
+$ 
+11002 這是一個輔助說明主題檔案，屬於輔助說明容體的\\\n\
+                        一部分。要察看輔助說明主題，您必須先開\\\n\
+                        啟主容體檔案。這個檔案的資料類型名稱為\\\n\
+                        DTHELP_HT。 DTHELP_HT 檔案的副檔名\\\n\
+                        為 '.ht'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 11003 refers to the DTHELP_HVK (*.hvk) datatype.
+$ 
+$ 11003 - Do not translate DTHELP_HVK or '.hvk' in the message.
+$         DTHELP_HVK is a defined datatype name and it doesn't get translated
+$         and '.hvk' is the filename pattern which matches this
+$         datatype.
+$ 
+11003 這個檔案與已編譯的輔助說明容體有關聯。要察\\\n\
+                        看輔助說明容體，您必須先開啟主容體檔\\\n\
+                        案。這個檔案的資料類型名稱為 DTHELP_HVK。\\\n\
+                        DTHELP_HVK 檔案的副檔名為 'hvk'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 11004 refers to the DTHELP_XRN (*.xrh) datatype.
+$ 
+$ 11004 - Do not translate DTHELP_XRN or '.xrh' in the message.
+$         DTHELP_XRN is a defined datatype name and it doesn't get translated
+$         and '.xrh' is the filename pattern which matches this
+$         datatype.
+11004 這個檔案與已編譯的輔助說明容體有關聯。要察\\\n\
+                        看輔助說明容體，您必須先開啟主容體檔\\\n\
+                        案。這個檔案的資料類型名稱為 DTHELP_XRH。\\\n\
+                        DTHELP_XRH 檔案的副檔名為 '.xrh'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 11005 - 11007 refer to the Help Viewer (Dthelpview) action.
+$ 
+11005 輔助說明察看器
+$ 
+$ Message 11006 - Prompt the user for the help volume to open for the
+$  HelpView action if none is provided.  Do not remove the ':'.
+$ 
+11006 輔助說明容體:
+$ 
+$ 11007 - do not translate '(Dthelpview)'.
+$ 
+11007 「輔助說明察看器」(Dthelpview) 動作在連按兩\\\n\
+                        下該圖像之後，可顯示頂層輔助說明。\\\n\
+                        如果將一個輔助說明容體定位到該圖像上，\\\n\
+                        該容體就會顯示。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 11008 - 11009 refer to the 'ManPages' action.
+$ 
+$ 11008 - translate into 1 word with no blanks.
+$ 
+11008 線上援助頁
+$ 
+$ 11009 - use the same word as Message 11008 to translate 'ManPages'.
+$ 
+11009 「線上援助頁」動作會在線上援助頁察看器中顯\\\n\
+                        示一個線上援助頁。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 11010 - 11013 refer to the Man Page Viewer (Dtmanpageview) action.
+$ 
+11010 線上援助頁察看器
+$ 
+$ Message 11011 - Prompt the user for the man page to view for the
+$  OpenManPage action if none is provided.  Do not remove the ':'.
+$ 
+11011 線上援助頁:
+$ 
+$ Message 11013 is locale dependent value.
+$ Dthelpview*manBox*columns = 100 for single-byte
+$                             50 for multi-byte
+$ 
+11012 50 
+$ 
+$ 11013 - do not translate 'Dtmanpageview'.
+$ 
+11013 「線上援助頁察看器」(Dtmanpageview) 動作會在一個\\\n\
+                       簡易輔助說明察看器視窗中顯示線上援助頁。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 11014 - 11016 refer to the Help Generator (Dthelpgen) action.
+$ 
+11014 輔助說明產生器
+$ 
+$ Message 11015 - Prompt the user for the location where the user wishes to
+$  place the help volume generated by dthelpgen.
+$  Do not remove the ':'.
+$ 
+11015 產生的輔助說明檔案的放置位置:
+$ 
+$ 11016 - do not translate 'Dthelpgen'.
+$ 
+11016 輔助說明產生器 (Dthelpgen) 動作會執行\\\n\
+                        dthelpgen，以產生使用者可參考的線\\\n\
+                        上輔助說明。  執行時它也會顯示 "產生瀏\\\n\
+                        覽器資訊中，請稍候...。" 的對話。\\\n\
+                        當使用者第一次登入一般桌上管理系統\\\n\
+                        環境時，這個動作就會執行。
+$ 
+$ **************************************************************************
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  xclients.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The xclients.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes that are 'X' clients.
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12001 - 12004 refer to the XWD (*.xwd, *.wd) datatype.
+$ 
+$ 12001 - Do not translate XWD, '.xwd', or '.wd' in the message.  XWD is a
+$         defined datatype name and it doesn't get translated and '.xwd' and
+$         '.wd' are the filename patterns which match this datatype. 
+$         XwdCapture is the name of an action and should be translated the
+$         same as message 12034.
+$ 
+12001 這個檔案含有一個 XWD 格式的圖形影像。\\\n\
+                        這些檔案一般是以 Xwd Capture 動作\\\n\
+                        從視窗中快照下來的。 其資料類型名稱為 \\\n\
+                        XWD。XWD 檔案的副檔名為 \\\n\
+                        '.xwd' 或 '.wd'。
+$ 
+$ Messages 2002 - 2003 refer to the Xwd Display (Xwud) action 
+$    which get used by the 'XWD' datatype.
+$ 
+12002 Xwd 顯示
+$ 
+$ Message 12003 - Prompts the user for the xwd file to display when the 
+$  XwdDisplay action is invoked with no file.  Do not remove the ':'.
+$ 
+12003 要顯示的 Xwd 檔案:
+$ 
+$ 12004 - Don't translate xwd, xwud, (Xwud) or (Xwd). 
+$ 
+12004 「Xwd 顯示」(Xwud) 動作顯示以 Xwd \\\n\
+                        擷取 (Xwd) 動作所建\\\n\
+                        立的 xwd 檔案。它使用的是 'xwud' \\\n\
+                        命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12005 - 12006 refer to the Refresh Display (Xrefresh) action.
+$ 
+12005 刷新顯示器
+$ 
+$ 12006 - do not translate 'xrefresh' or '(Xrefresh)'.
+$ 
+12006 「刷新顯示器」(Xrefresh) 動作能讓整個螢幕\\\n\
+                        刷新，使用的是 'xrefresh' 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12007 - 12011 refer to the Edit Bitmap (Bitmap) action.
+$ 
+12007 編輯位元映射檔
+$ 
+$ Messages 12008 - 12010 - Prompt the user for input about the bitmap file.
+$   that is to be displayed by the Bitmap action. Do not remove the ':'.
+$ 12008 - Asks the user what file to open.
+$ 
+12008 要開啟的檔案:
+$ 
+$ 12009 and 12010 - Ask the user what size via width and height the bitmap
+$   is going to be.  These only get used if the user doesn't provide a file
+$   to the action.
+$ 
+12009 寬:
+12010 高:
+$ 
+$ 12011 - do not translate 'bitmap' or '(Bitmap)'.
+$ 
+12011 「編輯位元映射檔」(Bitmap) 動作執行 'bitmap' \\\n\
+                        客戶程式。您可以提供一個檔案引數，\\\n\
+                        否則它會要求使用者輸入新的位元映射\\\n\
+                        檔的寬度及高度。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12012 - 12013 refer to the Terminal Console action.
+$ 
+12012 終端機主控台
+$ 
+$ 12013 - Don't translate 'dtterm'.
+$ 
+12013 「終端機主控台」動作啟動一個'dtterm' 終端\\\n\
+                        機模擬程式作為使用者的主控台。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12014 - 12015 refer to the Xterm action.
+$ 
+12014 Xterm
+$ 
+$ 12015 - Do Not translate 'xterm'.
+$ 
+12015 Xterm 動作啟動一個 \\\n\
+                        'xterm' 終端機模擬程式。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12016 - 12018 refer to the Terminal Remote (DttermDtspcd) action.
+$ 
+12016 遠端終端機
+$ 
+$ Message 12017 - Prompts the user for the hostname to connect to when the
+$  DttermDtspcd action is invoked.  Do not remove the ':'.
+$ 
+12017 主機名稱:
+$ 
+$ 12018 - Don't translate 'dtterm'.
+$ 
+12018 「遠端終端機」動作要求使用者輸入一個系統\\\n\
+                        名稱，然後在該系統上啟動一個 'dtterm' \\\n\
+                        終端機模擬程式。系統的配置必須正確，才\\\n\
+                        能使用遠端執行功能。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12019 - 12020 refer to the Xterm Remote action.
+$ 
+12019 遠端 Xterm
+$ 
+$ 12020 - Do not translate 'xterm'.
+$ 
+12020 「遠端 Xterm」動作要求使用者\\\n\
+                        輸入系統名稱，然後在該系統上啟動一\\\n\
+                        個 'xterm' 終端機模擬程式。系統的配置必\\\n\
+                        須正確，才能使用遠端執行功能。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12021 - 12024 refer to the Terminal Rlogin (DttermRlogin) action.
+$ 
+12021 終端機 Rlogin
+$ 
+$ In messages 12022 - 12023 the "\\$_title" should not be translated.  It is
+$ the hostname of the foreign host the xterm or dtterm is trying to connect
+$ to.
+$ 
+12022 \\$_title : Dtterm
+12023 嘗試與 \\$_title 建立連接中...，請稍候。
+$ 
+$ 12024 - do not translate 'dtterm' or 'rlogin'.
+$ 
+12024 「終端機 Rlogin」動作要求使用者輸入一個\\\n\
+                        系統名稱，然後開啟一個 'dtterm' 終端機模\\\n\
+                        擬視窗，再執行 'rlogin' 登入該系統。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12025 - 12027 refer to the Xterm Rlogin action.
+$ 
+12025 Xterm Rlogin
+$ 
+$ In message 12026 the "\\$_title" should not be translated.  It is
+$ the hostname of the foreign host the xterm is trying to connect
+$ to.
+$ 
+12026 \\$_title : Xterm
+$ 
+$ 12027 - Do not translate 'rlogin' or 'xterm'.
+$ 
+12027 Xterm Rlogin 動作要求使用者輸入一個\\\n\
+                        系統名稱，然後開啟一個 'xterm' 終端機模\\\n\
+                        擬視窗，再執行 'rlogin' 登入該系統。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12028 - 12029 refer to the 'ReloadResources' action.
+$ 
+12028 重新載入資源
+$ 
+$ 12029 - use the same word as Message 12028 to translate 'ReloadResources'.
+$   Don't translate EDITOR.
+$ 
+12029 「重新載入資源」動作會將您的 X 資源資料庫重新載入\\\n\
+                        桌上管理系統資源，並含括您登入後所有可能\\\n\
+                        發生的變更。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12030 - 12031 refer to the 'DigitalClock' action.
+$ 
+12030 數位時鐘
+$ 
+$ 12031 - Don't translate 'xclock -digital' or (Xclock).
+$ 
+12031 「數位時鐘」(Xclock) 動作顯示一個\\\n\
+                        數位時鐘。  它使用的是 'xclock -digital' 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12032 - 12033 refer to the System Load (Xload) action.
+$ 
+12032 系統載入
+$ 
+$ 12033 - Don't translate xload or (Xload).
+$ 
+12033 「系統載入」(Xload) 動作顯示一個\\\n\
+                        系統載入的圖形視區。它使用的是 \\\n\
+                        xload 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12034 - 12036 refer to the Xwd Capture (XwdCapture) action.
+$ 
+12034 Xwd 擷取
+$ 
+$ Message 12035 - Prompts the user for the name of the file the user wishes
+$  to store the captured xwd image in.  Do not remove the ':'.
+$ 
+12035 輸出檔案 (<name>.xwd):
+$ 
+$ 12036 - Don't translate xwd or (Xwd).
+$ 
+12036 「Xwd 擷取」(Xwd) 動作會將一個\\\n\
+                        視窗快照下來，並將其儲存成一個 xwd \\\n\
+                        格式的圖形檔。當您執行這個動作時，\\\n\
+                        游標會變成十字，請在您想擷取的視窗\\\n\
+                        上按一下。這個動作使用的是 xwd 命令。\\\n\
+                        Xwd 代表 'X 視窗傾印'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12037 - 12038 refer to the Clipboard Contents (Xclipboard) action.
+$ 
+12037 剪輯板內容
+$ 
+$ 12038 - Don't translate 'xclipboard' or (Xclipboard).
+$ 
+12038 「剪輯板內容」(Xclipboard) 動作\\\n\
+                        顯示您的剪輯板。  它使用的是 'xclipboard' \\\n\
+                        命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12039 - 12043 refer to the Font Preview (Xfd) action.
+$ 
+12039 字形預覽
+$ 
+$ Message 12040 - Prompts the user for the name of the font the user wishes
+$  display.  Do not remove the ':'.
+$ 
+12040 要預覽的字形:
+$ 
+$ Messages 12041 and 12042 are information messages that are output when
+$   a font the user specified can't be found.
+$ 12041 the message. NOTE: the '\\\\n' represents a newline. Place these 
+$   where you feel it's appropriate.
+$ 
+12041 無法找到您所指定的字形。\\\\n\\\n\
+                           請執行字形列示動作來顯示\\\\n\\\n\
+                           可用字形名稱的列示。
+$ 
+$ 12042 the title of the dialog.
+$ 
+12042 無法找到字形名稱
+$ 
+$ 12043 - Don't translate 'xfd' or (Xfd).
+$ 
+12043 「字形預覽」(Xfd) 動作要求使用者輸入字形\\\n\
+                        名稱，然後顯示該字形的所有字元。\\\n\
+                        它使用的是 'xfd' 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12044 - 12046 refer to the Window Information (Xwininfo) action.
+$ 
+$ Message 12044 is a comment in xclients.dt.
+$         NOTE: make sure each new line begins with a "#".  This indicates
+$         that it is a comment.   Don't translate '| ${PAGER:-more}' or
+$         (Xwininfo).
+$ 
+12044 # 「視窗資訊」(Xwininfo) 動作無法使用\n\
+# '| ${PAGER:-more}' 定義，因為它不讓 '在某個視窗中\n\
+# 按一下' 訊息顯示出來。
+$ 
+12045 視窗資訊
+$ 
+$ 12046 - Don't translate 'xwininfo' or (Xwininfo).
+$ 
+12046 「視窗資訊」(Xwininfo) 動作顯示\\\n\
+                        關於某個視窗的資訊。  當您執行「列示視窗資訊」\\\n\
+                        時，游標會變成十字形，請在您想獲得資訊的\\\n\
+                        視窗中按一下。  這個動作使用的是 'xwininfo' \\\n\
+                        命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12047 - 12049 refer to the Window Properties (Xprop) action.
+$ 
+12047 視窗特性
+$ 
+$ 12048 - Translate "When the cursor changes to a cross, click on a window" 
+$   only.  This message gets displayed when the cursor changes to a cross and
+$   prompts the user to click on a window
+$ 
+12048 [當游標變成十字形時，請在視窗中按一下 ...]\\\\n
+$ 
+$ 12049 - $  Don't translate 'xprop' or (Xprop).
+$ 
+12049 「視窗特性」(Xprop) 動作\\\n\
+                        會顯示視窗中儲存的特性。  當您執行「視窗\\\n\
+                        特性」時，游標會變成十字形，此時請在您\\\n\
+                        想獲得資訊的視窗中按一下。這個動作使用\\\n\
+                        的是 'xprop' 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12050 - 12051 refer to the X Server Information (Xdpyinfo) 
+$  action.
+$ 
+12050 X 伺服器資訊
+$ 
+$ 12051 - Don't translate 'xdpyinfo' or (Xdpyinfo).
+$ 
+12051 「X 伺服器資訊」(Xdpyinfo) 動作\\\n\
+                        顯示有關 X 伺服器與顯示系統的資訊。\\\n\
+                        它使用的是 'xdpyinfo' 命令。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 12052 - 12054 refer to the Font List (Xlsfonts) action.
+$ 
+12052 字形列示
+$ 
+$ Message 12053 is a note to the user.
+$ 
+12053 尋找字形中，請稍候......。\\\\n\
+        請注意：您的顯示器伺服器可能會被鎖定一會兒。
+$ 
+$ 12054 - do not translate 'xlsfonts' or '(Xlsfonts)'.
+$ 
+12054 「字形列示」(Xlsfonts) 動作列出您的\\\n\
+                        系統可顯示的所有字形。它使用的是 \\\n\
+                        'xlsfonts' 命令。
+$ 
+$ 12055 - this message was left out of the System Load (Xload) action
+$  defined in messages 12032 and 12033.  It is the title of the load.
+$ 
+12055 系統載入
+$ 
+$ 12056 - this message was left out of the DttermConsole action
+$  defined in messages 12012 and 12013.  It is the title of the Terminal.
+$ 
+12056 主控台
+
+$ ----------------------------------------------------------------------------
+$ Message 12057 refers to the 'DigitalClock' action.
+$ 
+$ 12057 - Translate the following X Logical Font Description so the
+$         font used by the digital xclock will be localized.
+$ 
+12057 -dt-interface system-medium-r-normal-s*-*-*-*-*-*-*-*-*
+
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtappman.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dtappman.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes that are specific to the
+$ * CDE Application Manager.
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 13001:
+$         This Message is a header used to explain what objects this file 
+$         works on.  Don't translate /var/dt/appconfig/appmanager/$LOGNAME 
+$         NOTE: make sure each line begins with a "#  ".  This indicates
+$         that it is a comment.
+$ 
+13001 # 這些資料類型定義應用於使用者在 \n\
+# /var/dt/appconfig/appmanager/$LOGNAME \n\
+# 次檔案夾中所建立的物件。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 13002 - 13008 are descriptions for the different application groups
+$   within the Application Manager.
+$ 
+$ 13002 - this is the description for the DtApplications icon in the top level
+$   of the Application Manager.
+$ 
+13002 請連按兩下這個圖像，以開啟 \\\n\
+                        Desktop_Apps 桌上管理系統應用程式群組。
+$ 
+$ 13003 - this is the description for the Printer icon in the top level
+$   of the Application Manager.
+$ 
+13003 請連按兩下這個圖像，以開啟 Printers 印表機\\\n\
+                        應用程式群組。
+$ 
+$ 13004 - this is the description for the Information icon in the top level
+$   of the Application Manager.
+$ 
+13004 請連按兩下這個圖像，以開啟 Information 資訊\\\n\
+                        應用程式群組。
+$ 
+$ 13005 - this is the description for the SystemAdmin icon in the top level
+$   of the Application Manager.
+$ 
+13005 請連按兩下這個圖像，以開啟 System_Admin 系統\\\n\
+                        管理應用程式群組。
+$ 
+$ 13006 - this is the description for the DtTools icon located in the 
+$   Desktop Tools folder of the Application Manager.
+$ 
+13006 請連按兩下這個圖像，以開啟 \\\n\
+                        Desktop_Tools 桌上管理系統工具應用程式群組。
+$ 
+$ 13007 - this is the description for the Application Manager go up icon.
+$ 
+13007 請連按兩下這個圖像，在\\\n\
+                        應用程式管理者中提高一層。
+$ 
+$ 13008 - this is the description for the Application Manager icon.
+$ 
+13008 請連按兩下這個圖像，以顯示\\\n\
+                        最上層的應用程式管理者。
+$ ----------------------------------------------------------------------------
+$ Messages 13009 - 13014 Labels for the Application Manager Icons.
+$  Translate all into 1 word with no blanks.
+$ 
+13009 Desktop_Apps
+13010 Printers
+13011 Information
+13012 System_Admin
+13013 Desktop_Tools
+13014 Digital_Media
+$ 
+$ 13015 - this is the description for the Digital_Media icon located in the
+$   top level of the Application Manager.
+$ 
+13015 連按兩下該圖像以開啟 \\\n\
+			Digital_Media 數位媒體應用程式群組。 
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  ibm.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * These are ibm specific actions and data types.
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 14001 - 14005
+$ Do not translate XXX in the messages "The XXX action ..." and
+$ "A XXX file ...". It is a defined Action and Filetype name.
+$ Use \\\n\ at the end of the line if the message continues to the next line.
+$ ----------------------------------------------------------------------------
+$ Messages 14001 - 14003 refer to the 'Smit' action.
+$ 
+$ 14001 - translate into 1 word with no blanks.
+$ 
+14001 Smit
+$ 
+$ 14002 and 14003 - use the same word as Message 14001 to translate 'Smit'.
+$ 
+14002 Smit 動作要求使用者輸入根密碼，然後執行 \\\n\
+                        IBM 的 'smit' 系統管理工具。
+$ 
+14003 Smit 動作執行 IBM 的 'smit' 系統管理工具。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 14004 - 14005 refer to the 'Smit' action.
+$ 
+$ 14004 - translate into 1 word with no blanks.
+14004 Aixterm
+$ 
+$ 14005 - use the same word as Message 14004 to translate 'Aixterm'.
+$ 
+14005 Aixterm 動作啟動一個 aixterm 終端機模擬程式。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  hp.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * These are hp specific actions and data types.
+$ 
+$ ----------------------------------------------------------------------------
+$ Do not translate XXX in the messages "The XXX action ..." and
+$ "A XXX file ...". It is a defined Action and Filetype name.
+$ Use \\\n\ at the end of the line if the message continues to the next line.
+$ ----------------------------------------------------------------------------
+$ Messages 15001 - 15003 refer to the 'Sam' action.
+$ 
+$ 15001 - translate into 1 word with no blanks.
+$ 
+15001 Sams
+$ 
+$ 15002 and 15003 - use the same word as Message 15001 to translate 'Sam'.
+$ 
+15002 Sam 動作要求使用者輸入根密碼，然後\\\n\
+                        在一個終端機視窗中執行 HP 的 'sam' 系統管理工具。
+$ 
+15003 Sam 動作在一個終端機視窗中執行 HP \\\n\
+                        的 'sam' 系統管理工具。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 15004 - 15005 refer to the 'Hpterm' action.
+$ 
+$ 15004 - translate into 1 word with no blanks.
+15004 Hpterm
+$ 
+$ 15005 - use the same word as Message 15004 to translate 'Hpterm'.
+$ 
+15005 Hpterm 動作啟動 hpterm 終端機模擬程式。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 15006 is obsolete
+$ Message 15006 refers to the BMF data type. 
+$ 
+15006 BMF 檔案含有 Starbase 格式的圖形影像。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 15007 - 15008 refer to the Hpterm Remote action.
+$ 
+15007 遠端 Hpterm
+$ 
+$ 15008 - Do not translate 'hpterm'.
+$ 
+15008 遠端 Hpterm 動作提示使用者\\\n\
+			鍵入系統的名稱, 並在該系統啟動 \\\n\
+			'hpterm' 終端機模擬程式。 該系統\\\n\
+			必須正確配置可供遠端執行之用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 15009 - 15011 refer to the Hpterm Rlogin action.
+$ 
+15009 Hpterm Rlogin
+$ 
+$ In message 15010 the "\\$_title" should not be translated.  It is
+$ the hostname of the foreign host the hpterm is trying to connect
+$ to.
+$ 
+15010 \\$_title : Hpterm
+$ 
+$ 15011 - Do not translate 'rlogin' or 'hpterm'.
+$ 
+15011 Hpterm Rlogin 動作提示使用者\\\n\
+			鍵入系統的名稱, 開啟一個 'hpterm' \\\n\
+			終端機模擬程式視窗, 然後執行 \\\n\
+			'rlogin' 到其他系統。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 15012 - 15013 refer to the Capture Screen action.
+$ 
+15012 擷取螢幕
+$ 
+15013 該動作會啟動擷取螢幕公用程式
+$ 
+$ ***************************************************************************
+$ **************************************************************************
+$ *  dthelptag.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dthelptag.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes that are for CDE help 
+$ * developers.
+$ 
+$ ----------------------------------------------------------------------------
+$   Message 16001
+$         This message is a comment in the dthelptag.dt file.
+$         NOTE: make sure each new line begins with a "#".  This indicates
+$         that it is a comment.  Also, keep the \n\ at the end of each
+$         line.
+$ 
+$ 
+16001 # Help 可執行檔交貨時位於 ../dt/bin 目錄中，這可能\n\
+# 不在使用者的路徑上。因此特別定義下列字串，在調用該\n\
+# 客戶程式之前，將其加入路徑中。\n
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 16002 refers to the DTHELP_HTG (*.htg) datatype.
+$ 
+$ 16002 - Do not translate DTHELP_HTG or '.htg' in the message.  DTHELP_HTG is 
+$         a defined datatype name and it doesn't get translated and '.htg' 
+$         is the filename pattern which matches this datatype.  Also don't
+$         translate ('dthelptag').  
+$ 
+16002 這是桌上管理系統輔助說明系統的主要 HelpTag \\\n\
+                        來源檔案。這個檔案內的資訊是利用 \\\n\
+                        HelpTag 標示語言來設定格式，必須以 HelpTag \\\n\
+                        軟體 ('dthelptag') 編譯之後才能察看。其資料類\\\n\
+                        型名稱為 DTHELP_HTG。DTHELP_HTG 檔案的\\\n\
+                        副檔名為 '.htg'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 16003 refers to the DTHELP_CTG (*.ctg) datatype.
+$ 
+$ 16003 - Do not translate DTHELP_CTG or '.ctg' in the message.  DTHELP_CTG is 
+$         a defined datatype name and it doesn't get translated and '.ctg' 
+$         is the filename pattern which matches this datatype.  Also don't
+$         translate ('dthelptag') or '-canon'.  
+$ 
+16003 這是一個桌上管理系統輔助說明系統公認的 SGML \\\n\
+                        主要 HelpTag 來源檔案。這個檔案內的資訊是\\\n\
+                        利用公認的 HelpTag 標示語言來設定格式，必\\\n\
+                        須以 HelpTag 軟體 ('dthelptag') 編譯之後才能察\\\n\
+                        看。  其資料類型名稱為 DTHELP_CTG。\\\n\
+                        DTHELP_CTG 檔案的副檔名為 '.ctg'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 16004 refers to the DTHELP_ERR (*.ctg) datatype.
+$ 
+$ 16004 - Do not translate DTHELP_ERR or '.err' in the message.  DTHELP_ERR is 
+$         a defined datatype name and it doesn't get translated and '.err' 
+$         is the filename pattern which matches this datatype.  Also don't
+$         translate ('dthelptag') or '-canon'.  
+$ 
+16004 這個檔案包含與已編譯的輔助說明容體相關\\\n\
+                        之解析器錯誤。這個檔案只有在編譯輔\\\n\
+                        助說明容體，偵測到解析器錯誤時，才\\\n\
+                        會由 dthelptag 解析器產生。其資料類型\\\n\
+                        名稱為 DTHELP_ERR。 DTHELP_ERR 檔\\\n\
+                        案的副檔名為 '.err'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 16005 - 16007 are Labels for actions.  They all get mapped
+$  to other actions.
+$ 
+16005 編譯
+16006 編譯 Canon 格式
+16007 清除
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 16008 - 16009 refer to the 'OpenHelpTag' action.
+$ 
+$ 16008 - translate into 1 word with no blanks.
+$ 
+16008 OpenHelpTag
+$ 
+$ 16009 - use the same word as Message 16008 to translate 'OpenHelpTag'.
+$ 
+16009 OpenHelpTag 動作在一個文字編輯器中開啟一個主\\\n\
+                        要的 HelpTag 檔案 (一個 '.sdl' 或 '.hv' 檔案)。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 16010 - 16012 refer to the 'HelpTag' action.
+$ 
+$ 16010 - translate into 1 word with no blanks.
+$ 
+16010 HelpTag
+$ 
+$ Message 16011 - Prompt the user for the helptag file to view for the
+$  HelpTag action if none is provided.  Do not remove the ':'.
+$ 
+16011 HelpTag 檔案:
+$ 
+$ 16012 - use the same word as Message 16010 to translate 'HelpTag'.
+$   Don't translate 'dthelpview'.
+$ 
+16012 HelpTag 動作能編譯主要的 HelpTag \\\n\
+                        檔案，以建立執行時輔助說明檔案。執行\\\n\
+                        時檔案可以利用輔助說明系統或 'dthelpview' \\\n\
+                        程式，由某個程式顯示。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 16013 - 16014 refer to the 'HelpTagCanon' action.
+$ 
+$ 16013 - translate into 1 word with no blanks.
+$ 
+16013 HelpTagCanon
+$ 
+$ 16014 - use the same word as Message 16013 to translate 'HelpTagCanon'.
+$   Don't translate 'dthelpview'.
+$ 
+16014 HelpTagCanon 動作可編譯公認的 SGML \\\n\
+                        主要 HelpTag 檔案，以建立執行時輔助\\\n\
+                        說明檔案。執行時檔案可以利用輔助說\\\n\
+                        明系統由應用程式顯示或利用 'dthelpview' 程式\\\n\
+                        顯示。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 16015 - 16016 refer to the 'CleanHelpTag' action.
+$ 
+$ 16015 - translate into 1 word with no blanks.
+$ 
+16015 CleanHelpTag
+$ 
+$ 16016 - use the same word as Message 16015 to translate 'CleanHelpTag'.
+$ 
+16016 CleanHelpTag 動作除去由 HelpTag 動作所建立的運行\\\n\
+                        輔助說明檔案。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtmail.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dtmail.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes used by the CDE
+$ * Mailer
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 17001 refers to the DTMAIL_FILE datatype.
+$ 
+$ 17001 - Do not translate DTMAIL_FILE in the message.
+$         DTMAIL_FILE is a defined datatype name and it doesn't
+$         get translated.  Also don't translate the strings "From".
+$ 
+17001 這是桌上管理系統 mailer 所用的檔案夾。  其\\\n\
+                        資料類型為 DTMAIL_FILE。  DMMAIL_FILE 檔案\\\n\
+                        包含了字元 "CDE-Mail-Application-MailBox-File"\\\n\
+                        或 "From"。
+17002 回信
+17003 這是一個 MIME 訊息/外部主體檔案。  其資料類型\\\n\
+                        為 DTEXTERNALBODY。  DTEXTERNALBODY\\\n\
+                        檔案的副檔名為 '.ext'。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtwm.fp
+$  **************************************************************************
+$ *
+$ * LABEL of CONTROL
+$ *
+18001 時鐘
+$ 
+18002 行事曆
+$ 
+18003 起始檔案夾
+$ 
+18004 文字編輯器
+$ 
+18005 郵件
+$ 
+18006 內定值
+$ 
+18007 桌上管理系統外型式樣
+$ 
+18008 應用程式
+$ 
+18009 輔助說明管理者
+$ 
+18010 垃圾桶
+$ 
+18011 鎖定
+$ 
+18012 工作中
+$ 
+18013 結束
+$ 
+18014 終端機
+$ 
+18015 圖像編輯器
+$ 
+18016 桌上管理系統簡介
+$ 
+18017 前方面板輔助說明
+$ *
+$ * TITLE of SUBPANEL
+$ *
+18018 個人應用程式
+$ 
+18019 輔助說明
+$ 
+18020 個人印表機
+$ 
+18021 關於項目輔助說明
+$ 
+18022 %b%n%e日
+$ *
+$ * LABEL of CONTROL
+$ *
+18023 聲訊控制
+$ 
+$ **************************************************************************
+$ *  dtscreen.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dtscreen.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes used by the CDE
+$ * Screen Savers.
+$ 
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19001 - 19003 refer to the 'StartDtscreenHop' action.
+$ 
+$ 19001 - translate into 1 word with no blanks.
+$ 
+19001 StartDtscreenHop
+$ 
+$ 19002 - Short Description
+$ 
+19002 Hopalong iterated fractals
+$ 
+$ 19003 - use the same word as Message 19001 to translate 'StartDtscreenHop'.
+$   Long Description
+$ 
+19003 StartDtscreenHop 動作是系統用來啟動 hopalong iterated \\\n\
+                        fractals 螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19004 - 19006 refer to the 'StartDtscreenQix' action.
+$ 
+$ 19004 - translate into 1 word with no blanks.
+$ 
+19004 StartDtscreenQix
+$ 
+$ 19005 - Short Description
+$ 
+19005 Spinning lines
+$ 
+$ 19006 - use the same word as Message 19004 to translate 'StartDtscreenQix'.
+$   Long Description
+$ 
+19006 StartDtscreenQix 動作是系統用來啟動 \\\n\
+                        spinning lines 螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19007 - 19009 refer to the 'StartDtscreenImage' action.
+$ 
+$ 19007 - translate into 1 word with no blanks.
+$ 
+19007 StartDtscreenImage
+$ 
+$ 19008 - Short Description
+$ 
+19008 Random bouncing image
+$ 
+$ 19009 - use the same word as Message 19007 to translate 'StartDtscreenImage'.
+$   Long Description
+$ 
+19009 StartDtscreenImage 動作是系統用來啟動 \\\n\
+                        Random bouncing image 螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19010 - 19012 refer to the 'StartDtscreenLife' action.
+$ 
+$ 19010 - translate into 1 word with no blanks.
+$ 
+19010 StartDtscreenLife
+$ 
+$ 19011 - Short Description
+$ 
+19011 Conway's game of Life
+$ 
+$ 19012 - use the same word as Message 19010 to translate 'StartDtscreenLife'.
+$   Long Description
+$ 
+19012 StartDtscreenLife 動作是系統用來啟動 \\\n\
+                        Conway's game of Life 螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19013 - 19015 refer to the 'StartDtscreenSwarm' action.
+$ 
+$ 19013 - translate into 1 word with no blanks.
+$ 
+19013 StartDtscreenSwarm
+$ 
+$ 19014 - Short Description
+$ 
+19014 Swarm of bees
+$ 
+$ 19015 - use the same word as Message 19013 to translate 'StartDtscreenSwarm'.
+$   Long Description
+$ 
+19015 StartDtscreenSwarm 動作是系統用來啟動 \\\n\
+                        Swarm of bees 影像螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19016 - 19018 refer to the 'StartDtscreenRotor' action.
+$ 
+$ 19016 - translate into 1 word with no blanks.
+$ 
+19016 StartDtscreenRotor
+$ 
+$ 19017 - Short Description
+$ 
+19017 Rotor
+$ 
+$ 19018 - use the same word as Message 19016 to translate 'StartDtscreenRotor'.
+$   Long Description
+$ 
+19018 StartDtscreenRotor 動作是系統用來啟動 \\\n\
+                        Rotor 螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19019 - 19021 refer to the 'StartDtscreenPyro' action.
+$ 
+$ 19019 - translate into 1 word with no blanks.
+$ 
+19019 StartDtscreenPyro
+$ 
+$ 19020 - Short Description
+$ 
+19020 Fireworks
+$ 
+$ 19021 - use the same word as Message 19019 to translate 'StartDtscreenPyro'.
+$   Long Description
+$ 
+19021 StartDtscreenPyro 動作是系統用來啟動 \\\n\
+                        Fireworks 螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19022 - 19024 refer to the 'StartDtscreenFlame' action.
+$ 
+$ 19022 - translate into 1 word with no blanks.
+$ 
+19022 StartDtscreenFlame
+$ 
+$ 19023 - Short Description
+$ 
+19023 Cosmic Flame Fractals
+$ 
+$ 19024 - use the same word as Message 19022 to translate 'StartDtscreenFlame'.
+$   Long Description
+$ 
+19024 StartDtscreenFlame 動作是系統用來啟動 \\\n\
+                        Cosmic Flame Fractals 螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19025 - 19027 refer to the 'StartDtscreenWorm' action.
+$ 
+$ 19025 - translate into 1 word with no blanks.
+$ 
+19025 StartDtscreenWorm
+$ 
+$ 19026 - Short Description
+$ 
+19026 Wiggly Worms
+$ 
+$ 19027 - use the same word as Message 19025 to translate 'StartDtscreenWorm'.
+$   Long Description
+$ 
+19027 StartDtscreenWorm 動作是系統用來啟動 \\\n\
+                        Wiggly Worms 螢幕省電裝置所用。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 19028 - 19030 refer to the 'StartDtscreenBlank' action.
+$ 
+$ 19028 - translate into 1 word with no blanks.
+$ 
+19028 StartDtscreenBlank
+$ 
+$ 19029 - Short Description
+$ 
+19029 Blank Screen
+$ 
+$ 19030 - use the same word as Message 19028 to translate 'StartDtscreenBlank'.
+$   Long Description
+$ 
+19030 StartDtscreenBlank 動作是系統用來啟動 \\\n\
+                        Blank Screen 螢幕省電裝置所用。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtcm.dt (Calender Manager)
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dtcm.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes used by the CDE
+$ * Calender Manager.
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 20001 refers to the CalendarAppointmentAttrs (*.appt) datatype.
+$ 
+$ 20001 - Do not translate CalendarAppointmentAttrs or '.appt' in the message.
+$         CalendarAppointmentAttrs is a defined datatype name and it doesn't 
+$         get translated and '.appt' is the filename pattern which matches 
+$         this datatype.
+$ 
+20001 這個檔案內含與行事曆管理者相關的資訊。\\\n\
+                        其資料類型名稱為 CalendarAppointmentAttrs。\\\n\
+                        CalendarAppointmentAttrs 檔案的副檔名\\\n\
+                        為 '.appt'。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 20002 - 20003 refer to the Calendar (Dtcm)  action
+$ 
+$ 20002 - translate into 1 word with no blanks.
+$ 
+20002 行事曆
+$ 
+$ 20003 - Don't translate '(Dtcm)'
+$ 
+20003 「行事曆」(Dtcm) 動作啟動桌上管理系統的\\\n\
+                        行事曆管理者。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 20004 - 20005 refer to the Calendar Insert (DtcmInsert) action
+$ 
+20004 行事曆插入
+$ 
+$ 20005 - Don't translate (DtcmInsert).
+$ 
+20005 「行事曆插入」(DtcmInsert) 動作在使用者\\\n\
+                        內定的行事曆中插入一個預約。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 20006 - 20007 refer to the Calendar Edit (DtcmEdit) action
+$ 
+$ 20006 - translate into 1 word with no blanks.
+$ 
+20006 行事曆編輯
+$ 
+$ 20007 - Don't translate (DtcmEdit).
+$ 
+20007 「行事曆編輯」(DtcmEdit) 動作對某個\\\n\
+                        行事曆預約執行單獨的預約編輯\\\n\
+                        器。
+$ 
+$ 20008 - this is and action label
+$ 
+20008 插入
+$ 
+$ Messages 20009 - 20010 
+$	These refer to the messages that appear in the error dialog
+$       when the dtcmInsert action fails.
+$ 20009 NOTE: the '\\\\n' represents a newline. Place these where you 
+$             feel it's appropriate.
+$ 
+20009 這個約會沒有被安排在您的\\\n\
+			     日曆\\\\n\\\n\
+			     因為有錯誤。  這個約會可能有\\\n\
+			     格式\\\\n\\\n\
+			     錯誤，或您的日曆可能無法被\\\n\
+			     存取。
+$ 
+$ 20010 Error dialog title
+$ 
+20010 行事曆 : 錯誤 - 安排約會
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  IconBrowse.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The IconBrowse.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes by user whom wish to use
+$ * Instance based icons. 
+$ 
+$ ----------------------------------------------------------------------------
+$ Message 22001 - is a header for IconBrowse.dt.  It is actually a comment
+$                 but it explains how the file works so it should be
+$                 localized.  NOTE: make sure each new line begins with a
+$                 "#".  This indicates that it is a comment.  Also, keep the
+$                 \n\ at the end of each line.
+$    Don't translate BM and PM or .bm and .pm.
+$ 
+22001 # 這個檔案中的兩個資料類型 (BM 與 PM) 可啟動位元映射\n\
+# 與圖像映射檔案的 "實例" 圖像。  這表示每個圖像檔案 (副檔\n\
+# 名為 .bm 和 .pm 者) 均可參照到自身，作為其圖像。  這在瀏覽\n\
+# 整個檔案夾的圖像時很有用，因為您不需要開啟每一個檔案\n\
+# 來查看 -- 圖像本身就可以代表。\n\
+#\n\
+# 要啟動實例圖像，請將這個檔案複製到您起始檔案夾的 .dt/types/ \n\
+# 次檔案夾中，然後重新載入動作與資料類型資料庫。(要重新載\n\
+# 入動作與資料類型資料庫，您可以登出後重新登入，或是在應\n\
+# 用程式管理者的 DtTools 檔案夾中執行 ReloadApps 動作。\n\
+#\n\
+#   請注意：由於讀取與顯示自訂圖像需要額外的工作，因此在這些資料\n\
+#           和類型啟動的情況下，檔案管理者的執行速度可能會變慢。\n\
+#\n\
+# 要讓這些資料類型變回內定的圖像，請從您個人的 .dt/types/ \n\
+# 次檔案夾中除去這個檔案，然後重新載入動作與資料類型\n\
+# 資料庫。
+$ 
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  user-prefs.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The user-prefs.dt types file defines all the Actions, Datatypes, and 
+$ * descriptions of those Actions and Datatypes for the default capabilities
+$ * for CDE.
+$ 
+$ Message 23001 - 23006
+$         These messages are comments in the user-prefs.dt file.
+$         NOTE: make sure each new line begins with a "#".  This indicates
+$         that it is a comment.  Also, keep the \n\ at the end of each
+$         line.
+$ 
+$ 
+23001 # 一般桌上管理系統環境 (CDE) 動作資料庫定義\n\
+#\n\
+# 這個檔案中所定義的動作，從一般動作的要求，例\n\
+# 如 "文字編輯器"，到特定的應用程式，如 "Vi"。若\n\
+# 要自訂個人版本的對應，請將這個檔案複製到 \n\
+# $HOME/.dt/types/user-prefs.dt，然後將任何 MAP_ACTION \n\
+# 改成您要執行的動作。\n\
+#\n\
+# 要得知您的系統可以使用哪些動作，請從前方面板\n\
+# 開啟應用程式管理者來瀏覽。
+23002 # 要使用非 dtmail 的郵件程式，請為您的郵件程式定義\n\
+# 一個動作，然後取代 Dtmail。\n
+23003 # 要使用 'vi' 作為您的文字編輯器，請將 'Dtpad' (CDE \n\
+# 的 Motif 文字編輯器) 改成 'Vi'。\n
+23004 # 一般桌上管理系統環境 (CDE) 內定的終端機模擬程式為 Dtterm。\n
+23005 # 要使用 SPCD 遠端 Dtterm，請將 'RemoteDttermRlogin' \n\
+# 改成 'RemoteDttermSpcd'。\n
+23006 # 要使用 SPCD 遠端 Xterm，請將 'RemoteXtermRlogin' \n\
+# 改成 'RemoteXtermSpcd'。\n
+$ 
+$ --------------------------------------------------------------
+$ Messages 23007 - 23011 are LABEL's for actions.
+$ --------------------------------------------------------------
+23007 郵件程式
+$ 
+23008 文字編輯器
+$ 
+23009 終端機
+$ 
+23010 RemoteDtterm
+$ 
+23011 RemoteXterm
+$ 
+$ --------------------------------------------------------------
+$ Messages 23012 - 23016 are DESCRIPTIONS of actions
+$ --------------------------------------------------------------
+23012 郵件程式動作執行使用者偏好的\\\n\
+                        郵件程式。
+$ 
+23013 「文字編輯器」動作執行使用者偏好的\\\n\
+                        文字編輯器。
+$ 
+23014 「終端機」動作執行使用者偏好的\\\n\
+                        終端機模擬程式。
+$ 
+23015 RemoteDtterm 動作執行使用者偏好的\\\n\
+                         在不同機器上啟動 dtterm 的方式。
+$ 
+23016 RemoteXterm 動作執行使用者偏好的\\\n\
+                         在不同機器上啟動 xterm 的方式。
+$ 
+$ New action for user-pref's - the Trash 
+$ 
+23017 # 一般桌上管理系統環境 (CDE) 內定的檔案垃圾桶是 Dttrash。\n
+23018 垃圾桶
+$ 
+23019 「垃圾桶」動作執行使用者偏好的\\\n\
+                        垃圾桶客戶程式。
+$ 
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtbuilder.dt (The Application Builder)
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dtbuilder.dt types file defines all the Actions, Datatypes, and
+$ * descriptions of those Actions and Datatypes used by the CDE
+$ * Application Builder tool.
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 24001 - 24002 refer to the BIP (*.bip) datatype.
+$ 
+$ 24001 - Do not translate BIP or '.bip' in the message.  BIP is a defined 
+$         datatype name and it doesn't get translated and '.bip' is the 
+$         filename pattern which matches this datatype.
+$ 
+24001 這個檔案包含桌上管理系統應用程式建立\\\n\
+                        者的模組群資料。其資料類型名稱為 \\\n\
+                        BIP。 BIP 檔案的副檔名為 '.bip'。
+$ 
+$ Message 24002 is the description of the BIP 'Open' action.
+$  Don't translate (*.bip).
+$ 
+24002 這個動作以執行應用程式建立者，並載入該檔的\\\n\
+                        方式，開啟一個應用程式建立者模組群，\\\n\
+                        檔案 (*.bip)。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 24003 - 24004 refer to the BIL (*.bil) datatype.
+$ 
+$ 24003 - Do not translate BIL or '.bil' in the message.  BIL is a defined 
+$         datatype name and it doesn't get translated and '.bil' is the 
+$         filename pattern which matches this datatype.
+$ 
+24003 這個檔案包含桌上管理系統應用程式建立者的\\\n\
+                        模組資料。  其資料類型為 BIL。  BIL 檔\\\n\
+                        案的副檔名為 '.bil'。
+$ 
+$ Message 24004 is the description of the BIL 'Open' action.
+$  Don't translate (*.bil).
+$ 
+24004 這個動作以執行應用程式建立者，並載入該檔的\\\n\
+                        方式，開啟一個應用程式建立者模組，\\\n\
+                        檔案 (*.bil)。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 24005 - 24006 refer to the BIX (*.bix) datatype.
+$ 
+$ 24005 - Do not translate BIX, BIP, BIL, or '.bix' in the message.  
+$         BIX, BIP, and BIL is a defined datatype name and it doesn't get 
+$         translated and '.bix' is the filename pattern which matches this 
+$         data type.
+$ 
+24005 這個檔案包含桌上管理系統應用程式建立者的\\\n\
+                        模組群的所有模組群 (BIP) 與模組 (BIL) \\\n\
+                        檔案資料。  其資料類型為 BIX。  BIX 檔\\\n\
+                        案的副檔名為 '.bix'。
+$ 
+$ Message 24006 is the description of the BIX 'Open' action.
+$  Don't translate (*.bix).
+$ 
+24006 這個動作以執行應用程式建立者，並載入該檔的\\\n\
+                        方式，開啟一個應用程式建立者包裹的模\\\n\
+                        組群檔案 (*.bil)。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 24007 - 24008 refer to the Dtappbuild action
+$ 
+$ 24007 - translate into 1 word with no blanks.
+$ 
+24007 應用程式建立者
+$ 
+$ 24008 - Don't translate '(Dtappbuild)'
+$ 
+24008 「應用程式建立者」(Dtappbuild) 動作執行\\\n\
+                        桌上管理系統應用程式建立者。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 24009 - 24012 refer to the CodeGen action
+$ 
+$ 24009 - translate into 1 word with no blanks.
+$ 
+24009 碼產生器
+$ 
+$ Message 24010 - Prompt the user for the Application builder project file 
+$   (*.bip)for which to work with.  Do not remove the ':'.
+$ 
+24010 模組群檔案 (*.bip):
+$ 
+$ For Message 24011 do not localize \\$DIR_NAME.  It is an environment variable
+$   which contains a folder name.  This is an error message that gets output
+$   when the user doesn't input of provide an folder to the CodeGen action.
+$ 
+24011 錯誤：\\$DIR_NAME 不是一個檔案夾。
+$ 
+$ 24012 - don't translate '(CodeGen)'
+$ 
+24012 「碼產生器」(CodeGen) 動作執行桌上管理系統應用程式\\\n\
+                        的碼產生器。
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  miscActions.dt (Example actions shipped in an example folder)
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The miscActions.dt types file defines all the Actions and
+$ * descriptions of those Actions that we are shipping as examples.  The
+$ * user has the ability to move these into there .dt/types folder if
+$ * they wish to use them.
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25001 - 25002 refer to the Xcalc action
+$ 
+25001 X 計算機
+$ 
+$ 25002 - Don't translate xcalc, TI-30, or HP-10C. 
+$ 
+25002 Xcalc 動作調用 X 客戶程式。 \\\n\
+                        xcalc 客戶程式是一個可模擬 TI-30 或 HP-10C \\\n\
+                        的科學型計算機桌上管理程式配件。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25003 - 25004 refer to the OvalClock (Oclock) action
+$ 
+25003 橢圓時鐘
+$ 
+$ 25004 - Don't translate (Oclock) or oclock.
+$ 
+25004 「橢圓時鐘」(Oclock) 動作調用 oclock \\\n\
+                        X 客戶程式。 oclock 客戶程式以指針方式\\\n\
+                        顯示目前時間。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25005 - 25006 refer to the List Atoms (Xlsatoms) action
+$ 
+25005 列示元素
+$ 
+$ 25006 - Don't translate (Xlsatoms), xlsatoms, and Xlsatoms.
+$ 
+25006 「列示元素」(Xlsatoms) 動作調用 xlsatoms \\\n\
+                        X 客戶程式。 Xlsatoms 列出被設限的元素。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25007 - 25008 refer to the Xbiff action
+$ 
+25007 Xbiff
+$ 
+$ 25008 - Don't translate xbiff.
+$ 
+25008 Xbiff 動作調用 xbiff X 客戶程式。\\\n\
+                        xbiff 程式顯示一個小小的郵箱圖像。\\\n\
+                        若沒有郵件，郵箱上面的旗子\\\n\
+                        不會升起。如果有郵件，則旗子會\\\n\
+                        升起，郵箱會發出嗶聲。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25009 - 25010 refer to the Xcolor action
+$ 
+25009 Xcolor
+$ 
+$ 25010 - Don't translate xcolor.
+$ 
+25010 Xcolor 動作調用 xcolor X 客戶程式。\\\n\
+                        xcolor 在視窗中顯示所有的 256 色。\\\n\
+                        當您將游標移到視窗中時，即會安\\\n\
+                        裝一個含有色度表 (中有一定\\\n\
+                        的濃度與亮度) 的色彩對照表，\\\n\
+                        同時仍保留黑白。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25011 - 25012 refer to the Cut and Select (Xcutsel) action
+$ 
+25011 剪取與選取
+$ 
+$ 25012 - Don't translate (Xcutsel) and xcutsel.
+$ 
+25012 剪取與選取 (Xcutsel) 動作調用了\\\n\
+                        xcutsel X 客戶程式。  xcutsel 客戶程式用來\\\n\
+                        將目前選取部分的副本複製到一個剪取緩\\\n\
+                        衝區，並將包含剪取緩衝區內容的部分選\\\n\
+                        取起來。  它可作為不提供選取功能與提供\\\n\
+                        選取功能的應用程式兩者之間的橋樑。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25013 - 25014 refer to the Xditview action
+$ 
+25013 Xditview
+$ 
+$ 25014 - Don't translate xditview or ditroff.
+$ 
+25014 Xditview 動作調用 xditview X 客戶程式。\\\n\
+                        xditview 程式會將 ditroff 輸出顯示在\\\n\
+                        一個 X 顯示器螢幕上。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25015 - 25016 refer to the Xedit action
+$ 
+25015 Xedit
+$ 
+$ 25016 - Don't translate xedit.
+$ 
+25016 Xedit 動作調用 xedit X 客戶程式。\\\n\
+                        xedit 客戶程式提供一個含有四個區域的\\\n\
+                        視窗：1. 命令段：一組能讓您結束 xedit、\\\n\
+                        儲存檔案、或在編輯視窗中載入一個新檔\\\n\
+                        的命令。 2. 訊息視窗：顯示 xedit 訊息。 \\\n\
+                        此外，這個視窗還可以作為系統暫存區。 \\\n\
+                        3. 檔名顯示器：顯示目前編輯中的檔案名\\\n\
+                        稱，以及這個檔案是否可以讀寫，或者只\\\n\
+                        能讀取。 4. 編輯視窗：顯示您正編輯或建\\\n\
+                        立之檔案的名稱。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25017 - 25018 refer to the Xlock action
+$ 
+25017 Xlock
+$ 
+$ 25018 - Don't translate xlock.
+$ 
+25018 Xlock 動作調用 xlock X 伺服器。\\\n\
+                        xlock 客戶程式鎖定 X 顯示器，一直到\\\n\
+                        輸入密碼後才能解除。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25019 - 25020 refer to the Xlogo action
+$ 
+25019 Xlogo
+$ 
+$ 25020 - Don't translate xlogo.
+$ 
+25020 Xlogo 動作調用 xlogo X 客戶程式。\\\n\
+                        xlogo 客戶程式顯示 X 視窗系統的\\\n\
+                        標誌。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25021 - 25022 refer to the Magnify (Xmag) action
+$ 
+25021 放大
+$ 
+$ 25022 - Don't translate (Xmag) or xmag.
+$ 
+25022 「放大」(Xmag) 動作調用 xmag X 客戶程式。\\\n\
+                        xmag 客戶程式能讓您將 X 視窗局部放\\\n\
+                        大。  如果沒有明確地指定區域，就會\\\n\
+                        顯示一個正方形，指標位於左上角，代\\\n\
+                        表要放大的區域。  這個區域可以按住滑\\\n\
+                        鼠按鈕 2 往外拉到需要的大小。  一旦選\\\n\
+                        取好區域，就會跳出一個視窗，顯示放\\\n\
+                        大的樣子，其中來源影像的每個圖像單\\\n\
+                        元都會以同色的小正方形代表。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25023 - 25024 refer to the Xman action
+$ 
+25023 Xman
+$ 
+$ 25024 - use the same word as Message 20023 to translate 'Xman'
+$  Also, don't translate xman.
+$ 
+25024 Xman 動作調用 xman X 客戶程式。\\\n\
+                        xman 客戶程式是一個援助說明頁瀏覽器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25025 - 25026 refer to the X Mail Handler (Xmh) action
+$ 
+25025 X 郵件處理器
+$ 
+$ 25026 - don't translate Xmh, xmh, or MH.
+$ 
+25026 X 郵件處理器 (Xmh) 動作調用 xmh \\\n\
+                        X 客戶程式。xmh 客戶程式提供一個\\\n\
+                        圖形式的使用者介面，以使用 MH 訊息\\\n\
+                        處理系統。  真正要對您的郵件執行動作\\\n\
+                        時，它會呼叫 MH 套裝軟體。  電子郵件\\\n\
+                        訊息可以撰寫、送出、接收、回覆、轉\\\n\
+                        送、排序、以及儲存在檔案夾內。 xmh \\\n\
+                        並提供各種機能，供您自訂使用者介面。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25027 - 25028 refer to the Eyes (Xeyes) action
+$ 
+25027 眼睛
+$ 
+$ 25028 - Don't translate xeyes.
+$ 
+25028 「眼睛」(Xeyes) 動作調用 xeyes X 客戶程式。\\\n\
+                        xeyes 客戶程式顯示一雙眼睛，跟隨您的指標\\\n\
+                        在顯示器上移動。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25029 - 25030 refer to the X Authority (Xauth) action
+$ 
+25029 X 授權
+$ 
+$ 25030 - Don't translate (Xauth) or xauth.
+$ 
+25030 「X 授權」(Xauth) 動作調用 xauth X 客\\\n\
+                        戶程式。 xauth 客戶程式可用來編輯與顯\\\n\
+                        示連接到 X 伺服器的授權資訊。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25031 - 25032 refer to the List Clients (Xlsclients) action
+$ 
+25031 列示客戶程式
+$ 
+$ 25032 - Don't translate (Xlsclients) or xlsclients.
+$ 
+25032 「列示客戶程式」(Xlsclients) 動作調用\\\n\
+                        xlsclients X 客戶程式。 xlsclients 客戶程式是\\\n\
+                        一個公用程式，可列出螢幕上正執行的客戶\\\n\
+                        程式的相關資訊。  它可以用來產生命令集，\\\n\
+                        代表使用者目前階段作業的快照。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25033 - 25036 refer to the Change Password (Passwd) action
+$ 
+25033 Change Password
+$ 
+$ Messages 25034 and 25035 - Provides a 'friendly' output to the user 
+$   providing a title to where the user is to change the password.
+$   Translate "Changing password" and adjust "----------------" to the same
+$   size of "Changing password".
+$ 
+25034 更改密碼
+25035 --------
+$ 
+$ 25036 - Don't translate (Passwd).
+$ 
+25036 「更改密碼」(Passwd) 動作使用 'passwd' \\\n\
+                        命令來改變使用者密碼。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 25037 - 25038 refer to the X Puzzle (Xpuzzle) action
+$ 
+25037 X 拼圖
+$ 
+$ 25038 - Don't translate (Xpuzzle) or xpuzzle.
+$ 
+25038 「X 拼圖」(Xpuzzle) 動作調用 \\\n\
+                        xpuzzle X 客戶程式。 xpuzzle 客戶程式是一個\\\n\
+                        4x4 15 片的拼圖。
+$ **************************************************************************
+$ **************************************************************************
+$ *  miscImages.dt (Example image datatypes shipped in an example folder)
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The miscImages.dt types file defines all the image datatypes and
+$ * descriptions of those image datatypes that we are shipping as examples.  
+$ * The user has the ability to move these into there $HOME/.dt/types folder 
+$ * if they wish to use them.
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26001 is the description of the Sun-raster datatype.
+$ 26001 - Do not translate Sun-raster, or "0x59a66a95" in the
+$        message.  Sun-raster is a defined datatype name and it doesn't get
+$        translated and "0x59a66a95" is the CONTENT pattern used to match 
+$        this datatype.
+$ 
+26001 這個檔案含有一個 Sun-raster 格式的圖形影像。\\\n\
+                        其資料類型名稱即為 Sun-raster。\\\n\
+                        Sun-raster 檔案包含長的 "0x59a66a95"。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26002 is the description of the pict-file datatype.
+$ 26002 - Do not translate PICT, pict-file, '.PICT', or '.pict' in the
+$        message.  pict-file is a defined datatype name and it doesn't get
+$        translated and '.PICT' and '.pict' are the filename patterns used 
+$        to match this datatype.
+$ 
+26002 這個檔案含有一個 Macintosh PICT 格式的圖形影像。\\\n\
+                        其資料類型名稱為 pict-file。\\\n\
+                        pict-file 檔案的副檔名為 '.PICT' \\\n\
+                        或 '.pict'。
+$ 
+$ 26003 - This message is used by the pict-file datatype. It is the error
+$   message when a user tries to "Open" a pict-file file.
+$ 
+26003 無法開啟 - 沒有 pict-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26004 is the description of the ppm-file datatype.
+$ 26004 - Do not translate ppm-file, "P6, or "P3" in the
+$        message.  ppm-file is a defined datatype name and it doesn't get
+$        translated and "P6", and "P3" are the CONTENT patterns used to match 
+$        this datatype.
+$ 
+26004 這個檔案含有一個 Poskanser Protable Pixmap 格式的圖形\\\n\
+                        影像。  其資料類型名稱為 ppm-file。\\\n\
+                        ppm-file 檔案含有字元 "P6" \\\n\
+                        或 "P3"。
+$ 
+$ 26005 - This message is used by the ppm-file datatype. It is the error
+$   message when a user tries to "Open" a ppm-file file.
+$ 
+26005 無法開啟 - 沒有 ppm-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26006 is the description of the pj-file datatype.
+$ 26006 - Do not translate pj-file, '.pj' in the message.  pj-file is a 
+$        defined datatype name and it doesn't get translated and '.pj' is 
+$        the filename pattern used to match this datatype.
+$ 
+26006 這個檔案含有一個 HP PaintJet 格式的圖形影像。\\\n\
+                        其資料類型名稱為 pj-file。\\\n\
+                        pj-file 檔案的副檔名為 '.pj'。
+$ 
+$ 26007 - This message is used by the pj-file datatype. It is the error
+$   message when a user tries to "Open" a pj-file file.
+$ 
+26007 無法開啟 - 沒有 pj-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26008 is the description of the pgm-file datatype.
+$ 26008 - Do not translate pgm-file, "P5, or "P2" in the
+$        message.  pgm-file is a defined datatype name and it doesn't get
+$        translated and "P5", and "P2" are the CONTENT patterns used to match 
+$        this datatype.
+$ 
+26008 這個檔案含有一個 Portable Graymap 格式的圖形影像。\\\n\
+                        其資料類型名稱為 pgm-file。\\\n\
+                        pgm-file 檔案含有字元 "p5" 或 "p2"。
+$ 
+$ 26009 - This message is used by the pgm-file datatype. It is the error
+$   message when a user tries to "Open" a pgm-file file.
+$ 
+26009 無法開啟 - 沒有 pgm-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26010 is the description of the pbm-file datatype.
+$ 26010 - Do not translate pbm-file, "P4, or "P1" in the
+$        message.  pbm-file is a defined datatype name and it doesn't get
+$        translated and "P4", and "P1" are the CONTENT patterns used to match 
+$        this datatype.
+$ 
+26010 這個檔案含有一個 Poskanser Portable Bitmap 格式的圖形\\\n\
+                        影像。  其資料類型名稱為 pbm-file。\\\n\
+                        pbm-file 檔案含有字元 "P4" 或 "P1"。
+$ 
+$ 26011 - This message is used by the pbm-file datatype. It is the error
+$   message when a user tries to "Open" a pbm-file file.
+$ 
+26011 無法開啟 - 沒有 pbm-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26012 is the description of the ilbm-file datatype.
+$ 26012 - Do not translate ilbm-file, '.ilbm', or "ILBM" in the
+$        message.  ilbm-file is a defined datatype name and it doesn't get
+$        translated and '.ilbm', and "ILBM" are the filename or CONTENT 
+$        patterns used to match this datatype.
+$ 
+26012 這個檔案含有一個 Amiga's IFF ILBM 格式的圖形影像。\\\n\
+                        其資料類型名稱為 ilbm-file。\\\n\
+                        ilbm-file 檔案的副檔名為 '.ilbm'，\\\n\
+                        或含有字元 "ILBM"。
+$ 
+$ 26013 - This message is used by the ilbm-file datatype. It is the error
+$   message when a user tries to "Open" an ilbm-file file.
+$ 
+26013 無法開啟 - 沒有 ilbm-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26014 is the description of the pi1-file datatype.
+$ 26014 - Do not translate pi1, pi1-file, '.pi1' in the message.  pi1-file is a 
+$        defined datatype name and it doesn't get translated and '.pi1' is 
+$        the filename pattern used to match this datatype.
+$ 
+26014 這個檔案含有一個  Atari Degas pil 格式的圖形\\\n\
+                        影像。  其資料類型名稱為 pil-file。\\\n\
+                        pil-file 檔案的副檔名為 '.pil'。
+$ 
+$ 26015 - This message is used by the pi1-file datatype. It is the error
+$   message when a user tries to "Open" a pi1-file file.
+$ 
+26015 無法開啟 - 沒有 pil-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26016 is the description of the pcx-file datatype.
+$ 26016 - Do not translate PCX, pcx-file, '.pcx' in the message.  pcx-file is a 
+$        defined datatype name and it doesn't get translated and '.pcx' is 
+$        the filename pattern used to match this datatype.
+$ 
+26016 這個檔案含有一個 PC Paintbrush PCX 格式的圖形\\\n\
+                        影像。  其資料類型名稱為 pcx-file。\\\n\
+                        pcx-file 檔案的副檔名為 '.pcx'。
+$ 
+$ 26017 - This message is used by the pcx-file datatype. It is the error
+$   message when a user tries to "Open" a pcx-file file.
+$ 
+26017 無法開啟 - 沒有 pcx-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26018 is the description of the tga-file datatype.
+$ 26018 - Do not translate tga-file, '.tga' in the message.  tga-file is a 
+$        defined datatype name and it doesn't get translated and '.tga' is 
+$        the filename pattern used to match this datatype.
+$ 
+26018 這個檔案含有一個 TrueVision Targa 格式的圖形\\\n\
+                        影像。  其資料類型名稱為 tga-file。\\\n\
+                        pga-file 檔案的副檔名為 '.tga'。
+$ 
+$ 26019 - This message is used by the tga-file datatype. It is the error
+$   message when a user tries to "Open" a tga-file file.
+$ 
+26019 無法開啟 - 沒有 tga-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26020 is the description of the yuv-file datatype.
+$ 26020 - Do not translate YUV, yuv-file, '.yuv' in the message.  yuv-file is a 
+$        defined datatype name and it doesn't get translated and '.yuv' is 
+$        the filename pattern used to match this datatype.
+$ 
+26020 這個檔案含有一個 Abekas YUV 格式的圖形影像。\\\n\
+                        其資料類型名稱為 yuv-file。\\\n\
+                        yuv-file 檔案的副檔名為 '.yuv'。
+$ 
+$ 26021 - This message is used by the yuv-file datatype. It is the error
+$   message when a user tries to "Open" a yuv-file file.
+$ 
+26021 無法開啟 - 沒有 yuv-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26022 is the description of the xim-file datatype.
+$ 26022 - Do not translate xim, xim-file, '.xim' in the message.  xim-file is a 
+$        defined datatype name and it doesn't get translated and '.xim' is 
+$        the filename pattern used to match this datatype.
+$ 
+26022 這個檔案含有一個 xim 格式的圖形影像。\\\n\
+                        其資料類型名稱為 xim-file。\\\n\
+                        xim-file 檔案的副檔名為 '.xim'。
+$ 
+$ 26023 - This message is used by the xim-file datatype. It is the error
+$   message when a user tries to "Open" a xim-file file.
+$ 
+26023 無法開啟 - 沒有 xim-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26024 is the description of the mtv-file datatype.
+$ 26024 - Do not translate MTV, PRT, mtv-file, '.mtv' in the message.  
+$        mtv-file is a defined datatype name and it doesn't get translated 
+$        and '.mtv' is  the filename pattern used to match this datatype.
+$ 
+26024 這個檔案含有一個 MTV/PRT ray-tracer 輸出格式\\\n\
+                        的圖形影像。  其資料類型名稱為 mtv-file。\\\n\
+                        mtv-file 檔案的副檔名為 '.mtv'。
+$ 
+$ 26025 - This message is used by the mtv-file datatype. It is the error
+$   message when a user tries to "Open" a mtv-file file.
+$ 
+26025 無法開啟 - 沒有 mtv-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26026 is the description of the qrt-file datatype.
+$ 26026 - Do not translate QRT, qrt-file, '.qrt' in the message.  qrt-file is a 
+$        defined datatype name and it doesn't get translated and '.qrt' is 
+$        the filename pattern used to match this datatype.
+$ 
+26026 這個檔案含有一個 QRT ray-tracer 輸出格式的\\\n\
+                        圖形影像。  其資料類型名稱為 qrt-file。\\\n\
+                        qrt-file 檔案的副檔名為 '.qrt'。
+$ 
+$ 26027 - This message is used by the qrt-file datatype. It is the error
+$   message when a user tries to "Open" a qrt-file file.
+$ 
+26027 無法開啟 - 沒有 qrt-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26028 is the description of the imgw-file datatype.
+$ 26028 - Do not translate Img-whatnot, imgw-file, '.imgw' in the message. 
+$        imgw-file is a defined datatype name and it doesn't get translated 
+$        and '.imgw' is the filename pattern used to match this datatype.
+$ 
+26028 這個檔案含有一個 Img-whatnot 格式的圖形影像。\\\n\
+                        其資料類型名稱為 imgw-file。\\\n\
+                        imgw-file 檔案的副檔名為 '.imgw'。
+$ 
+$ 26029 - This message is used by the imgw-file datatype. It is the error
+$   message when a user tries to "Open" a imgw-file file.
+$ 
+26029 無法開啟 - 沒有 imgw-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26030 is the description of the sld-file datatype.
+$ 26030 - Do not translate sld-file, '.sld' in the message.  sld-file is a 
+$        defined datatype name and it doesn't get translated and '.sld' is 
+$        the filename pattern used to match this datatype.
+$ 
+26030 這個檔案含有一個 AutoCAD slide 格式的圖形影像。\\\n\
+                        其資料類型名稱為 sld-file。\\\n\
+                        sld-file 檔案的副檔名為 '.sld'。
+$ 
+$ 26031 - This message is used by the sld-file datatype. It is the error
+$   message when a user tries to "Open" a sld-file file.
+$ 
+26031 無法開啟 - 沒有 sld-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26032 is the description of the spc-file datatype.
+$ 26032 - Do not translate Atari, spc-file, '.spc' in the message.  spc-file 
+$        is a defined datatype name and it doesn't get translated and '.spc' 
+$        is the filename pattern used to match this datatype.
+$ 
+26032 這個檔案含有一個 Atari compressed Spectrum 格式的\\\n\
+                        圖形影像。  其資料類型名稱為 spc-file。\\\n\
+                        spc-file 檔案的副檔名為 '.spc'。
+$ 
+$ 26033 - This message is used by the spc-file datatype. It is the error
+$   message when a user tries to "Open" a spc-file file.
+$ 
+26033 無法開啟 - 沒有 spc-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26034 is the description of the spu-file datatype.
+$ 26034 - Do not translate Atari, spu-file, '.spu' in the message.  spu-file 
+$        is a defined datatype name and it doesn't get translated and '.spu' 
+$        is the filename pattern used to match this datatype.
+$ 
+26034 這個檔案含有一個 Atari uncompress Spectrum 格式的\\\n\
+                        圖形影像。  其資料類型名稱為 spu-file。\\\n\
+                        spu-file 檔案的副檔名為 '.spu'。
+$ 
+$ 26035 - This message is used by the spu-file datatype. It is the error
+$   message when a user tries to "Open" a spu-file file.
+$ 
+26035 無法開啟 - 沒有 spu-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26036 is the description of the gould-file datatype.
+$ 26036 - Do not translate Gould, gould-file, '.gould' in the message.  
+$        gould-file is a defined datatype name and it doesn't get translated 
+$        and '.gould' is the filename pattern used to match this datatype.
+$ 
+26036 這個檔案含有一個 Gould scanner 格式的圖形影像。\\\n\
+                        其資料類型名稱為 gould-file。\\\n\
+                        gould-file 檔案的副檔名為 '.gould'。
+$ 
+$ 26037 - This message is used by the gould-file datatype. It is the error
+$   message when a user tries to "Open" a gould-file file.
+$ 
+26037 無法開啟 - 沒有 gould-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26038 is the description of the raw-file datatype.
+$ 26038 - Do not translate rgb, raw-file, '.raw' in the message.  raw-file a 
+$        is a defined datatype name and it doesn't get translated and '.raw' 
+$        is the filename pattern used to match this datatype.
+$ 
+26038 這個檔案含有一個 raw rgb bytes 格式的圖形影像。\\\n\
+                        其資料類型名稱為 raw-file。\\\n\
+                        raw-file 檔案的副檔名為 '.raw'。
+$ 
+$ 26039 - This message is used by the raw-file datatype. It is the error
+$   message when a user tries to "Open" a raw-file file.
+$ 
+26039 無法開啟 - 沒有 raw-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26040 is the description of the rgb3-file datatype.
+$ 26040 - Do not translate rgb3-file, '.rgb3' in the message.  rgb3-file is a 
+$        defined datatype name and it doesn't get translated and '.rgb3' is 
+$        the filename pattern used to match this datatype.
+$ 
+26040 這個檔案含有一個 three portable graymaps 格式的\\\n\
+                        圖形影像。  其資料類型名稱為 rgb3-file。\\\n\
+                        rgb3-file 檔案的副檔名為 '.rgb3'。
+$ 
+$ 26041 - This message is used by the rgb3-file datatype. It is the error
+$   message when a user tries to "Open" a rgb3-file file.
+$ 
+26041 無法開啟 - 沒有 rgb3-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26042 is the description of the fs-file datatype.
+$ 26042 - Do not translate fs-file, '.fs' in the message.  fs-file is a 
+$        defined datatype name and it doesn't get translated and '.fs' is 
+$        the filename pattern used to match this datatype.
+$ 
+26042 這個檔案含有一個 Usenix FaceSaver 格式的\\\n\
+                        圖形影像。  其資料類型名稱為 fs-file。\\\n\
+                        fs-file 檔案的副檔名為 '.fs'。
+$ 
+$ 26043 - This message is used by the fs-file datatype. It is the error
+$   message when a user tries to "Open" a fs-file file.
+$ 
+26043 無法開啟 - 沒有 rs-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26044 is the description of the fits-file datatype.
+$ 26044 - Do not translate FITS, fits-file, '.fits' in the message.  fits-file
+$        is a defined datatype name and it doesn't get translated and '.fits' 
+$        is the filename pattern used to match this datatype.
+$ 
+26044 這個檔案含有一個 FITS 格式的圖形影像。\\\n\
+                        其資料類型名稱為 fits-file。\\\n\
+                        fits-file 檔案的副檔名為 '.fits'。
+$ 
+$ 26045 - This message is used by the fits-file datatype. It is the error
+$   message when a user tries to "Open" a fits-file file.
+$ 
+26045 無法開啟 - 沒有 fits-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26046 is the description of the lispm-file datatype.
+$ 26046 - Do not translate lispm-file, '.lispm', or "This is a BitMap file"
+$        in the message.  lispm-file is a defined datatype name and it doesn't
+$        get translated and '.lispm', and "This is a BitMap file" are the 
+$        filename or CONTENT patterns used to match this datatype.
+$ 
+26046 這個檔案含有一個 Lisp Machine bit-array-file 格式的圖形\\\n\
+                        影像。  其資料類型名稱為 lispm-file。\\\n\
+                        lispm-file 檔案的副檔名為 '.lispm'，\\\n\
+                        或含有字元 "This is a BitMap file"。
+$ 
+$ 26047 - This message is used by the lispm-file datatype. It is the error
+$   message when a user tries to "Open" an lispm-file file.
+$ 
+26047 無法開啟 - 沒有 lispm-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26048 is the description of the rawg-file datatype.
+$ 26048 - Do not translate rawg-file, '.rawg' in the message.  rawg-file is a 
+$        defined datatype name and it doesn't get translated and '.rawg' is 
+$        the filename pattern used to match this datatype.
+$ 
+26048 這個檔案含有一個 raw grayscale butes 格式的圖形影像。\\\n\
+                        其資料類型名稱為 rawg-file。\\\n\
+                        rawg-file 檔案的副檔名為 '.rawg'。
+$ 
+$ 26049 - This message is used by the rawg-file datatype. It is the error
+$   message when a user tries to "Open" a rawg-file file.
+$ 
+26049 無法開啟 - 沒有 rawg-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ No 26050 message
+$ ----------------------------------------------------------------------------
+$ Messages 26051 is the description of the mac-file datatype.
+$ 26051 - Do not translate MacPaint, mac-file, '.mac' in the message.  
+$        mac-file is a defined datatype name and it doesn't get translated 
+$        and '.mac' is the filename pattern used to match this datatype.
+$ 
+26051 這個檔案含有一個 MacPaint 格式的圖形影像。\\\n\
+                        其資料類型名稱為 mac-file。\\\n\
+                        mac-file 檔案的副檔名為 '.mac'。
+$ 
+$ 26052 - This message is used by the mac-file datatype. It is the error
+$   message when a user tries to "Open" a mac-file file.
+$ 
+26052 無法開啟 - 沒有 mac-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26053 is the description of the atk-file datatype.
+$ 26053 - Do not translate atk-file, '.atk' in the message.  atk-file is a 
+$        defined datatype name and it doesn't get translated and '.atk' is 
+$        the filename pattern used to match this datatype.
+$ 
+26053 這個檔案含有一個 Andrew Toolkit raster 格式的圖形影像。\\\n\
+                        其資料類型名稱為 atk-file。\\\n\
+                        atk-file 檔案的副檔名為 '.atk'。
+$ 
+$ 26054 - This message is used by the atk-file datatype. It is the error
+$   message when a user tries to "Open" a atk-file file.
+$ 
+26054 無法開啟 - 沒有 atk-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26055 is the description of the brush-file datatype.
+$ 26055 - Do not translate brush-file, '.brush' in the message.  brush-file 
+$        is a defined datatype name and it doesn't get translated and 
+$        '.brush' is the filename pattern used to match this datatype.
+$ 
+26055 這個檔案含有一個 doodle brush 格式的圖形影像。\\\n\
+                        其資料類型名稱為 brush-file。\\\n\
+                        brush-file 檔案的副檔名為 '.brush'。
+$ 
+$ 26056 - This message is used by the brush-file datatype. It is the error
+$   message when a user tries to "Open" a brush-file file.
+$ 
+26056 無法開啟 - 沒有 brush-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26057 is the description of the cmu-file datatype.
+$ 26057 - Do not translate CMU, cmu-file, '.cmu', or "\361\0\100\273" in the
+$        message.  cmu-file is a defined datatype name and it doesn't get
+$        translated and '.cmu', and "\361\0\100\273" are the filename or 
+$        CONTENT patterns used to match this datatype.
+$ 
+26057 這個檔案含有一個 CMU window manager bitmap 格式的\\\n\
+                        圖形影像。  其資料類型名稱為 cmu-file。\\\n\
+                        cmu-file 檔案的副檔名為 '.cmu'，\\\n\
+                        或含有字元 "\\361\\0\\100\\273"。
+$ 
+$ 26058 - This message is used by the cmu-file datatype. It is the error
+$   message when a user tries to "Open" an cmu-file file.
+$ 
+26058 無法開啟 - 沒有 cmu-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26059 is the description of the mgr-file datatype.
+$ 26059 - Do not translate MGR, mgr-file, '.mgr', or "yz" in the
+$        message.  mgr-file is a defined datatype name and it doesn't get
+$        translated and '.mgr', and "yz" are the filename or CONTENT 
+$        patterns used to match this datatype.
+$ 
+26059 這個檔案含有一個 MGR bitmap 格式的圖形影像。\\\n\
+                        其資料類型名稱為 mgr-file。\\\n\
+                        mgr-file 檔案的副檔名為 '.mgr'，\\\n\
+                        或含有字元 "yz"。
+$ 
+$ 26060 - This message is used by the mgr-file datatype. It is the error
+$   message when a user tries to "Open" an mgr-file file.
+$ 
+26060 無法開啟 - 沒有 mgr-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26061 is the description of the g3-file datatype.
+$ 26061 - Do not translate g3-file, '.g3' in the message.  g3-file is a 
+$        defined datatype name and it doesn't get translated and '.g3' is 
+$        the filename pattern used to match this datatype.
+$ 
+26061 這個檔案含有一個 Group 3 fax 格式的圖形影像。\\\n\
+                        其資料類型名稱為 g3-file。\\\n\
+                        g3-file 檔案的副檔名為 '.g3'。
+$ 
+$ 26062 - This message is used by the g3-file datatype. It is the error
+$   message when a user tries to "Open" a g3-file file.
+$ 
+26062 無法開啟 - 沒有 g3-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26063 is the description of the img-file datatype.
+$ 26063 - Do not translate GEM, IMG, img-file, '.img' in the message.  
+$        img-file is a defined datatype name and it doesn't get translated 
+$        and '.img' is the filename pattern used to match this datatype.
+$ 
+26063 這個檔案含有一個 GEM IMG 格式的圖形影像。\\\n\
+                        其資料類型名稱為 img-file。\\\n\
+                        img-file 檔案的副檔名為 '.img'。
+$ 
+$ 26064 - This message is used by the img-file datatype. It is the error
+$   message when a user tries to "Open" a img-file file.
+$ 
+26064 無法開啟 - 沒有 img-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26065 is the description of the pi3-file datatype.
+$ 26065 - Do not translate pi3, pi3-file, '.pi3' in the message.  pi3-file is 
+$        a defined datatype name and it doesn't get translated and '.pi3' is 
+$        the filename pattern used to match this datatype.
+$ 
+26065 這個檔案含有一個 Atari Degas pi3 格式的圖形影像。\\\n\
+                        其資料類型名稱為 pi3-file。\\\n\
+                        pi3-file 檔案的副檔名為 '.pi3'。
+$ 
+$ 26066 - This message is used by the pi3-file datatype. It is the error
+$   message when a user tries to "Open" a pi3-file file.
+$ 
+26066 無法開啟 - 沒有 pi3-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26067 is the description of the xbm-file datatype.
+$ 26067 - Do not translate xbm-file, '.xbm' in the message.  xbm-file is a 
+$        defined datatype name and it doesn't get translated and '.xbm' is 
+$        the filename pattern used to match this datatype.
+$ 
+26067 這個檔案含有一個 X Bitmap 格式的圖形影像。\\\n\
+                        其資料類型名稱為 xbm-file。\\\n\
+                        xbm-file 檔案的副檔名為 '.xbm'。
+$ 
+$ 26068 - This message is used by the xbm-file datatype. It is the error
+$   message when a user tries to "Open" a xbm-file file.
+$ 
+26068 無法開啟 - 沒有 xbm-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26069 is the description of the ybm-file datatype.
+$ 26069 - Do not translate ybm-file, '.ybm', or "!!" in the
+$        message.  ybm-file is a defined datatype name and it doesn't get
+$        translated and '.ybm', and "!!" are the filename or CONTENT 
+$        patterns used to match this datatype.
+$ 
+26069 這個檔案含有一個 Benet Yee's face 格式的圖形影像。\\\n\
+                        其資料類型名稱為 ybm-file。\\\n\
+                        ybm-file 檔案的副檔名為 '.ybm'，\\\n\
+                        或含有字元 "!!"。
+$ 
+$ 26070 - This message is used by the ybm-file datatype. It is the error
+$   message when a user tries to "Open" an ybm-file file.
+$ 
+26070 無法開啟 - 沒有 ybm-file 檔案察看器。
+$ 
+$ Messages 26071 is the description of the hips-file datatype.
+$ 26071 - Do not translate HIPS, hips-file, '.hips' in the message.  hips-file
+$        is a defined datatype name and it doesn't get translated and '.hips'
+$        is the filename pattern used to match this datatype.
+$ 
+26071 這個檔案含有一個 HIPS 格式的圖形影像。\\\n\
+                        其資料類型名稱為 hips-file。\\\n\
+                        hips-file 檔案的副檔名為 '.hips'。
+$ 
+$ Messages 26072 is used by the hips-file datatype. It is the error
+$   message when a user tries to "Open" a hips-file file.
+$ 26072 - Do not translate hips-file in the message.  hips-file is a 
+$        defined datatype name and it doesn't get translated. 
+$ 
+26072 無法開啟 - 沒有 hips-file 檔案察看器。
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 26073 is the description of the photocd-file datatype.
+$ 26073 - Do not translate photocd-file, '.pcd', '.PCD' in the message.  
+$        photocd-file is a defined datatype name and it doesn't get translated 
+$        and '.pcd',and  '.PCD' are the filename patterns used to match 
+$	 this datatype.
+$ 
+26073 這個檔案包含圖形影像 photocd 的格式。 \\\n\
+			其資料類型稱為 photocd-file。  \\\n\
+		 	photocd-file 檔案的附檔名為 \\\n\
+			'.pcd' 或 '.PCD'.
+$ 
+$ Messages 26074 is used by the photocd-file datatype. It is the error
+$   message when a user tries to "Open" a photocd-file file.
+$ 26074 - Do not translate photocd-file in the message.  photocd-file is a
+$        defined datatype name and it doesn't get translated.
+$ 
+26074 無法開啟 - 沒有 photocd-file 檔案察看器.
+$ 
+$ ----------------------------------------------------------------------------
+$ 
+$ Datatype labels - below is a list of datatype labels that need to 
+$  be translated.
+$ 
+27001 桌上管理系統應用程式  
+27002 桌上管理系統工具  
+27003 系統管理  
+$ 
+$ 
+$ "NEW-"
+30000 Put On Workspace
+$ "NEW-"
+30001 This action (DtPutOnWorkspace) will place an object on the workspace
+$ 
+$ The followings are added by IBM for 41J
+$ They are used to display datatypes by dtfile. Don't use so long name.
+$ See COSE cmvc 7649
+$ 
+$ See 3001 for detail
+$ "NEW-"
+31000 BM
+$ See 3002 for detail
+$ "NEW-"
+31001 PM
+$ See 3003 for detail
+$ "NEW-"
+31002 PCL
+$ See 3006 for detail
+$ "NEW-"
+31003 POSTSCRIPT
+$ See 3009 for detail
+$ "NEW-"
+31004 AUDIO
+$ See 3014 for detail
+$ "NEW-"
+31005 TIFF
+$ See 3017 for detail
+$ "NEW-"
+31006 JPEG
+$ See 3020 for detail
+$ "NEW-"
+31007 MPEG
+$ See 3023 for detail
+$ "NEW-"
+31008 GIF
+$ See 3026 for detail
+$ "NEW-"
+31009 README
+$ See 3027 for detail
+$ "NEW-"
+31010 HTML
+$ See 3028 for detail
+$ "NEW-"
+31011 RICHTEXT
+$ See 3029 for detail
+$ "NEW-"
+31012 MSDOS_EXE
+$ See 6001 for detail
+$ "NEW-"
+31013 CORE
+$ See 6002
+$ "NEW-"
+31014 OBJECT
+$ See 6003
+$ "NEW-"
+31015 ASSEMBLER
+$ See 6004
+$ "NEW-"
+31016 ARCH_LIB
+$ See 6006
+$ "NEW-"
+31017 SHARED_LIB
+$ See 6008
+$ "NEW-"
+31018 C_SRC
+$ See 6010
+$ "NEW-"
+31019 CPLUSPLUS_SRC
+$ See 6012
+$ "NEW-"
+31020 H_SRC
+$ See 6013
+$ "NEW-"
+31021 MAKEFILE
+$ See 6016
+$ "NEW-"
+31022 IMAKEFILE
+$ See 2001
+$ "NEW-"
+31023 DT
+$ See 2004
+$ "NEW-"
+31024 FP
+$ See 2005
+$ "NEW-"
+31025 DTFILE_FILE
+$ See 2006
+$ "NEW-"
+31026 DTKSH_SCRIPT
+$ See 2007
+$ "NEW-"
+31027 DTKSH_CONV
+$ See 13008
+$ "NEW-"
+31028 AGROUP
+$ See 13002
+$ "NEW-"
+31029 DTAPPS_GROUP
+$ See 13004
+$ "NEW-"
+31030 INFORMATION_APPGROUP
+$ See 13005
+$ "NEW-"
+31031 SYSTEM_ADMIN_APPGROUP
+$ See 13006
+$ "NEW-"
+31032 DTTOOLS_APPGROUP
+$ See 13007
+$ "NEW-"
+31033 AGUP
+$ See 4003
+$ "NEW-"
+31034 TRASH_FOLDER
+$ See 4004
+$ "NEW-"
+31035 PARENT_FOLDER
+$ See 4005
+$ "NEW-"
+31036 CURRENT_FOLDER
+$ See 4006
+$ "NEW-"
+31037 DOT_FOLDER
+$ See 4007
+$ "NEW-"
+31038 FOLDER_LOCK
+$ See 4007
+$ "NEW-"
+31039 NON_WRITABLE_FOLDER
+$ See 4008
+$ "NEW-"
+31040 FOLDER
+$ See 4009
+$ "NEW-"
+31041 RECURSIVE_LINK
+$ See 4010
+$ "NEW-"
+31042 BROKEN_LINK
+$ See 4011
+$ "NEW-"
+31043 DOT_FILE
+$ See 4012
+$ "NEW-"
+31044 EXECUTABLE
+$ See 4013
+$ "NEW-"
+31045 UNKNOWN
+$ See 4014
+$ "NEW-"
+31046 DATA
+$ See 11001
+$ "NEW-"
+31047 DTHELP_VOL
+$ See 11002
+$ "NEW-"
+31048 DTHELP_HT
+$ See 11003
+$ "NEW-"
+31049 DTHELP_HVK
+$ See 11004
+$ "NEW-"
+31050 DTHELP_XRH
+$ See 8001
+$ "NEW-"
+31051 DTHELP_PRINT_FILE
+$ See 16002
+$ "NEW-"
+31052 DTHELP_HTG
+$ See 16003
+$ "NEW-"
+31053 DTHELP_CTG
+$ See 16004
+$ "NEW-"
+31054 DTHELP_ERR
+$ See 5001
+$ "NEW-"
+31055 TEXTFILE
+$ See 26001
+$ "NEW-"
+31056 Sun-raster
+$ See 26002
+$ "NEW-"
+31057 pict-file
+$ See 26004
+$ "NEW-"
+31058 ppm-file
+$ See 26006
+$ "NEW-"
+31059 pj-file
+$ See 26008
+$ "NEW-"
+31060 pgm-file
+$ See 26010
+$ "NEW-"
+31061 pbm-file
+$ See 26012
+$ "NEW-"
+31062 ilbm-file
+$ See 26014
+$ "NEW-"
+31063 pi1-file
+$ See 26016
+$ "NEW-"
+31064 pcx-file
+$ See 26018
+$ "NEW-"
+31065 tga-file
+$ See 26022
+$ "NEW-"
+31066 xim-file
+$ See 26024
+$ "NEW-"
+31067 mtv-file
+$ See 26026
+$ "NEW-"
+31068 qrt-file
+$ See 26028
+$ "NEW-"
+31069 imgw-file
+$ See 26030
+$ "NEW-"
+31070 sld-file
+$ See 26032
+$ "NEW-"
+31071 spc-file
+$ See 26034
+$ "NEW-"
+31072 spu-file
+$ See 26036
+$ "NEW-"
+31073 gould-file
+$ See 26042
+$ "NEW-"
+31074 fs-file
+$ See 26044
+$ "NEW-"
+31075 fits-file
+$ See 26046
+$ "NEW-"
+31076 lispm-file
+$ See 26071
+$ "NEW-"
+31077 hips-file
+$ See 26051
+$ "NEW-"
+31078 mac-file
+$ See 26053
+$ "NEW-"
+31079 atk-file
+$ See 26055
+$ "NEW-"
+31080 brush-file
+$ See 26057
+$ "NEW-"
+31081 cmu-file
+$ See 26059
+$ "NEW-"
+31082 mgr-file
+$ See 26061
+$ "NEW-"
+31083 g3-file
+$ See 26063
+$ "NEW-"
+31084 img-file
+$ See 26065
+$ "NEW-"
+31085 pi3-file
+$ See 26067
+$ "NEW-"
+31086 xbm-file
+$ See 26069
+$ "NEW-"
+31087 ybm-file
+$ See 7009
+$ "NEW-"
+31088 PRINTER_UNKNOWN
+$ See 10001
+$ "NEW-"
+31089 MAN_PAGE
+$ See 10002
+$ "NEW-"
+31090 TAR
+$ See 10010
+$ "NEW-"
+31091 COMPRESSED
+$ See 10013
+$ "NEW-"
+31092 SHELL
+$ See 10014
+$ "NEW-"
+31093 CSHELL
+$ See 10015
+$ "NEW-"
+31094 KSHELL
+$ See 10016
+$ "NEW-"
+31095 SHAR
+$ See 10019
+$ "NEW-"
+31096 UUENCODE
+$ See 10022
+$ "NEW-"
+31097 MESSAGE_CAT
+$ See 12001
+$ "NEW-"
+31098 XWD
+$ See 3030 for detail
+$ "NEW-"
+31099 UIL
+$ See 20001
+$ "NEW-"
+31100 DtcmAppointmentAttrs
+$ See 24001
+$ "NEW-"
+31101 BIP
+$ See 24003
+$ "NEW-"
+31102 BIL
+$ See 24005
+$ "NEW-"
+31103 BIX
+$ See 17001 for more information
+$ "NEW-"
+31104 DTMAIL_FILE
+
+$ See 17003
+$ 31105 OBS- DTEXTERNALBODY
+
+$ 
+$ ----------------------------------------------------------------------------
+$ Messages 31106 - 31107 refer to the Empty Trash Can (DtEmptyTrash) action.
+$ 
+$ "NEW-"
+31106 Empty Trash Can
+$ 
+$ 31107 - do not translate (DtEmptyTrash).
+$ 
+$ "NEW-"
+31107 The Empty Trash Can (DtEmptyTrash) action empties the desktop Trash \\\n\
+                        Can window when the action icon is double-clicked.
+$ 
+
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtinfo.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dtinfo.dt file defines Datatypes and Actions for dtinfo.
+$ 
+$ ----------------------------------------------------------------------------
+$ This message is used for the TYPE_LABEL field of the DtInfoLib 
+$   DATA_ATTRIBUTES definition.
+$ 31200 "NEW-"
+31200 Info Lib
+$ 
+$ This message is used for the DESCRIPTION field of the DtInfoLib 
+$   DATA_ATTRIBUTES definition.
+$ 31201 "NEW-"
+31201 On-line documentation for the Information Manager.
+$ 
+$ This message is used for the LABEL field of the DtLoadInfoLib 
+$   ACTION definition.
+$ 31202 "NEW-"
+31202 Load InfoLib
+$ 
+$ This message is used for the DESCRIPTION field of the DtLoadInfoLib 
+$   ACTION definition.
+$ 31203 "NEW-"
+31203 Start an information browser.
+
+$ 
+$ **************************************************************************
+$ **************************************************************************
+$ *  dtims.dt
+$ **************************************************************************
+$ 
+$ * DESCRIPTION
+$ * The dtims.dt file defines Actions for dtimsstart.
+$ 
+$ ----------------------------------------------------------------------------
+$ This message is used for the LABEL field of the DtImsMode
+$   ACTION definition.
+$ 31300 "NEW-"
+31300 DtImsMode
+$ 
+$ This message is used for the DESCRIPTION field of the DtImsMode
+$   ACTION definition.
+$ 31301 "NEW-"
+31301 The DtimsMode action sets the selection mode for Input Method.
+$ 
+$ This message is used for the DESCRIPTION field of the DtImsGetRemoteConf
+$   ACTION definition.
+$ 31302 "NEW-"
+31302 This action obtains IMS configuration data on a remote system.
+$ 
+$ This message is used for the DESCRIPTION field of the DtImsRunRemoteIms
+$   ACTION definition.
+$ 31303 "NEW-"
+31303 This action starts an IMS on a remote system.
+

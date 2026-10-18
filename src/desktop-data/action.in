@@ -1,0 +1,3 @@
+# Common Desktop Environment action
+# This executable file names an action in the desktop action database.
+echo "Common Desktop Environment action"

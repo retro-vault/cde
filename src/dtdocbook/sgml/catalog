@@ -1,0 +1,26 @@
+PUBLIC "-//Common Desktop Environment//DTD DtInfo Bookcase Description//EN" dtinfoBook.dtd
+PUBLIC "-//Common Desktop Environment//DTD DtInfo Style Sheet//EN" dtinfoStyle.dtd
+PUBLIC "-//Common Desktop Environment//DTD DtInfo Table of Contents//EN" dtinfoTOC.dtd
+PUBLIC "-//Common Desktop Environment//ENTITIES DtInfo Architectural Forms//EN" dtinfo.af
+PUBLIC "-//Common Desktop Environment//ENTITIES ISO Catalog//EN" iso-catalog
+PUBLIC "-//HaL and O'Reilly//DTD DocBook//EN" docbook.dtd
+
+PUBLIC "ISO 8879:1986//ENTITIES Added Math Symbols: Arrow Relations//EN" isoamsa.gml
+PUBLIC "ISO 8879:1986//ENTITIES Added Math Symbols: Binary Operators//EN" isoamsb.gml
+PUBLIC "ISO 8879:1986//ENTITIES Added Math Symbols: Delimiters//EN" isoamsc.gml
+PUBLIC "ISO 8879:1986//ENTITIES Added Math Symbols: Negated Relations//EN" isoamsn.gml
+PUBLIC "ISO 8879:1986//ENTITIES Added Math Symbols: Ordinary//EN" isoamso.gml
+PUBLIC "ISO 8879:1986//ENTITIES Added Math Symbols: Relations//EN" isoamsr.gml
+PUBLIC "ISO 8879:1986//ENTITIES Box and Line Drawing//EN" isobox.gml
+PUBLIC "ISO 8879:1986//ENTITIES Russian Cyrillic//EN" isocyr1.gml
+PUBLIC "ISO 8879:1986//ENTITIES Non-Russian Cyrillic//EN" isocyr2.gml
+PUBLIC "ISO 8879:1986//ENTITIES Diacritical Marks//EN" isodia.gml
+PUBLIC "ISO 8879:1986//ENTITIES Greek Letters//EN" isogrk1.gml
+PUBLIC "ISO 8879:1986//ENTITIES Monotoniko Greek//EN" isogrk2.gml
+PUBLIC "ISO 8879:1986//ENTITIES Greek Symbols//EN" isogrk3.gml
+PUBLIC "ISO 8879:1986//ENTITIES Alternative Greek Symbols//EN" isogrk4.gml
+PUBLIC "ISO 8879:1986//ENTITIES Added Latin 1//EN" isolat1.gml
+PUBLIC "ISO 8879:1986//ENTITIES Added Latin 2//EN" isolat2.gml
+PUBLIC "ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN" isonum.gml
+PUBLIC "ISO 8879:1986//ENTITIES Publishing//EN" isopub.gml
+PUBLIC "ISO 8879:1986//ENTITIES General Technical//EN" isotech.gml

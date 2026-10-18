@@ -1,0 +1,31 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/map.c by iffe version 2022-01-09 : : */
+#ifndef _def_map_ast
+#define _def_map_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+/*
+ * prototypes provided for standard interfaces hijacked
+ * by AST and mapped to _ast_* but already prototyped
+ * unmapped in native headers included by <ast_std.h>
+ */
+
+#undef	basename
+#define basename	_ast_basename
+#undef	dirname
+#define dirname		_ast_dirname
+#undef	getopt
+#define getopt		_ast_getopt
+#undef	glob
+#define glob		_ast_glob
+#undef	globfree
+#define globfree	_ast_globfree
+
+/* no local malloc override */
+#define	_std_malloc	1
+#undef	strdup
+#define strdup		_ast_strdup
+extern char*		strdup(const char*);
+#undef	extern
+#undef	extern
+
+#undef	extern
+#endif

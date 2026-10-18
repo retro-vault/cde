@@ -1,0 +1,10 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/tmlib by iffe version 2022-01-09 : : */
+#ifndef _def_tmlib_ast
+#define _def_tmlib_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _tzset_environ	1	/* tzset() bypasses user getenv() */
+#define tmlocaltime(p)		_tm_localtime(p)
+
+extern struct tm*		_tm_localtime(const time_t*);
+
+#endif

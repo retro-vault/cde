@@ -1,0 +1,8 @@
+add_library(dtfile_copy_common OBJECT sharedFuncs.c fsrtns.c)
+target_link_libraries(dtfile_copy_common PRIVATE cde_build_options)
+target_compile_definitions(dtfile_copy_common PRIVATE SHAPE)
+add_executable(dtfile_copy main_dtcopy.c copydialog.c overwrtdialog.c dosync.c utils.c errordialog.c)
+target_compile_definitions(dtfile_copy PRIVATE SHAPE)
+target_link_libraries(dtfile_copy PRIVATE dtfile_copy_common cde_build_options DtPrint DtHelp DtWidget DtSvc tt DtXinerama)
+install(TARGETS dtfile_copy RUNTIME DESTINATION libexec/cde)
+set_target_properties(dtfile_copy PROPERTIES INSTALL_RPATH "$ORIGIN/../../lib")

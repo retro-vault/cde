@@ -1,0 +1,53 @@
+Conditional Compilation 
+-----------------------
+
+The following is a listing of the conditional compilation switches that
+are "not obvious." Excluded are hardware or OS identifiers (e.g. __ultrix),
+header file include flags, and macros (e.g. ABS).
+
+    DEBUG
+	Turns on code that prints out error messages (specifically
+	protocol errors).
+
+    DEBUGGER
+	Turns on code to help debugging Help-on-item.
+
+    DEBUG_ICON_BOX
+	Turns on code that alters iconbox spacing to help debug iconbox.
+	(?)
+
+    DEBUG_RESOURCE_DATABASE
+	Turns on code that dumps out dtwm's local resource database 
+	to aid in debugging resource problems.
+
+    DEBUG_SESSION_HINTS
+	If defined, the session hints property is left on the root
+	window after being read. Normally, it is deleted.
+
+    ICCC_COMPLIANT
+        This enables stricter ICCCM compliance. Specifically, some
+	clients didn't get WM_PROTOCOLS quite right.
+
+    INTEGRATION_TESTING_
+	Swaps assignment of black and white on wait state cursor as
+	a quick indicator of which client is showing the wait state.
+
+    LARGECURSORS
+	Allows cursors larger than 16x16.
+
+    MESSAGE_CAT
+	Enables message catalog code for local language support.
+
+    MOTIF_DEFAULT_ICON
+	Enables the default window icon with four buttons.
+
+    OLD_CODE
+	Vestigal code.
+
+    R2_COMPAT
+	Enables support for old clients that still pass window geometry
+	hint information in WM_NORMAL_HINTS.
+
+    UNMAP_ON_RESTART
+	All windows are unmapped on restart.
+

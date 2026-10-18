@@ -1,0 +1,7 @@
+find_path(TCL_INCLUDE_PATH tcl.h PATH_SUFFIXES tcl REQUIRED)
+find_library(TCL_LIBRARY tcl REQUIRED)
+add_executable(instant main.c util.c info.c translate.c traninit.c tranvar.c tables.c browse.c)
+target_include_directories(instant PRIVATE ${TCL_INCLUDE_PATH})
+target_link_libraries(instant PRIVATE cde_build_options DtSvc tt ${TCL_LIBRARY})
+set_target_properties(instant PROPERTIES INSTALL_RPATH "$ORIGIN/../../../../lib")
+install(TARGETS instant RUNTIME DESTINATION libexec/cde/dtdocbook/instant)

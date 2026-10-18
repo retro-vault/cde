@@ -1,0 +1,8 @@
+set(infolib_description [=[CDE und Motif Informationsbibliothek]=])
+set(guide_directories infoUGd usersGuide sysAdminGuide)
+set(guide_id_infoUGd [=[cde.infoUGuide.toc]=])
+set(guide_title_infoUGd [=[Informationsmanager-Benutzerhandbuch]=])
+set(guide_id_usersGuide [=[cde.usersGuide.toc]=])
+set(guide_title_usersGuide [=[Benutzerhandbuch]=])
+set(guide_id_sysAdminGuide [=[cde.sysAdminGuide.toc]=])
+set(guide_title_sysAdminGuide [=[Benutzerhandbuch für Fortgeschrittene und Systemverwalter]=])

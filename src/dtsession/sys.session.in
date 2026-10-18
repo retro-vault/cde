@@ -1,0 +1,38 @@
+# ###############################################################
+#
+#   Common Desktop Environment (CDE)
+#
+#   sys.session:  Default session initiation file for CDE DT
+#
+#   (c) Copyright 1996 Digital Equipment Corporation.
+#   (c) Copyright 1993,1994,1996 Hewlett-Packard Company.
+#   (c) Copyright 1993,1994,1996 International Business Machines Corp.
+#   (c) Copyright 1993,1994,1996 Sun Microsystems, Inc.
+#   (c) Copyright 1993,1994,1996 Novell, Inc. 
+#   (c) Copyright 1996 FUJITSU LIMITED.
+#   (c) Copyright 1996 Hitachi.
+#
+#   This file is processed once for new CDE DT users
+#
+#   placed in: @CDE_CONFIGURATION_TOP@/sys.session
+#
+#
+# $XConsortium: sys.session.src /main/5 1996/04/23 18:49:46 drk $
+#
+# ###############################################################
+#
+# Start up the File Manager...
+#
+dtsmcmd -cmd "@CDE_INSTALLATION_TOP@/bin/dtfile -dir ~ -geometry +700+0"
+
+#
+# Start up the Introduction Manager...
+#
+dtsmcmd -cmd "@CDE_INSTALLATION_TOP@/bin/dthelpview -helpVolume Intromgr"
+
+#
+# Initialize the help browser
+#
+dtsmcmd -cmd "@CDE_INSTALLATION_TOP@/bin/dtaction Dthelpgen_delay"
+
+# ##################       End of the sys.session File  #############

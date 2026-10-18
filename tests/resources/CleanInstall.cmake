@@ -1,0 +1,17 @@
+file(REMOVE_RECURSE ${STAGE})
+file(MAKE_DIRECTORY ${STAGE})
+execute_process(COMMAND ${CMAKE_COMMAND} -E env DESTDIR=${STAGE}
+    ${CMAKE_COMMAND} --install ${BUILD_DIR}
+    RESULT_VARIABLE result OUTPUT_VARIABLE output ERROR_VARIABLE error)
+if(NOT result EQUAL 0)
+    message(FATAL_ERROR "Fresh installation failed: ${output}\n${error}")
+endif()
+file(READ ${BUILD_DIR}/install_manifest.txt manifest)
+string(REPLACE "\n" ";" files "${manifest}")
+foreach(file IN LISTS files)
+    if(NOT file STREQUAL "" AND NOT EXISTS ${STAGE}${file} AND NOT IS_SYMLINK ${STAGE}${file})
+        message(FATAL_ERROR "Installation manifest entry is missing: ${file}")
+    endif()
+endforeach()
+set(PREFIX ${STAGE}${PREFIX})
+include(${CMAKE_CURRENT_LIST_DIR}/CheckInstalled.cmake)

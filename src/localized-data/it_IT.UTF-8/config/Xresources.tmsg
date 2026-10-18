@@ -1,0 +1,414 @@
+$ $TOG: Xresources.tmsg /main/9 1997/02/25 09:00:40 barstow $
+$set 1
+$ *
+$ *****************************************************************************
+$ * Xresources.tmsg
+$ *
+$ * Translatable Strings for Xresources
+$ *
+$ * Copyright (c) 1993 Hewlett-Packard Company
+$ * Copyright (c) 1993 International Business Machines Corp.
+$ * Copyright (c) 1993 Sun Microsystems, Inc.
+$ *
+$ *****************************************************************************
+
+$ *****************************************************************************
+$ *
+$ *  Format of this message file.
+$ *    $set n [comment] ... n must be 1.
+$ *    $ [comment]
+$ *    m message-text ... Message text may contain following spcial characters
+$ *                       and escape sequences.
+$ *                         \\                  backslash
+$ *                         \n                  newline
+$ *                         \t                  horizontal tab
+$ *                         \ (at end of line)  continue on same line
+$ *
+$ *****************************************************************************
+$ ----------------------------------------------------------------------------
+$ Do not translate message 1 - 7.
+$ These are not messages, but locale dependent values.
+$ ----------------------------------------------------------------------------
+$ 
+$ Dtlogin*labelFont
+1 -dt-interface system-medium-r-normal-l*-*-*-*-*-*-*-*-*:
+$ Dtlogin*textFont
+2 -dt-interface user-medium-r-normal-l*-*-*-*-*-*-*-*-*:
+$ Dtlogin*greeting.fontList
+3 -dt-interface system-medium-r-normal-xxl*-*-*-*-*-*-*-*-*:
+$ 
+$ login_text.columns = 20 for single-byte
+$                      10 for multi-byte
+4 20
+$ 
+$ passwd_text.columns = 20 for single-byte
+$                       10 for multi-byte
+5 20
+$ Dtchooser*fontList
+6 -dt-interface system-medium-r-normal-l*-*-*-*-*-*-*-*-*:
+$ 6 is not used anymore...
+
+$ Dtchooser font for list and list header 
+$ - needs to be a mono-spaced font
+7 -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-*-*:
+
+$ Dtlogin*labelFont (low resolution displays)
+8 -dt-interface system-medium-r-normal-s*-*-*-*-*-*-*-*-*:
+$ Dtlogin*textFont (low resolution displays)
+9 -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-*-*:
+$ Dtlogin*greeting.fontList (low resolution displays)
+10 -dt-interface system-medium-r-normal-xl*-*-*-*-*-*-*-*-*:
+
+$ ----------------------------------------------------------------------------
+$ Login screen language list translations for AIX (IBM)
+$ 
+$ The following are the locale name to descriptive name mappings
+$ for AIX. When the login screen is displayed, the list of available
+$ locales (valid values for $LANG) are obtained from the system. When 
+$ the language list menu is displayed on the login screen, the descriptive
+$ text below is displayed rather than the locale name. 
+$ 
+$ For the translations below, the comment 'LANG=' provides the locale name
+$ and the numbered item is the translatable descriptive text for that locale.
+$ ----------------------------------------------------------------------------
+
+$ LANG=Ar_AA
+100 Arabo(PC) - IBM-1046
+$ LANG=C
+101 C (POSIX) - ISO8859-1
+$ LANG=Da_DK
+102 Danese - IBM-850
+$ LANG=De_CH
+103 Tedesco (Svizzera) - IBM-850
+$ LANG=De_DE
+104 Tedesco - IBM-850
+$ LANG=En_GB
+105 Inglese (Gran Bretagna) - IBM-850
+$ LANG=En_US
+106 Inglese (Stati Uniti) - IBM-850
+$ LANG=Es_ES
+107 Spagnolo - IBM-850
+$ LANG=Fi_FI
+108 Finlandese - IBM-850
+$ LANG=Fr_BE
+109 Francese (Belgio) - IBM-850
+$ LANG=Fr_CA
+110 Francese (Canada) - IBM-850
+$ LANG=Fr_CH
+111 Francese (Svizzera) - IBM-850
+$ LANG=Fr_FR
+112 Francese - IBM-850
+$ LANG=Is_IS
+113 Islandese - IBM-850
+$ LANG=It_IT
+114 Italiano - IBM-850
+$ LANG=Iw_IL
+115 Ebraico(PC) - IBM-856
+$ LANG=Ja_JP
+116 Giapponese(PC) - IBM-932
+$ LANG=Jp_JP
+117 Giapponese(PC Compat) - IBM-932
+$ LANG=Nl_BE
+118 Olandese (Belgio) - IBM-850
+$ LANG=Nl_NL
+119 Olandese - IBM-850
+$ LANG=No_NO
+120 Norvegese - IBM-850
+$ LANG=POSIX
+121 C (POSIX) - ISO8859-1
+$ LANG=Pt_PT
+122 Portoghese - IBM-850
+$ LANG=Sv_SE
+123 Svedese - IBM-850
+$ LANG=UNIVERSAL
+124 Universal/Unicode - UTF-8
+$ LANG=ar_AA
+125 Arabo(ISO) - ISO8859-6
+$ LANG=bg_BG
+126 Bulgaro - ISO8859-5
+$ LANG=cs_CS
+127 Ceco - ISO8859-2
+$ LANG=da_DK
+128 Danese - ISO8859-1
+$ LANG=de_CH
+129 Tedesco (Svizzera) - ISO8859-1
+$ LANG=de_DE
+130 Tedesco - ISO8859-1
+$ LANG=el_GR
+131 Greco - ISO8859-7
+$ LANG=en_GB
+132 Inglese (Gran Bretagna) - ISO8859-1
+$ LANG=en_US
+133 Inglese (Stati Uniti) - ISO8859-1
+$ LANG=es_ES
+134 Spagnolo - ISO8859-1
+$ LANG=fi_FI
+135 Finlandese - ISO8859-1
+$ LANG=fr_BE
+136 Francese (Belgio) - ISO8859-1
+$ LANG=fr_CA
+137 Francese (Canada) - ISO8859-1
+$ LANG=fr_CH
+138 Francese (Svizzera) - ISO8859-1
+$ LANG=fr_FR
+139 Francese - ISO8859-1
+$ LANG=hr_HR
+140 Croato - ISO8859-2
+$ LANG=hu_HU
+141 Ungherese - ISO8859-2
+$ LANG=is_IS
+142 Islandese - ISO8859-1
+$ LANG=it_IT
+143 Italiano - ISO8859-1
+$ LANG=iw_IL
+144 Ebraico(ISO) - ISO8859-8
+$ LANG=ja_JP
+145 Giapponese(EUC) - IBM-eucJP
+$ LANG=ko_KR
+146 Coreano - IBM-eucKR
+$ LANG=mk_MK
+147 Macedone - ISO8859-5
+$ LANG=nl_BE
+148 Olandese (Belgio) - ISO8859-1
+$ LANG=nl_NL
+149 Olandese - ISO8859-1
+$ LANG=no_NO
+150 Norvegese - ISO8859-1
+$ LANG=pl_PL
+151 Polacco - ISO8859-2
+$ LANG=pt_PT
+152 Portoghese - ISO8859-1
+$ LANG=ro_RO
+153 Rumeno - ISO8859-2
+$ LANG=ru_RU
+154 Russo - ISO8859-5
+$ LANG=sh_YU
+155 Serbo latino - ISO8859-2
+$ LANG=si_SI
+156 Sloveno - ISO8859-2
+$ LANG=sk_SK
+157 Slovacco - ISO8859-2
+$ LANG=sp_YU
+158 Serbo cirillico - ISO8859-5
+$ LANG=sv_SE
+159 Svedese - ISO8859-1
+$ LANG=tr_TR
+160 Turco - ISO8859-9
+$ LANG=zh_TW
+161 Cinese (tradizionale) - IBM-eucTW
+
+$ ----------------------------------------------------------------------------
+$ Login screen language list translations for Solaris (Sun)
+$ 
+$ The following are the locale name to descriptive name mappings
+$ for Solaris. When the login screen is displayed, the list of available
+$ locales (valid values for $LANG) are obtained from the system. When
+$ the language list menu is displayed on the login screen, the descriptive
+$ text below is displayed rather than the locale name.
+$ 
+$ For the translations below, the comment 'LANG=' provides the locale name
+$ and the numbered item is the translatable descriptive text for that locale.
+$ 
+$ Note: in this case, for the translatable descriptive text for each locale,
+$ translate only the text to the right of the dashes ('-'). For example, if
+$ the text is 'de ------- German', only translate 'German'. 
+$ ----------------------------------------------------------------------------
+
+$ LANG=C
+200 C -------- POSIX
+$ LANG=de
+201 de ------- Tedesco
+$ LANG=fr
+202 fr ------- Francese
+$ LANG=it
+203 it ------- Italiano
+$ LANG=sv
+204 sv ------- Svedese
+$ LANG=es
+205 es ------- Spagnolo Latino-americano
+$ LANG=en_US
+206 en_US ---- Inglese (USA) 
+$ LANG=ja
+207 ja ------- Giapponese 
+$ LANG=japanese
+208 japanese - Giapponese 
+$ LANG=ko
+209 ko ------- Coreano
+$ LANG=korean
+210 korean --- Coreano
+$ LANG=zh
+211 zh ------- Cinese semplificato
+$ LANG=chinese
+212 chinese -- Cinese semplificato
+$ LANG=zh_TW
+213 zh_TW ---- Cinese tradizionale
+$ LANG=tchinese
+214 tchinese - Cinese tradizionale
+$ LANG=ca
+215 ca ------- Catalano 
+216 en_AU ---- Inglese (Australia) 
+217 en_CA ---- Inglese (Canada) 
+218 en_IE ---- Inglese (Irlanda) 
+219 en_NZ ---- Inglese (Nuova Zelanda) 
+220 en_UK ---- Inglese (Regno Unito) 
+221 da ------- Danese 
+222 nl ------- Olandese (standard) 
+223 nl_BE ---- Olandese (Belgio)
+224 su ------- Finlandese
+225 fr_CA ---- Francese (Canada)
+226 fr_BE ---- Francese (Belgio) 
+227 fr_CH ---- Francese (Svizzera) 
+228 de_CH ---- Tedesco (Svizzera) 
+229 no ------- Norvegese
+230 pt ------- Portoghese
+231 es_AR ---- Spagnolo (Argentina)
+232 es_BO ---- Spagnolo (Bolivia)
+233 es_CL ---- Spagnolo (Cile)
+234 es_CO ---- Spagnolo (Colombia)
+235 es_CR ---- Spagnolo (Costa Rica) 
+236 es_EC ---- Spagnolo (Ecuador)
+237 es_SV ---- Spagnolo (El Salvador)
+238 es_GT ---- Spagnolo (Guatemala)
+239 es_MX ---- Spagnolo (Messico)
+240 es_NI ---- Spagnolo (Nicaragua)
+241 es_PA ---- Spagnolo (Panama)
+242 es_PY ---- Spagnolo (Paraguay)
+243 es_PE ---- Spagnolo (Peru)
+244 es_UY ---- Spagnolo (Uruguay)
+245 es_VE ---- Spagnolo (Venezuela)
+246 pt_BR ---- Portoghese (Brasile)
+
+$ ----------------------------------------------------------------------------
+$ Sun Desktop Names
+$ 
+$ Names are used on the dtlogin Options->Session menu
+290 Common Desktop Environment (CDE)
+
+
+$ ----------------------------------------------------------------------------
+$ Login screen language list translations for HP-UX (HP)
+$ 
+$ The following are the locale name to descriptive name mappings
+$ for HP-UX. When the login screen is displayed, the list of available
+$ locales (valid values for $LANG) are obtained from the system. When
+$ the language list menu is displayed on the login screen, the descriptive
+$ text below is displayed rather than the locale name.
+$ 
+$ For the translations below, the comment 'LANG=' provides the locale name
+$ and the numbered item is the translatable descriptive text for that locale.
+$ ----------------------------------------------------------------------------
+
+$ LANG=C
+300 C
+$ LANG=C.iso88591
+301 C.ISO8859-1
+$ LANG=POSIX
+302 POSIX
+$ LANG=arabic-w
+303 Algerino.Arabic8
+$ LANG=arabic
+304 Arabo.Arabic8
+$ LANG=arabic.iso88596
+305 Arabo.ISO8859-6
+$ LANG=bulgarian
+306 Bulgaro.ISO8859-5
+$ LANG=czech
+307 Ceco.ISO8859-2
+$ LANG=danish.iso88591
+308 Danese.ISO8859-1
+$ LANG=danish
+309 Danese.Roman8
+$ LANG=german.iso88591
+310 Tedesco.ISO8859-1
+$ LANG=german
+311 Tedesco.Roman8
+$ LANG=greek
+312 Greco.Greek8
+$ LANG=greek.iso88597
+313 Greco.ISO8859-7
+$ LANG=english.iso88591
+314 Inglese-GB.ISO8859-1
+$ LANG=english
+315 Inglese-GB.Roman8
+$ LANG=american.iso88591
+316 Inglese-US.ISO8859-1
+$ LANG=american
+317 Inglese-US.Roman8
+$ LANG=spanish.iso88591
+318 Spagnolo.ISO8859-1
+$ LANG=spanish
+319 Spagnolo.Roman8
+$ LANG=finnish.iso88591
+320 Finlandese.ISO8859-1
+$ LANG=finnish
+321 Finlandese.Roman8
+$ LANG=c-french.iso88591
+322 Francese-Canadese.ISO8859-1
+$ LANG=c-french
+323 Francese-Canadese.Roman8
+$ LANG=french.iso88591
+324 Francese.ISO8859-1
+$ LANG=french
+325 Francese.Roman8
+$ LANG=serbocroatian
+326 Croato.ISO8859-2
+$ LANG=hungarian
+327 Ungherese.ISO8859-2
+$ LANG=icelandic.iso88591
+328 Islandese.ISO8859-1
+$ LANG=icelandic
+329 Islandese.Roman8
+$ LANG=italian.iso88591
+330 Italiano.ISO8859-1
+$ LANG=italian
+331 Italiano.Roman8
+$ LANG=hebrew
+332 Ebraico.Hebrew8
+$ LANG=hebrew.iso88598
+333 Ebraico.ISO8859-8
+$ LANG=japanese
+334 Giapponese.SJIS
+$ LANG=japanese.euc
+335 Giapponese.EUC
+$ LANG=katakana
+336 Giapponese.KANA8
+$ LANG=korean
+337 Coreano.EUC
+$ LANG=dutch.iso88591
+338 Olandese.ISO8859-1
+$ LANG=dutch
+339 Olandese.Roman8
+$ LANG=norwegian.iso88591
+340 Norvegese.ISO8859-1
+$ LANG=norwegian
+341 Norvegese.Roman8
+$ LANG=polish
+342 Polacco.ISO8859-2
+$ LANG=portuguese.iso88591
+343 Portoghese.ISO8859-1
+$ LANG=portuguese
+344 Portoghese.Roman8
+$ LANG=rumanian
+345 Rumeno.ISO8859-2
+$ LANG=russian
+346 Russo.ISO8859-5
+$ LANG=slovak
+347 Slovacco.ISO8859-2
+$ LANG=slovene
+348 Sloveno.ISO8859-2
+$ LANG=swedish.iso88591
+349 Svedese.ISO8859-1
+$ LANG=swedish
+350 Svedese.Roman8
+$ LANG=thai
+351 Tailandese.TIS620
+$ LANG=turkish.iso88599
+352 Turco.ISO8859-9
+$ LANG=turkish
+353 Turco.Turkish8
+$ LANG=chinese-s
+354 Cinese-s.HP15
+$ LANG=chinese-t.big5
+355 Cinese-t.BIG5
+$ LANG=chinese-t
+356 Cinese-t.CCDC

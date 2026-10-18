@@ -1,0 +1,93 @@
+/* Generated from ksh93/SHOPT.sh by ksh93/Mamfile */
+
+#ifndef SHOPT_ACCT
+#define SHOPT_ACCT	0
+#endif
+
+#ifndef SHOPT_ACCTFILE
+#define SHOPT_ACCTFILE	0
+#endif
+
+#ifndef SHOPT_ALL_LIBCMD
+#define SHOPT_ALL_LIBCMD	0
+#endif
+
+#ifndef SHOPT_AUDIT
+#define SHOPT_AUDIT	1
+#endif
+
+#ifndef SHOPT_AUDITFILE
+#define SHOPT_AUDITFILE	"/etc/ksh_audit"
+#endif
+
+#ifndef SHOPT_BGX
+#define SHOPT_BGX	1
+#endif
+
+#ifndef SHOPT_BRACEPAT
+#define SHOPT_BRACEPAT	1
+#endif
+
+#ifndef SHOPT_DYNAMIC
+#define SHOPT_DYNAMIC	0
+#endif
+
+#ifndef SHOPT_EDPREDICT
+#define SHOPT_EDPREDICT	0
+#endif
+
+#ifndef SHOPT_ESH
+#define SHOPT_ESH	1
+#endif
+
+#ifndef SHOPT_FILESCAN
+#define SHOPT_FILESCAN	1
+#endif
+
+#ifndef SHOPT_FIXEDARRAY
+#define SHOPT_FIXEDARRAY	1
+#endif
+
+#ifndef SHOPT_HISTEXPAND
+#define SHOPT_HISTEXPAND	1
+#endif
+
+#ifndef SHOPT_MKSERVICE
+#define SHOPT_MKSERVICE	0
+#endif
+
+#if !defined(SHOPT_MULTIBYTE) && !AST_NOMULTIBYTE
+#define SHOPT_MULTIBYTE	1
+#endif
+
+#ifndef SHOPT_NAMESPACE
+#define SHOPT_NAMESPACE	1
+#endif
+
+#ifndef SHOPT_NOECHOE
+#define SHOPT_NOECHOE	0
+#endif
+
+#ifndef SHOPT_OPTIMIZE
+#define SHOPT_OPTIMIZE	1
+#endif
+
+#ifndef SHOPT_P_SUID
+#define SHOPT_P_SUID	0
+#endif
+
+#ifndef SHOPT_RAWONLY
+#define SHOPT_RAWONLY	1
+#endif
+
+#ifndef SHOPT_STATS
+#define SHOPT_STATS	1
+#endif
+
+#ifndef SHOPT_SUID_EXEC
+#define SHOPT_SUID_EXEC	1
+#endif
+
+#ifndef SHOPT_VSH
+#define SHOPT_VSH	1
+#endif

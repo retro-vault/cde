@@ -1,0 +1,22 @@
+/* : : generated from upstream-ksh93/src/cmd/ksh93/features/externs by iffe version 2022-01-09 : : */
+#ifndef _def_externs_ksh93
+#define _def_externs_ksh93	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _LIB_m	1	/* -lm is a library */
+#define _LIB_ast	1	/* upstream-ksh93/arch/linux.i386-64/lib/libast.a is a library */
+#define _LIB_util	1	/* -lutil is a library */
+#define _LIB_cmd	1	/* upstream-ksh93/arch/linux.i386-64/lib/libcmd.a is a library */
+#define _LIB_dll	1	/* upstream-ksh93/arch/linux.i386-64/lib/libdll.a is a library */
+#define _hdr_math	1	/* #include <math.h> ok */
+#define _lib_setreuid	1	/* setreuid() in default lib(s) */
+#define _lib_setregid	1	/* setregid() in default lib(s) */
+#define _lib_nice	1	/* nice() in default lib(s) */
+#define _lib_fork	1	/* fork() in default lib(s) */
+#define _lib_spawnveg	1	/* spawnveg() in default lib(s) */
+#define _lib_fchdir	1	/* fchdir() in default lib(s) */
+#define _lib_pathnative	1	/* pathnative() in default lib(s) */
+#define _lib_pathposix	1	/* pathposix() in default lib(s) */
+#define _lib_fts_notify	1	/* fts_notify() in default lib(s) */
+#define _sys_mman	1	/* #include <sys/mman.h> ok */
+#define _arg_extrabytes	8	/* extra bytes per argument for arguments list */
+#endif

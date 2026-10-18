@@ -1,0 +1,4 @@
+execute_process(COMMAND ${CMAKE_COMMAND} -E env LC_ALL=C.UTF-8 "CPP=${CPP}"
+    ${SHELL} ${SCRIPT} dtprintinfo ${INPUT}
+    WORKING_DIRECTORY ${WORK_DIR} OUTPUT_FILE ${WORK_DIR}/dtprintinfo.msg
+    COMMAND_ERROR_IS_FATAL ANY)

@@ -1,0 +1,70 @@
+add_executable(dtmail
+    AliasListUiItem.C
+    AlternatesListUiItem.C
+    AntiCheckBoxUiItem.C
+    AttachArea.C
+    Attachment.C
+    CheckBoxUiItem.C
+    CheckForMailUiItem.C
+    ComposeCmds.C
+    CustomListUiItem.C
+    Dialog.C
+    DialogShell.C
+    DmxMailbox.C
+    DmxMessage.C
+    DmxPrintJob.C
+    DmxPrintOptions.C
+    DmxPrintOutput.C
+    DmxPrintSetup.C
+    DmxUtils.C
+    DtEditor.C
+    DtMailEditor.C
+    DtMailGenDialog.C
+    DtMailWDM.C
+    Editor.C
+    EncryptedTextFieldUiItem.C
+    FindDialog.C
+    Fonts.C
+    Icon.C
+    IgnoreListUiItem.C
+    InboxTextFieldUiItem.C
+    IndexedOptionMenu.C
+    IndexedOptionMenuUiItem.C
+    ListUiItem.C
+    MailRcSource.C
+    MailRetrievalOptions.C
+    MailSession.C
+    MoveMenuListUiItem.C
+    MsgHndArray.C
+    MsgScrollingList.C
+    NoOpCmd.C
+    OptCmd.C
+    PasswordDialogManager.C
+    PropUi.C
+    RoamApp.C
+    RoamCmds.C
+    RoamInterruptibleCmd.C
+    RoamMenuWindow.C
+    ScaleUiItem.C
+    SendMsgDialog.C
+    Sort.C
+    SortCmd.C
+    SpinBoxUiItem.C
+    StringTab.c
+    TemplateListUiItem.C
+    TextFieldUiItem.C
+    Undelete.C
+    ViewMsgDialog.C
+    WMSaveSession.C
+    XmStrCollector.C
+    XmTextEditor.C
+    XtArgCollector.C
+    dtb_utils.C
+    options_stubs.C
+    options_ui.C
+    options_util.C
+)
+target_link_libraries(dtmail PRIVATE DtMail MotifApp cde_build_options DtPrint DtHelp DtWidget DtSvc tt DtXinerama)
+target_compile_definitions(dtmail PRIVATE RELEASE_NOTES DTMAIL_TOOLTALK DTEDITOR)
+install(TARGETS dtmail RUNTIME DESTINATION bin)
+target_include_directories(dtmail PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

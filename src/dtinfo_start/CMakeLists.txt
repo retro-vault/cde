@@ -1,0 +1,5 @@
+add_executable(dtinfo_start dtinfo_start.c)
+target_include_directories(dtinfo_start PRIVATE ${PROJECT_SOURCE_DIR}/src/desktop-data/tttypes)
+target_link_libraries(dtinfo_start PRIVATE cde_build_options DtSvc tt)
+set_target_properties(dtinfo_start PROPERTIES INSTALL_RPATH "$ORIGIN/../../lib")
+install(TARGETS dtinfo_start RUNTIME DESTINATION libexec/cde)

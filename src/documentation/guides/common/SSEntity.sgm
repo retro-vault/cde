@@ -1,0 +1,35 @@
+<!-- $XConsortium: SSEntity.sgm /main/3 1996/10/14 11:04:45 rws $ -->
+<!-- (c) Copyright 1996 Digital Equipment Corporation. -->
+<!-- (c) Copyright 1996 Hewlett-Packard Company. -->
+<!-- (c) Copyright 1996 International Business Machines Corp. -->
+<!-- (c) Copyright 1996 Sun Microsystems, Inc. -->
+<!-- (c) Copyright 1996 Novell, Inc. -->
+<!-- (c) Copyright 1996 FUJITSU LIMITED. -->
+<!-- (c) Copyright 1996 Hitachi. -->
+
+<!ENTITY RefNameDivTitle "NAME">
+<!ENTITY RefSynopsisDivTitle "SYNOPSIS">
+<!ENTITY CautionPrefix "Caution: ">
+<!ENTITY NotePrefix "Note: ">
+<!ENTITY TipPrefix "Tip: ">
+<!ENTITY WarningPrefix "Warning: ">
+<!ENTITY ImportantPrefix "Important: ">
+<!ENTITY FigurePrefix "Figure">
+<!ENTITY TablePrefix "Table">
+
+<!ENTITY FontFamilies "<family foundry=dt name=application charset=iso8859-1><family foundry=dt name=application charset=iso8859-15>">
+
+<!ENTITY Fontmono "<font fallback=mono slant=roman spacing=char>&FontFamilies;</font>">
+<!ENTITY Fontmonobold "<font fallback=mono slant=roman weight=bold spacing=char>&FontFamilies;</font>">
+<!ENTITY Fontsans12 "<font fallback=sans slant=roman size=12 style=sans>&FontFamilies;</font>">
+<!ENTITY Fontserif12 "<font fallback=serif slant=roman size=12 style=serif spacing=prop>&FontFamilies;</font>">
+<!ENTITY Fontsymbol "<font fallback=symbol>">
+<!ENTITY Fontbold12 "<font size=12 weight=bold>">
+<!ENTITY Fontbold14 "<font size=14 weight=bold>">
+<!ENTITY Fontbold18 "<font size=18 weight=bold>">
+<!ENTITY Fontbold24 "<font size=24 weight=bold>">
+<!ENTITY Fontitalic "<font slant=italic>">
+<!ENTITY Fontroman "<font slant=roman>">
+<!ENTITY Fontbold "<font weight=bold>">
+<!ENTITY Fontsubscript "<font position=subscript>">
+<!ENTITY Fontsuperscript "<font position=superscript>">

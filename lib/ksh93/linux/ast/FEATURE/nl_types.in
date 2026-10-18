@@ -1,0 +1,36 @@
+/* : : generated from upstream-ksh93/src/lib/libast/features/nl_types by iffe version 2022-01-09 : : */
+#ifndef _def_nl_types_ast
+#define _def_nl_types_ast	1
+#define _sys_types	1	/* #include <sys/types.h> ok */
+#define _lib_catopen	1	/* catopen() in default lib(s) */
+#define _lib_nl_langinfo	1	/* nl_langinfo() in default lib(s) */
+#define _hdr_nl_types	1	/* #include <nl_types.h> ok */
+#define _hdr_langinfo	1	/* #include <langinfo.h> ok */
+#define _nxt_nl_types <../include/nl_types.h>	/* include path for the native <nl_types.h> */
+#define _nxt_nl_types_str "../include/nl_types.h"	/* include string for the native <nl_types.h> */
+#include <limits.h>
+#include <../include/nl_types.h>	/* the native nl_types.h */
+
+#ifdef __HAIKU__
+typedef int	nl_item;  /* workaround system header bug */
+#endif
+#undef	NL_SETMAX
+#define NL_SETMAX	1023
+#undef	NL_MSGMAX
+#define NL_MSGMAX	32767
+#undef	nl_catd
+#define	nl_catd		_ast_nl_catd
+#undef	catopen
+#define catopen		_ast_catopen
+#undef	catgets
+#define	catgets		_ast_catgets
+#undef	catclose
+#define catclose	_ast_catclose
+
+typedef void* nl_catd;
+
+extern nl_catd		catopen(const char*, int);
+extern char*		catgets(nl_catd, int, int, const char*);
+extern int		catclose(nl_catd);
+
+#endif
