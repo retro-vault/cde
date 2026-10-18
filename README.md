@@ -1,113 +1,144 @@
 # CDE for x86-64 Linux
 
-CDE 2.5.3 with a native, nested CMake build for x86-64 Linux, C11 and C++11.
-The source tree is self-contained. The reference source at
-../cdesktopenv-code is not used during builds.
-Baseline upstream commit: c5727a7798af9a3424f090428120132e73315a60.
+The Common Desktop Environment (CDE) 2.5.3 for 64-bit x86 Linux, built with
+CMake. It includes the desktop and window manager, login and session tools,
+file manager, terminal, editor, mail, calendar, desktop utilities, Application
+Builder, Information Manager, and online help.
 
-## Build, stage, and test
+## Build
+
+You need Docker and access to the `wischner/gcc-x86_64-linux-motif` image.
+Run commands from the repository root.
 
 ```sh
 ./cmake/docker-build.sh
 ```
 
-The helper uses wischner/gcc-x86_64-linux-motif and installs no packages.
-It starts rpcbind in the disposable container, builds and stages with your
-UID/GID, and runs CTest. The image supplies GCC, CMake, Make, Motif, X11,
-PAM, libtirpc, LMDB, JPEG, bison, flex, ksh, Tcl, onsgmls, compress and Xvfb.
-An ephemeral account lets desktop applications resolve the build UID.
-Calendar, ToolTalk and PAM fixtures exist only inside that container.
-CMake installs runtime helpers, executable scripts, ToolTalk registrations,
-localized help-family files and documentation. CTest also installs into a fresh
-DESTDIR under build/ to check the manifest, executable permissions and required
-runtime files independently of the existing bin/ tree.
+This compiles CDE, installs it into `bin/`, and runs the test suite inside the
+container. The image provides the build dependencies; the script installs no
+packages on your host.
 
-All intermediate files, generated headers/resources, logs and test files
-belong under build/. The default build directory is build/linux. Final files
-are staged under bin/, including bin/bin, bin/lib, bin/libexec/cde,
-bin/include and bin/share/dt. Libraries live under lib/<component>, programs
-under src/<component>, public headers under include/<namespace>, and tests
-under tests/<component>. Private headers stay with their owning libraries.
+To compile and install without running tests:
 
-Runtime paths default to the configured installation prefix (/work/bin in
-this container). CDE_DATA_TOP, CDE_CONFIGURATION_TOP, CDE_LOGFILES_TOP,
-CDE_CALENDAR_DIR and CDE_LIBEXEC_DIR are CMake cache paths for packaging.
-Installed libraries and executables use relative RUNPATHs for CDE libraries.
-The staged tree is an installation prefix; running the build does not
-configure the host display manager or install host services.
+```sh
+./cmake/docker-build.sh --build-only
+```
 
-## Components
+Build files and logs are stored under `build/`. The default build directory is
+`build/linux/`, and its `install_manifest.txt` lists the installed files.
 
-The build includes the CDE core libraries, ToolTalk client and servers,
-window and session managers, PAM login manager and greeters, file manager,
-editor, terminal, mail, calendar client and server, calculator, style and
-icon editors, action editor, print manager, embedded Desktop KornShell,
-Application Builder and code generator, Information Manager, help tools,
-search tools, integration scripts and desktop resources.
+## Run in Xephyr
 
-Help and searchable information libraries are built from SGML for English,
-German, Spanish, French, Italian and Japanese. The English reference manual
-is rendered from its sources. Supplied application resources and message
-catalogs are built for ten additional locales, using English fallback text
-where a resource translation is incomplete. Translation coverage varies
-according to the supplied upstream files. A C.UTF-8 tool locale supports
-minimal images without separately generated regional locales.
+Xephyr runs CDE inside a window on your existing X11 or Xwayland desktop.
+Your terminal must have valid `DISPLAY` and `XAUTHORITY` settings.
 
-CTest checks live ToolTalk messaging and persistent metadata; database binary
-encodings, deletion and reopen behavior; real calendar RPC operations; PAM
-conversations and identity reuse; Motif and editor behavior; window framing;
-full Xsession startup; desktop application windows; generated help; document
-libraries in all six languages; and installed resource expansion. GUI tests
-run under Xvfb with isolated homes and files under build/.
-
-These checks are a reproducible build and functional baseline, not exhaustive
-application acceptance testing. Calendar data still has historical 2037/2038
-limits. Imported source retains compiler warnings and legacy temporary-file
-APIs; warnings have not been globally hidden. Solaris-only administration
-and discontinued font utilities outside the upstream Linux build are not
-part of this Linux desktop.
-
-See [the C coding standard](docs/standards/CSTANDARD.md). Migrated files retain
-upstream notices; see COPYING and individual source licenses.
-
-## Run in Xephyr with F5
-
-Open this folder in VS Code, select **CDE desktop in Xephyr** in Run and Debug,
-then press **F5**. The pre-launch task builds and stages CDE in the Motif Docker
-image; the launcher opens the desktop in a resizable 1280×800 Xephyr window.
-This uses VS Code's built-in JavaScript Debug Terminal to run the launcher;
-it does not attach a C/C++ debugger. The F5 command replaces its launch shell,
-so closing Xephyr also ends the launch terminal and debug session.
-
-Docker must be accessible from VS Code, and VS Code must inherit DISPLAY and
-XAUTHORITY from your local X11 or Xwayland desktop. Xephyr runs inside the
-image, so no host Xephyr installation or xhost access change is needed.
-Only the parent X socket and its authority file are mounted for display access.
-The desktop runs as your UID with a separate home and logs under build/xephyr/.
-Use CDE's Exit control, close the Xephyr window, or stop the launch terminal
-to end the disposable container. The separate home persists between runs. Mailer uses the private local inbox at
-build/xephyr/home/Mail/Inbox; the launcher exports MAIL to select it. Clicking
-the panel clock opens Digital Clock.
-
-To launch an already staged build from a terminal:
+After building:
 
 ```sh
 ./cmake/run-xephyr.sh
 ```
 
-Set CDE_XEPHYR_SCREEN (for example, 1600x1000) to choose the initial window size.
+In VS Code, select **CDE desktop in Xephyr** under Run and Debug and press
+**F5**. This builds and installs CDE before launching it. Close Xephyr or use
+CDE's Exit control to end the session.
 
-CDE now follows X RandR resolution changes while running. The front panel,
-maximized/fullscreen windows, workspace backdrops and desktop-icon grids update without
-restarting the session. Inactive workspaces are updated too. Separate RandR
-virtual monitor regions retain their own maximize boundaries. The Xephyr launcher
-also synchronizes its RandR output mode after resizing so the mouse can reach
-the entire desktop. Resize tests check pointer movement and application button
-press/release delivery through the parent X server, alongside workspace and
-virtual-monitor geometry. They also keep Calendar open during rapid resize
-bursts and inject stale RandR replies to verify that the resize helper retries
-without terminating the session.
+The default window size is 1280×800. To choose another starting size:
 
-In a virtual machine, this responds when the guest X server reports a new
-resolution. Automatic resizing from the VM window still depends on the
-hypervisor's guest display integration.
+```sh
+CDE_XEPHYR_SCREEN=1600x1000 ./cmake/run-xephyr.sh
+```
+
+The desktop follows resolution changes and supports multiple workspaces and
+virtual monitors. Session settings and files persist in `build/xephyr/home/`,
+logs are in `build/xephyr/logs/`, and the local mail inbox is
+`build/xephyr/home/Mail/Inbox`.
+
+## Deploy
+
+Choose the final installation prefix before compiling: runtime paths are
+configured into the programs and resources. The default Docker build uses
+`/work/bin` for running inside the container. For a host installation, build
+separately with the intended target path, for example `/opt/cde`:
+
+```sh
+docker run --rm \
+    --user "$(id -u):$(id -g)" \
+    --volume "$PWD:/work" --workdir /work \
+    wischner/gcc-x86_64-linux-motif sh -eu -c '
+        cmake -S . -B build/deploy \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DBUILD_TESTING=OFF \
+            -DCMAKE_INSTALL_PREFIX=/opt/cde
+        cmake --build build/deploy --parallel 8
+        DESTDIR=/work/build/deploy-root cmake --install build/deploy
+    '
+```
+
+The resulting installation is in `build/deploy-root/opt/cde/`. Copy it to the
+same prefix on the target machine:
+
+```sh
+sudo mkdir -p /opt/cde
+sudo cp -a build/deploy-root/opt/cde/. /opt/cde/
+```
+
+The target needs an X server and the runtime libraries used by CDE, including
+Motif, X11, PAM, libtirpc, LMDB, JPEG and Tcl, plus `/bin/ksh`.
+
+For desktop login, configure your display manager to launch
+`/opt/cde/bin/Xsession`, register the supplied PAM configurations in
+`/etc/pam.d/`, and configure services for `rpcbind`, ToolTalk's
+`rpc.ttdbserver`, and Calendar's `rpc.cmsd`. These host services and display
+manager settings are managed separately from the CMake installation.
+
+## Installed files
+
+Paths below are relative to the installation prefix. In the default build,
+that prefix is the repository's `bin/` directory.
+
+| Directory | Contents |
+| --- | --- |
+| `bin/` | Desktop applications, session tools, commands and executable scripts |
+| `lib/` | CDE libraries and Desktop KornShell support |
+| `libexec/cde/` | Runtime helpers, ToolTalk and Calendar servers, and document tools |
+| `include/` | Public development headers |
+| `etc/dt/` | Desktop configuration |
+| `etc/pam.d/` | Login and screen-unlock PAM configurations |
+| `share/dt/` | Icons, fonts, palettes, backdrops, actions, ToolTalk registrations, translations, help and searchable documentation |
+| `share/man/` | Manual pages |
+| `share/terminfo/` | Terminal description |
+| `share/doc/cde/` | License and copyright information |
+
+Online help and searchable documentation are supplied in English, German,
+Spanish, French, Italian and Japanese. Application translations vary by locale.
+
+See [COPYING](COPYING) for licensing and
+[the C coding standard](docs/standards/CSTANDARD.md) for contributor conventions.
+
+## Acknowledgements
+
+This repository includes software and documentation from the following projects
+and contributors:
+
+- **CDE and The Open Group**, the CDE maintainers and community, and the original
+  contributors, including Hewlett-Packard, IBM, Sun Microsystems, Novell,
+  Digital Equipment Corporation, Fujitsu and Hitachi. CDE artwork and
+  documentation are attributed to **The Open Group**; see [COPYING](COPYING).
+- **KornShell 93u+m and the AST libraries**, by AT&T and the ksh contributors,
+  including David Korn and Martijn Dekker. Desktop KornShell incorporates this
+  code. See the [bundled Eclipse Public License 2.0](lib/ksh93/LICENSE.md).
+- **tradcpp**, by The NetBSD Foundation and David A. Holland, used to preprocess
+  application resources. See its [copyright and license notice](src/tradcpp/main.c).
+- **Raima Corporation**, for database code included in
+  [Desktop Search](lib/DtSearch/raima).
+- **RSA Data Security, Inc.**, for code derived from the **RSA Data Security,
+  Inc. MD5 Message-Digest Algorithm**, included in
+  [Mailer](lib/DtMail/Common/md5.C).
+- **HaL Computer Systems and LRI**, for Information Manager components and the
+  [WWL widget wrappers](lib/DtInfo/wwl), and **MIT and the X Consortium**, for
+  X11 code incorporated into the desktop and login tools.
+
+CDE also uses external projects including Motif, X.Org/X11, libtirpc, Linux-PAM,
+LMDB, libjpeg and Tcl. Their authors and maintainers are gratefully acknowledged.
+
+Individual source files retain their copyright, attribution and license notices.
